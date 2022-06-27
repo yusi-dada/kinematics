@@ -1,0 +1,6 @@
+<map id="kinematics::PyramidMarker" name="kinematics::PyramidMarker">
+<area shape="rect" id="node1" title="矢印マーカ生成（隣接データを接続）" alt="" coords="499,35,700,61"/>
+<area shape="rect" id="node2" href="$namespacekinematics.html#a1014edfee462dfd8de6bbfe3210cbafe" title="カメラマーカ生成" alt="" coords="252,5,451,32"/>
+<area shape="rect" id="node4" href="$namespacekinematics.html#ac6d93824fd11d8b6d236fc044c72e78e" title=" " alt="" coords="255,57,447,98"/>
+<area shape="rect" id="node3" href="$namespacekinematics.html#afe631913dee72c4d6cd70f534bf5b06c" title=" " alt="" coords="5,5,204,32"/>
+</map>

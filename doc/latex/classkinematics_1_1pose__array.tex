@@ -1,0 +1,138 @@
+\hypertarget{classkinematics_1_1pose__array}{}\doxysection{kinematics\+::pose\+\_\+array$<$ T $>$ クラステンプレート}
+\label{classkinematics_1_1pose__array}\index{kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}}
+
+
+{\ttfamily \#include $<$pose\+\_\+array.\+h$>$}
+
+
+
+kinematics\+::pose\+\_\+array$<$ T $>$ 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=239pt]{classkinematics_1_1pose__array__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classkinematics_1_1pose__array_a1bd5fba8cd02fa3ad1b0af919cac6cc4}{pose\+\_\+array}} ()
+\item 
+\mbox{\hyperlink{classkinematics_1_1pose__array_add8d65d34c81ec3f008a533a389b6135}{pose\+\_\+array}} (std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ pos, std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ \mbox{\hyperlink{namespacekinematics_a576e59c2a04271bac0fd8ddd80e01d38}{alfa}}, T theta\mbox{[}$\,$\mbox{]}, \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ posI=\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$())
+\begin{DoxyCompactList}\small\item\em ベース座標系から相対変換によるリンク構造生成 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1pose__array}{pose\+\_\+array}} \mbox{\hyperlink{classkinematics_1_1pose__array_a7202b45a8d461eff53e169b83cb6ce2a}{operator=}} (const \mbox{\hyperlink{classkinematics_1_1pose__array}{pose\+\_\+array}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em 代入 \end{DoxyCompactList}\item 
+std\+::shared\+\_\+ptr$<$ \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ $>$ \mbox{\hyperlink{classkinematics_1_1pose__array_ad2224bf40ae7b534ac9c220cfc8b769c}{operator\mbox{[}$\,$\mbox{]}}} (int n)
+\begin{DoxyCompactList}\small\item\em インデックスによるリンク取得（python方式） \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ $>$ \mbox{\hyperlink{classkinematics_1_1pose__array_ad24355de181d039e70e6eb976de5f221}{p}} ()
+\begin{DoxyCompactList}\small\item\em 座標系原点位置を抽出 \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ $>$ \mbox{\hyperlink{classkinematics_1_1pose__array_a000df0a2426b03ba0173a213b0d0b9fd}{q}} ()
+\begin{DoxyCompactList}\small\item\em 座標系姿勢を抽出 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ $>$ \mbox{\hyperlink{classkinematics_1_1pose__array_a11eb35b28c65b69baf573fd05a5608d7}{pa}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{classkinematics_1_1pose__array_a1bd5fba8cd02fa3ad1b0af919cac6cc4}\label{classkinematics_1_1pose__array_a1bd5fba8cd02fa3ad1b0af919cac6cc4}} 
+\index{kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}!pose\_array@{pose\_array}}
+\index{pose\_array@{pose\_array}!kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pose\_array()}{pose\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose__array}{kinematics\+::pose\+\_\+array}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1pose__array}{pose\+\_\+array}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classkinematics_1_1pose__array_add8d65d34c81ec3f008a533a389b6135}\label{classkinematics_1_1pose__array_add8d65d34c81ec3f008a533a389b6135}} 
+\index{kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}!pose\_array@{pose\_array}}
+\index{pose\_array@{pose\_array}!kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pose\_array()}{pose\_array()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose__array}{kinematics\+::pose\+\_\+array}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1pose__array}{pose\+\_\+array}} (\begin{DoxyParamCaption}\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{pos,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{alfa,  }\item[{T}]{theta\mbox{[}$\,$\mbox{]},  }\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{posI = {\ttfamily \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ベース座標系から相対変換によるリンク構造生成 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em pos} & 相対位置 \\
+\hline
+\mbox{\texttt{ in}}  & {\em alfa} & リンク回転軸 \\
+\hline
+\mbox{\texttt{ in}}  & {\em theta} & 回転角 \\
+\hline
+\mbox{\texttt{ in}}  & {\em posI} & ベース座標系 \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{classkinematics_1_1pose__array_add8d65d34c81ec3f008a533a389b6135_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{classkinematics_1_1pose__array_a7202b45a8d461eff53e169b83cb6ce2a}\label{classkinematics_1_1pose__array_a7202b45a8d461eff53e169b83cb6ce2a}} 
+\index{kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose__array}{pose\+\_\+array}} \mbox{\hyperlink{classkinematics_1_1pose__array}{kinematics\+::pose\+\_\+array}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1pose__array}{pose\+\_\+array}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+代入 
+
+\mbox{\Hypertarget{classkinematics_1_1pose__array_ad2224bf40ae7b534ac9c220cfc8b769c}\label{classkinematics_1_1pose__array_ad2224bf40ae7b534ac9c220cfc8b769c}} 
+\index{kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::shared\+\_\+ptr$<$\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$ $>$ \mbox{\hyperlink{classkinematics_1_1pose__array}{kinematics\+::pose\+\_\+array}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+インデックスによるリンク取得（python方式） 
+
+\mbox{\Hypertarget{classkinematics_1_1pose__array_ad24355de181d039e70e6eb976de5f221}\label{classkinematics_1_1pose__array_ad24355de181d039e70e6eb976de5f221}} 
+\index{kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}!p@{p}}
+\index{p@{p}!kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{p()}{p()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$ $>$ \mbox{\hyperlink{classkinematics_1_1pose__array}{kinematics\+::pose\+\_\+array}}$<$ T $>$\+::p (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+座標系原点位置を抽出 
+
+\mbox{\Hypertarget{classkinematics_1_1pose__array_a000df0a2426b03ba0173a213b0d0b9fd}\label{classkinematics_1_1pose__array_a000df0a2426b03ba0173a213b0d0b9fd}} 
+\index{kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}!q@{q}}
+\index{q@{q}!kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{q()}{q()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ $>$ \mbox{\hyperlink{classkinematics_1_1pose__array}{kinematics\+::pose\+\_\+array}}$<$ T $>$\+::q (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+座標系姿勢を抽出 
+
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{classkinematics_1_1pose__array_a11eb35b28c65b69baf573fd05a5608d7}\label{classkinematics_1_1pose__array_a11eb35b28c65b69baf573fd05a5608d7}} 
+\index{kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}!pa@{pa}}
+\index{pa@{pa}!kinematics::pose\_array$<$ T $>$@{kinematics::pose\_array$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pa}{pa}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$ $>$ \mbox{\hyperlink{classkinematics_1_1pose__array}{kinematics\+::pose\+\_\+array}}$<$ T $>$\+::pa}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pose__array_8h}{pose\+\_\+array.\+h}}\end{DoxyCompactItemize}

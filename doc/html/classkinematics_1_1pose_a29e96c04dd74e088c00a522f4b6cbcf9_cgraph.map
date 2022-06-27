@@ -1,0 +1,4 @@
+<map id="kinematics::pose::rotate" name="kinematics::pose::rotate">
+<area shape="rect" id="node1" title="指定軸で回転させて姿勢変更" alt="" coords="5,5,185,32"/>
+<area shape="rect" id="node2" href="$namespacekinematics.html#a576e59c2a04271bac0fd8ddd80e01d38" title=" " alt="" coords="233,5,360,32"/>
+</map>

@@ -1,0 +1,471 @@
+\hypertarget{classkinematics_1_1vec4}{}\doxysection{kinematics\+::vec4$<$ T $>$ クラステンプレート}
+\label{classkinematics_1_1vec4}\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+
+
+{\ttfamily \#include $<$vec4.\+h$>$}
+
+
+
+kinematics\+::vec4$<$ T $>$ 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classkinematics_1_1vec4__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classkinematics_1_1vec4_ae8e6b0599b395afa8e2305f005abd149}{vec4}} ()
+\begin{DoxyCompactList}\small\item\em 基準クォータニオン \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec4_ac7dcb0d14020934a2f387ca680701e18}{vec4}} (T x\+\_\+, T y\+\_\+, T z\+\_\+, T w\+\_\+)
+\begin{DoxyCompactList}\small\item\em 要素直接指定 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec4_af3ddfee028cd8d378b64739f4796ff1d}{vec4}} (T roll, T pitch, T yaw)
+\begin{DoxyCompactList}\small\item\em 3-\/2-\/1-\/オイラー角から生成 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec4_ab93111e34e2b603862cbf05100ae5cd2}{vec4}} (\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{namespacekinematics_a576e59c2a04271bac0fd8ddd80e01d38}{alfa}}, T theta)
+\begin{DoxyCompactList}\small\item\em 回転軸と回転角度から生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_af2ed6dc8d5d548779e2c1f63a01977e9}{operator=}} (const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ U $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em 代入 \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classkinematics_1_1vec4_a273e9e3da96f4e2c80faf0166d0f826c}{operator\mbox{[}$\,$\mbox{]}}} (int n)
+\begin{DoxyCompactList}\small\item\em 要素アクセス \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_a3c59547e2529274c4a697ad5a7fb751c}{operator+}} ()
+\item 
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_a6fc5cf3659c5f55ccc497999cb9bdf28}{operator-\/}} ()
+\item 
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_ac67fcb111862198f207044b0ee4a4f4d}{conj}} ()
+\begin{DoxyCompactList}\small\item\em 共役クォータニオン \end{DoxyCompactList}\item 
+T \mbox{\hyperlink{classkinematics_1_1vec4_adc454d4c11e84108fc05638aa562ad9a}{nrm}} ()
+\begin{DoxyCompactList}\small\item\em ノルム \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_af6249aee2d4a648b4cfa17ad70977e7c}{normalize}} ()
+\begin{DoxyCompactList}\small\item\em 正規化 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_a7263ea2298c6a2f8dd85e21a53e8d818}{rpy}} ()
+\begin{DoxyCompactList}\small\item\em 3-\/2-\/1-\/オイラー角の生成 \end{DoxyCompactList}\item 
+std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ $>$ \mbox{\hyperlink{classkinematics_1_1vec4_aaa3c5f2b4c157a927571577c091b5a5e}{C}} ()
+\begin{DoxyCompactList}\small\item\em 回転行列の生成 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_a70a2477a9b95f50ecc7b00c236341865}{operator$\ast$}} (const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em クォータニオン積 \end{DoxyCompactList}\item 
+std\+::pair$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$, T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_aa8a7b0a474611f81afb1e8a150fc9276}{Rotation\+To2}} (\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&obj)
+\item 
+std\+::pair$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$, T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_a74ee7de249ebb579f8c6185c627390af}{Rotation\+To}} (\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em this姿勢からobj姿勢への等価回転軸と回転角を算出 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_aada3d89d17a31f4e6bba6515e01bded7}{slerp}} (\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ obj, T t, bool detour=false)
+\begin{DoxyCompactList}\small\item\em 球面線形補間 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1vec4_a46f3542b20cdc1931331ebc3773c054f}{Trans}} (const \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \&v)
+\begin{DoxyCompactList}\small\item\em ベクトルの基準座標への変換 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classkinematics_1_1vec4_a3beb616d9abc8e5429a50a36497dcf8b}{operator==}} (const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em 各要素の一致判定（数値誤差をerrだけ許容） \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classkinematics_1_1vec4_a3c0d07be38ae5838de06592860580c65}{eq}} (const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em 同回転のクォータニオン判定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classkinematics_1_1vec4_a6a8f359ef8483ee02a77644bb7767042}{isnan}} ()
+\begin{DoxyCompactList}\small\item\em 不定値判定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classkinematics_1_1vec4_a371930d0dd40401cf21e81b97bb04230}{isinf}} ()
+\begin{DoxyCompactList}\small\item\em 無限大値判定 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classkinematics_1_1vec4_a967ae30d1b4d24b9371d2701a0f4f698}{isnum}} ()
+\begin{DoxyCompactList}\small\item\em 有効値判定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+T \mbox{\hyperlink{classkinematics_1_1vec4_a464079a19879e47ec6344c5fa5e09d74}{err}} = 1e-\/9
+\item 
+T \mbox{\hyperlink{classkinematics_1_1vec4_a3973b2748ef043e52321568554fa33bf}{x}}
+\item 
+T \mbox{\hyperlink{classkinematics_1_1vec4_a51135392a56f1b0f1d677b4c605b8ae9}{y}}
+\item 
+T \mbox{\hyperlink{classkinematics_1_1vec4_a272c7f93e1b342b64e90bfa86990f1f3}{z}}
+\item 
+T \mbox{\hyperlink{classkinematics_1_1vec4_a2c47b9f30d20e72d8b99831e30034f13}{w}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{classkinematics_1_1vec4_ae8e6b0599b395afa8e2305f005abd149}\label{classkinematics_1_1vec4_ae8e6b0599b395afa8e2305f005abd149}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!vec4@{vec4}}
+\index{vec4@{vec4}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vec4()}{vec4()}\hspace{0.1cm}{\footnotesize\ttfamily [1/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+基準クォータニオン 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_ac7dcb0d14020934a2f387ca680701e18}\label{classkinematics_1_1vec4_ac7dcb0d14020934a2f387ca680701e18}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!vec4@{vec4}}
+\index{vec4@{vec4}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vec4()}{vec4()}\hspace{0.1cm}{\footnotesize\ttfamily [2/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}} (\begin{DoxyParamCaption}\item[{T}]{x\+\_\+,  }\item[{T}]{y\+\_\+,  }\item[{T}]{z\+\_\+,  }\item[{T}]{w\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+要素直接指定 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_af3ddfee028cd8d378b64739f4796ff1d}\label{classkinematics_1_1vec4_af3ddfee028cd8d378b64739f4796ff1d}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!vec4@{vec4}}
+\index{vec4@{vec4}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vec4()}{vec4()}\hspace{0.1cm}{\footnotesize\ttfamily [3/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}} (\begin{DoxyParamCaption}\item[{T}]{roll,  }\item[{T}]{pitch,  }\item[{T}]{yaw }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+3-\/2-\/1-\/オイラー角から生成 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_ab93111e34e2b603862cbf05100ae5cd2}\label{classkinematics_1_1vec4_ab93111e34e2b603862cbf05100ae5cd2}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!vec4@{vec4}}
+\index{vec4@{vec4}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vec4()}{vec4()}\hspace{0.1cm}{\footnotesize\ttfamily [4/4]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}} (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{alfa,  }\item[{T}]{theta }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+回転軸と回転角度から生成 
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_ab93111e34e2b603862cbf05100ae5cd2_cgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{classkinematics_1_1vec4_aaa3c5f2b4c157a927571577c091b5a5e}\label{classkinematics_1_1vec4_aaa3c5f2b4c157a927571577c091b5a5e}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!C@{C}}
+\index{C@{C}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{C()}{C()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::vector$<$\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$ $>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::C (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+回転行列の生成 
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_aaa3c5f2b4c157a927571577c091b5a5e_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_ac67fcb111862198f207044b0ee4a4f4d}\label{classkinematics_1_1vec4_ac67fcb111862198f207044b0ee4a4f4d}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!conj@{conj}}
+\index{conj@{conj}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{conj()}{conj()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::conj (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+共役クォータニオン 
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_ac67fcb111862198f207044b0ee4a4f4d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_a3c0d07be38ae5838de06592860580c65}\label{classkinematics_1_1vec4_a3c0d07be38ae5838de06592860580c65}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!eq@{eq}}
+\index{eq@{eq}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{eq()}{eq()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::eq (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+同回転のクォータニオン判定 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a371930d0dd40401cf21e81b97bb04230}\label{classkinematics_1_1vec4_a371930d0dd40401cf21e81b97bb04230}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!isinf@{isinf}}
+\index{isinf@{isinf}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isinf()}{isinf()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::isinf (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+無限大値判定 
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_a371930d0dd40401cf21e81b97bb04230_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_a6a8f359ef8483ee02a77644bb7767042}\label{classkinematics_1_1vec4_a6a8f359ef8483ee02a77644bb7767042}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!isnan@{isnan}}
+\index{isnan@{isnan}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isnan()}{isnan()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::isnan (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+不定値判定 
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_a6a8f359ef8483ee02a77644bb7767042_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_a967ae30d1b4d24b9371d2701a0f4f698}\label{classkinematics_1_1vec4_a967ae30d1b4d24b9371d2701a0f4f698}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!isnum@{isnum}}
+\index{isnum@{isnum}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isnum()}{isnum()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::isnum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+有効値判定 
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_a967ae30d1b4d24b9371d2701a0f4f698_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_af6249aee2d4a648b4cfa17ad70977e7c}\label{classkinematics_1_1vec4_af6249aee2d4a648b4cfa17ad70977e7c}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!normalize@{normalize}}
+\index{normalize@{normalize}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{normalize()}{normalize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::normalize (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+正規化 
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_af6249aee2d4a648b4cfa17ad70977e7c_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_adc454d4c11e84108fc05638aa562ad9a}\label{classkinematics_1_1vec4_adc454d4c11e84108fc05638aa562ad9a}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!nrm@{nrm}}
+\index{nrm@{nrm}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{nrm()}{nrm()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::nrm (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ノルム 
+
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_adc454d4c11e84108fc05638aa562ad9a_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_a70a2477a9b95f50ecc7b00c236341865}\label{classkinematics_1_1vec4_a70a2477a9b95f50ecc7b00c236341865}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+クォータニオン積 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a3c59547e2529274c4a697ad5a7fb751c}\label{classkinematics_1_1vec4_a3c59547e2529274c4a697ad5a7fb751c}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!operator+@{operator+}}
+\index{operator+@{operator+}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator+()}{operator+()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::operator+ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a6fc5cf3659c5f55ccc497999cb9bdf28}\label{classkinematics_1_1vec4_a6fc5cf3659c5f55ccc497999cb9bdf28}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!operator-\/@{operator-\/}}
+\index{operator-\/@{operator-\/}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator-\/()}{operator-()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::operator-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_af2ed6dc8d5d548779e2c1f63a01977e9}\label{classkinematics_1_1vec4_af2ed6dc8d5d548779e2c1f63a01977e9}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+template$<$typename U $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ U $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+代入 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a3beb616d9abc8e5429a50a36497dcf8b}\label{classkinematics_1_1vec4_a3beb616d9abc8e5429a50a36497dcf8b}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+各要素の一致判定（数値誤差をerrだけ許容） 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a273e9e3da96f4e2c80faf0166d0f826c}\label{classkinematics_1_1vec4_a273e9e3da96f4e2c80faf0166d0f826c}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{int}]{n }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+要素アクセス 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a74ee7de249ebb579f8c6185c627390af}\label{classkinematics_1_1vec4_a74ee7de249ebb579f8c6185c627390af}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!RotationTo@{RotationTo}}
+\index{RotationTo@{RotationTo}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RotationTo()}{RotationTo()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::pair$<$\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$, T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::Rotation\+To (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+this姿勢からobj姿勢への等価回転軸と回転角を算出 
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_a74ee7de249ebb579f8c6185c627390af_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_aa8a7b0a474611f81afb1e8a150fc9276}\label{classkinematics_1_1vec4_aa8a7b0a474611f81afb1e8a150fc9276}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!RotationTo2@{RotationTo2}}
+\index{RotationTo2@{RotationTo2}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{RotationTo2()}{RotationTo2()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::pair$<$\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$, T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::Rotation\+To2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_aa8a7b0a474611f81afb1e8a150fc9276_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1vec4_a7263ea2298c6a2f8dd85e21a53e8d818}\label{classkinematics_1_1vec4_a7263ea2298c6a2f8dd85e21a53e8d818}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!rpy@{rpy}}
+\index{rpy@{rpy}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rpy()}{rpy()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::rpy (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+3-\/2-\/1-\/オイラー角の生成 
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_aada3d89d17a31f4e6bba6515e01bded7}\label{classkinematics_1_1vec4_aada3d89d17a31f4e6bba6515e01bded7}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!slerp@{slerp}}
+\index{slerp@{slerp}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{slerp()}{slerp()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::slerp (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$}]{obj,  }\item[{T}]{t,  }\item[{bool}]{detour = {\ttfamily false} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+球面線形補間 
+
+
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em obj} & 補間先姿勢 \\
+\hline
+\mbox{\texttt{ in}}  & {\em t} & 補間係数 \mbox{[}0,1\mbox{]} \\
+\hline
+\mbox{\texttt{ in}}  & {\em detour} & 遠回り \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkinematics_1_1vec4_a46f3542b20cdc1931331ebc3773c054f}\label{classkinematics_1_1vec4_a46f3542b20cdc1931331ebc3773c054f}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!Trans@{Trans}}
+\index{Trans@{Trans}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Trans()}{Trans()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::Trans (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \&}]{v }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ベクトルの基準座標への変換 
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_a46f3542b20cdc1931331ebc3773c054f_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1vec4_a46f3542b20cdc1931331ebc3773c054f_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{classkinematics_1_1vec4_a464079a19879e47ec6344c5fa5e09d74}\label{classkinematics_1_1vec4_a464079a19879e47ec6344c5fa5e09d74}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!err@{err}}
+\index{err@{err}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{err}{err}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::err = 1e-\/9}
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a2c47b9f30d20e72d8b99831e30034f13}\label{classkinematics_1_1vec4_a2c47b9f30d20e72d8b99831e30034f13}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!w@{w}}
+\index{w@{w}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{w}{w}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::w}
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a3973b2748ef043e52321568554fa33bf}\label{classkinematics_1_1vec4_a3973b2748ef043e52321568554fa33bf}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!x@{x}}
+\index{x@{x}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::x}
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a51135392a56f1b0f1d677b4c605b8ae9}\label{classkinematics_1_1vec4_a51135392a56f1b0f1d677b4c605b8ae9}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!y@{y}}
+\index{y@{y}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::y}
+
+\mbox{\Hypertarget{classkinematics_1_1vec4_a272c7f93e1b342b64e90bfa86990f1f3}\label{classkinematics_1_1vec4_a272c7f93e1b342b64e90bfa86990f1f3}} 
+\index{kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}!z@{z}}
+\index{z@{z}!kinematics::vec4$<$ T $>$@{kinematics::vec4$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{z}{z}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \mbox{\hyperlink{classkinematics_1_1vec4}{kinematics\+::vec4}}$<$ T $>$\+::z}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{vec4_8h}{vec4.\+h}}\end{DoxyCompactItemize}

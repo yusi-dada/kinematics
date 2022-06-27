@@ -1,0 +1,613 @@
+\hypertarget{namespaceros__func}{}\doxysection{ros\+\_\+func 名前空間}
+\label{namespaceros__func}\index{ros\_func@{ros\_func}}
+\doxysubsection*{クラス}
+\begin{DoxyCompactItemize}
+\item 
+class \mbox{\hyperlink{classros__func_1_1PathMarker}{Path\+Marker}}
+\item 
+class \mbox{\hyperlink{classros__func_1_1rviz__publisher}{rviz\+\_\+publisher}}
+\begin{DoxyCompactList}\small\item\em Marker\+Array publisher \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{関数}
+\begin{DoxyCompactItemize}
+\item 
+std\+\_\+msgs\+::\+Color\+R\+G\+BA \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}} (double r, double g, double b, double a)
+\item 
+{\footnotesize template$<$typename T $>$ }\\geometry\+\_\+msgs\+::\+Point \mbox{\hyperlink{namespaceros__func_a3145b9759af1dc750a8365f5f043de13}{Point}} (\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ p)
+\item 
+{\footnotesize template$<$typename T $>$ }\\geometry\+\_\+msgs\+::\+Quaternion \mbox{\hyperlink{namespaceros__func_a3028fd72493d8ec049ff7e9e6eea5629}{Quaternion}} (\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ p)
+\item 
+{\footnotesize template$<$typename T $>$ }\\geometry\+\_\+msgs\+::\+Pose \mbox{\hyperlink{namespaceros__func_a2e66bc91fb3d2a3cdd6c8d468345a188}{Pose}} (\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ pos)
+\item 
+void \mbox{\hyperlink{namespaceros__func_aaaf7bb2f39610376406302f38860a8c0}{delete\+All}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma)
+\begin{DoxyCompactList}\small\item\em マーカの初期化指令 \end{DoxyCompactList}\item 
+visualization\+\_\+msgs\+::\+Marker\+Array \mbox{\hyperlink{namespaceros__func_a7fdd2456fc5239db33f53e090e847f1b}{Init\+Marker}} ()
+\begin{DoxyCompactList}\small\item\em 初期化マーカデータの生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_ae0c028fe8be35d3f544eb9b5c75f80b6}{Point\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ pos, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 点マーカ生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_a9ea7d40fbd41cfc330eb36537095e697}{Triangle\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ pos, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 線分マーカデータの生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_a7b62a9cd824d376006672bff9f0b3bf8}{Cube\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ p0, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ size, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 直方体マーカデータの生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_ac99beb59b98779a3af2f8119e5380654}{Point\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ pos, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 点マーカ生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_a4c8c1e6533ea5d154c3468e1fcd59f5d}{Line\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ start, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ end, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 線マーカ生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_abdfbec155db74c6e82badea476f12e45}{Arrow\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ start, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ end, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 矢印マーカ生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_ae270409de31c1d99ed37854dbf60f1be}{Line\+Chain\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ pos, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 直線マーカ生成（隣接データを接続） \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_a61f62476e92dfbe418c726cdad67149b}{Arrow\+Chain\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ pos, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 矢印マーカ生成（隣接データを接続） \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_ada308df7f1cb923bc05c5bc5ac468b31}{Line\+Loop\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ pos, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 直線マーカ生成（データを順番に接続しループ） \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_a576f441325d402ff9498d32ec18972f8}{Polygon\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ pos, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em ポリゴン生成（データを順番に接続しループ） \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_a1fa3b6d33735e091b3870cb5dc3cd3cf}{Cube\+Wire\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ p0, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ size, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em 直方体のワイヤーフレームマーカ生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_a42bd08518980cacbe215a4693f46191d}{Pyramid\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ virtex, std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$ bottom, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em N角錐マーカ生成（頂点から底面への線分） \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_aa52eba1f1b526428f9967e5c0d627641}{Camera\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1camera}{camera}}$<$ T $>$ cam, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\begin{DoxyCompactList}\small\item\em カメラマーカ生成 \end{DoxyCompactList}\item 
+{\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1}{Image\+Surface\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1camera}{camera}}$<$ T $>$ cam, \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$surf, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{namespaceros__func_a61f62476e92dfbe418c726cdad67149b}\label{namespaceros__func_a61f62476e92dfbe418c726cdad67149b}} 
+\index{ros\_func@{ros\_func}!ArrowChainMarker@{ArrowChainMarker}}
+\index{ArrowChainMarker@{ArrowChainMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{ArrowChainMarker()}{ArrowChainMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Arrow\+Chain\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{pos,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+矢印マーカ生成（隣接データを接続） 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} pos 位置データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a61f62476e92dfbe418c726cdad67149b_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_abdfbec155db74c6e82badea476f12e45}\label{namespaceros__func_abdfbec155db74c6e82badea476f12e45}} 
+\index{ros\_func@{ros\_func}!ArrowMarker@{ArrowMarker}}
+\index{ArrowMarker@{ArrowMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{ArrowMarker()}{ArrowMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Arrow\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{start,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{end,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+矢印マーカ生成 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} start 先頭位置データ
+
+\mbox{[}in\mbox{]} end 終端位置データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_abdfbec155db74c6e82badea476f12e45_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_abdfbec155db74c6e82badea476f12e45_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_aa52eba1f1b526428f9967e5c0d627641}\label{namespaceros__func_aa52eba1f1b526428f9967e5c0d627641}} 
+\index{ros\_func@{ros\_func}!CameraMarker@{CameraMarker}}
+\index{CameraMarker@{CameraMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{CameraMarker()}{CameraMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Camera\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1camera}{camera}}$<$ T $>$}]{cam,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+カメラマーカ生成 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} cam カメラ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_aa52eba1f1b526428f9967e5c0d627641_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_aa52eba1f1b526428f9967e5c0d627641_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}\label{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}} 
+\index{ros\_func@{ros\_func}!ColorRGBA@{ColorRGBA}}
+\index{ColorRGBA@{ColorRGBA}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{ColorRGBA()}{ColorRGBA()}}
+{\footnotesize\ttfamily std\+\_\+msgs\+::\+Color\+R\+G\+BA ros\+\_\+func\+::\+Color\+R\+G\+BA (\begin{DoxyParamCaption}\item[{double}]{r,  }\item[{double}]{g,  }\item[{double}]{b,  }\item[{double}]{a }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_abe14e13e891377507cdc4495947e1e7f_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a7b62a9cd824d376006672bff9f0b3bf8}\label{namespaceros__func_a7b62a9cd824d376006672bff9f0b3bf8}} 
+\index{ros\_func@{ros\_func}!CubeMarker@{CubeMarker}}
+\index{CubeMarker@{CubeMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{CubeMarker()}{CubeMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Cube\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{p0,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{size,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+直方体マーカデータの生成 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} p0 位置・姿勢データ
+
+\mbox{[}in\mbox{]} size 直方体サイズデータ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a7b62a9cd824d376006672bff9f0b3bf8_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a1fa3b6d33735e091b3870cb5dc3cd3cf}\label{namespaceros__func_a1fa3b6d33735e091b3870cb5dc3cd3cf}} 
+\index{ros\_func@{ros\_func}!CubeWireMarker@{CubeWireMarker}}
+\index{CubeWireMarker@{CubeWireMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{CubeWireMarker()}{CubeWireMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Cube\+Wire\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{p0,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{size,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+直方体のワイヤーフレームマーカ生成 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} p0 姿勢データ
+
+\mbox{[}in\mbox{]} size サイズデータ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a1fa3b6d33735e091b3870cb5dc3cd3cf_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_aaaf7bb2f39610376406302f38860a8c0}\label{namespaceros__func_aaaf7bb2f39610376406302f38860a8c0}} 
+\index{ros\_func@{ros\_func}!deleteAll@{deleteAll}}
+\index{deleteAll@{deleteAll}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{deleteAll()}{deleteAll()}}
+{\footnotesize\ttfamily void ros\+\_\+func\+::delete\+All (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma }\end{DoxyParamCaption})}
+
+
+
+マーカの初期化指令 
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_aaaf7bb2f39610376406302f38860a8c0_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1}\label{namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1}} 
+\index{ros\_func@{ros\_func}!ImageSurfaceMarker@{ImageSurfaceMarker}}
+\index{ImageSurfaceMarker@{ImageSurfaceMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{ImageSurfaceMarker()}{ImageSurfaceMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Image\+Surface\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1camera}{camera}}$<$ T $>$}]{cam,  }\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{surf,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a7fdd2456fc5239db33f53e090e847f1b}\label{namespaceros__func_a7fdd2456fc5239db33f53e090e847f1b}} 
+\index{ros\_func@{ros\_func}!InitMarker@{InitMarker}}
+\index{InitMarker@{InitMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{InitMarker()}{InitMarker()}}
+{\footnotesize\ttfamily visualization\+\_\+msgs\+::\+Marker\+Array ros\+\_\+func\+::\+Init\+Marker (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+初期化マーカデータの生成 
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=336pt]{namespaceros__func_a7fdd2456fc5239db33f53e090e847f1b_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a7fdd2456fc5239db33f53e090e847f1b_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_ae270409de31c1d99ed37854dbf60f1be}\label{namespaceros__func_ae270409de31c1d99ed37854dbf60f1be}} 
+\index{ros\_func@{ros\_func}!LineChainMarker@{LineChainMarker}}
+\index{LineChainMarker@{LineChainMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{LineChainMarker()}{LineChainMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Line\+Chain\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{pos,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+直線マーカ生成（隣接データを接続） 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} pos 位置データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_ae270409de31c1d99ed37854dbf60f1be_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_ae270409de31c1d99ed37854dbf60f1be_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_ada308df7f1cb923bc05c5bc5ac468b31}\label{namespaceros__func_ada308df7f1cb923bc05c5bc5ac468b31}} 
+\index{ros\_func@{ros\_func}!LineLoopMarker@{LineLoopMarker}}
+\index{LineLoopMarker@{LineLoopMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{LineLoopMarker()}{LineLoopMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Line\+Loop\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{pos,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+直線マーカ生成（データを順番に接続しループ） 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} pos 位置データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_ada308df7f1cb923bc05c5bc5ac468b31_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_ada308df7f1cb923bc05c5bc5ac468b31_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a4c8c1e6533ea5d154c3468e1fcd59f5d}\label{namespaceros__func_a4c8c1e6533ea5d154c3468e1fcd59f5d}} 
+\index{ros\_func@{ros\_func}!LineMarker@{LineMarker}}
+\index{LineMarker@{LineMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{LineMarker()}{LineMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Line\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{start,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{end,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+線マーカ生成 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} start 先頭位置データ
+
+\mbox{[}in\mbox{]} end 終端位置データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a4c8c1e6533ea5d154c3468e1fcd59f5d_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a4c8c1e6533ea5d154c3468e1fcd59f5d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a3145b9759af1dc750a8365f5f043de13}\label{namespaceros__func_a3145b9759af1dc750a8365f5f043de13}} 
+\index{ros\_func@{ros\_func}!Point@{Point}}
+\index{Point@{Point}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{Point()}{Point()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+geometry\+\_\+msgs\+::\+Point ros\+\_\+func\+::\+Point (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{p }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a3145b9759af1dc750a8365f5f043de13_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_ae0c028fe8be35d3f544eb9b5c75f80b6}\label{namespaceros__func_ae0c028fe8be35d3f544eb9b5c75f80b6}} 
+\index{ros\_func@{ros\_func}!PointMarker@{PointMarker}}
+\index{PointMarker@{PointMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{PointMarker()}{PointMarker()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Point\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{pos,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+点マーカ生成 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} pos 位置データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=327pt]{namespaceros__func_ae0c028fe8be35d3f544eb9b5c75f80b6_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_ae0c028fe8be35d3f544eb9b5c75f80b6_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_ac99beb59b98779a3af2f8119e5380654}\label{namespaceros__func_ac99beb59b98779a3af2f8119e5380654}} 
+\index{ros\_func@{ros\_func}!PointMarker@{PointMarker}}
+\index{PointMarker@{PointMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{PointMarker()}{PointMarker()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Point\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{pos,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+点マーカ生成 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} pos 位置データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_ac99beb59b98779a3af2f8119e5380654_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a576f441325d402ff9498d32ec18972f8}\label{namespaceros__func_a576f441325d402ff9498d32ec18972f8}} 
+\index{ros\_func@{ros\_func}!PolygonMarker@{PolygonMarker}}
+\index{PolygonMarker@{PolygonMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{PolygonMarker()}{PolygonMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Polygon\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{pos,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+ポリゴン生成（データを順番に接続しループ） 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} pos 位置データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a576f441325d402ff9498d32ec18972f8_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a576f441325d402ff9498d32ec18972f8_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a2e66bc91fb3d2a3cdd6c8d468345a188}\label{namespaceros__func_a2e66bc91fb3d2a3cdd6c8d468345a188}} 
+\index{ros\_func@{ros\_func}!Pose@{Pose}}
+\index{Pose@{Pose}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{Pose()}{Pose()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+geometry\+\_\+msgs\+::\+Pose ros\+\_\+func\+::\+Pose (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{pos }\end{DoxyParamCaption})}
+
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=321pt]{namespaceros__func_a2e66bc91fb3d2a3cdd6c8d468345a188_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=325pt]{namespaceros__func_a2e66bc91fb3d2a3cdd6c8d468345a188_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a42bd08518980cacbe215a4693f46191d}\label{namespaceros__func_a42bd08518980cacbe215a4693f46191d}} 
+\index{ros\_func@{ros\_func}!PyramidMarker@{PyramidMarker}}
+\index{PyramidMarker@{PyramidMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{PyramidMarker()}{PyramidMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Pyramid\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{virtex,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{bottom,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+N角錐マーカ生成（頂点から底面への線分） 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} virtex 頂点データ
+
+\mbox{[}in\mbox{]} bottom 底辺データ
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a42bd08518980cacbe215a4693f46191d_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a42bd08518980cacbe215a4693f46191d_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a3028fd72493d8ec049ff7e9e6eea5629}\label{namespaceros__func_a3028fd72493d8ec049ff7e9e6eea5629}} 
+\index{ros\_func@{ros\_func}!Quaternion@{Quaternion}}
+\index{Quaternion@{Quaternion}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{Quaternion()}{Quaternion()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+geometry\+\_\+msgs\+::\+Quaternion ros\+\_\+func\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$}]{p }\end{DoxyParamCaption})}
+
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a3028fd72493d8ec049ff7e9e6eea5629_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{namespaceros__func_a9ea7d40fbd41cfc330eb36537095e697}\label{namespaceros__func_a9ea7d40fbd41cfc330eb36537095e697}} 
+\index{ros\_func@{ros\_func}!TriangleMarker@{TriangleMarker}}
+\index{TriangleMarker@{TriangleMarker}!ros\_func@{ros\_func}}
+\doxysubsubsection{\texorpdfstring{TriangleMarker()}{TriangleMarker()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void ros\+\_\+func\+::\+Triangle\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{std\+::vector$<$ \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$$>$}]{pos,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
+
+
+
+線分マーカデータの生成 
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} pos 三角形の構成点（点数は３の倍数）
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=342pt]{namespaceros__func_a9ea7d40fbd41cfc330eb36537095e697_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{namespaceros__func_a9ea7d40fbd41cfc330eb36537095e697_icgraph}
+\end{center}
+\end{figure}

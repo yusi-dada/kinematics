@@ -1,0 +1,326 @@
+\hypertarget{classkinematics_1_1pose}{}\doxysection{kinematics\+::pose$<$ T $>$ クラステンプレート}
+\label{classkinematics_1_1pose}\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+
+
+{\ttfamily \#include $<$pose.\+h$>$}
+
+
+
+kinematics\+::pose$<$ T $>$ 連携図
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=208pt]{classkinematics_1_1pose__coll__graph}
+\end{center}
+\end{figure}
+\doxysubsection*{公開メンバ関数}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classkinematics_1_1pose_a92b0071417351c21e0549126126122a4}{pose}} ()
+\item 
+\mbox{\hyperlink{classkinematics_1_1pose_a404646378984be365f5b897f76526c71}{pose}} (const \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ p\+\_\+, const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ q\+\_\+)
+\item 
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_ae546c1daffe2160f815816393095cae6}{operator=}} (const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em 代入 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_a29e96c04dd74e088c00a522f4b6cbcf9}{rotate}} (int axis, T angle)
+\begin{DoxyCompactList}\small\item\em 指定軸で回転させて姿勢変更 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_a4b42e075aac59b522754d89ce8c7f952}{operator$\ast$}} (const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em 相対姿勢で座標系変換 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_a5b862d808e53d177522083133675b8a8}{operator/}} (\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em 2座標系間の相対姿勢取得 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classkinematics_1_1pose_a3b4e6c02ccb6479834fafebff24855eb}{isnum}} ()
+\begin{DoxyCompactList}\small\item\em 有効判定 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_adb321e96192e012af765b09bdffc94a3}{Trans\+\_\+pnt}} (const \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \&pnt, const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&obj=\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$())
+\begin{DoxyCompactList}\small\item\em 点の座標系表現(pnt)を別座標系(obj)表現へ変換 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_abd44246a228f5d32aa098b1f93d057dc}{Trans\+\_\+vec}} (const \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \&pnt, const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&obj=\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$())
+\begin{DoxyCompactList}\small\item\em ベクトルの座標系表現(pnt)を別座標系(obj)表現へ変換 \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_a5753d2354ac97ba94ffb127cf03bb330}{surface}} (\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ normal, T yaw=0)
+\begin{DoxyCompactList}\small\item\em 法線方向指定による平面オブジェクト生成 \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classkinematics_1_1pose_af8be4fd7c99dca62a5e3fb5ac533c102}{projection}} (\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ ray, \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ surf, \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ normal)
+\begin{DoxyCompactList}\small\item\em ベクトルの平面への写像 \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{classkinematics_1_1pose_af7e12ff799eed1951c3a02c693042f2b}{operator==}} (const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&obj)
+\begin{DoxyCompactList}\small\item\em 一致判定 \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{公開変数類}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_a7f5b8ef02610a3039518fda4911f42f3}{p}}
+\item 
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$ \mbox{\hyperlink{classkinematics_1_1pose_af93ee52cbf52cc767193a7ca3145da40}{q}}
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{構築子と解体子}
+\mbox{\Hypertarget{classkinematics_1_1pose_a92b0071417351c21e0549126126122a4}\label{classkinematics_1_1pose_a92b0071417351c21e0549126126122a4}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!pose@{pose}}
+\index{pose@{pose}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pose()}{pose()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1pose}{pose}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+\mbox{\Hypertarget{classkinematics_1_1pose_a404646378984be365f5b897f76526c71}\label{classkinematics_1_1pose_a404646378984be365f5b897f76526c71}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!pose@{pose}}
+\index{pose@{pose}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pose()}{pose()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1pose}{pose}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{p\+\_\+,  }\item[{const \mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$}]{q\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+\doxysubsection{関数詳解}
+\mbox{\Hypertarget{classkinematics_1_1pose_a3b4e6c02ccb6479834fafebff24855eb}\label{classkinematics_1_1pose_a3b4e6c02ccb6479834fafebff24855eb}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!isnum@{isnum}}
+\index{isnum@{isnum}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{isnum()}{isnum()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::isnum (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+有効判定 
+
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1pose_a3b4e6c02ccb6479834fafebff24855eb_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1pose_a4b42e075aac59b522754d89ce8c7f952}\label{classkinematics_1_1pose_a4b42e075aac59b522754d89ce8c7f952}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!operator$\ast$@{operator$\ast$}}
+\index{operator$\ast$@{operator$\ast$}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator$\ast$()}{operator*()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::operator$\ast$ (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+相対姿勢で座標系変換 
+
+結合規則は左から右へ 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em obj} & 相対姿勢(this座標系表現) \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classkinematics_1_1pose_a5b862d808e53d177522083133675b8a8}\label{classkinematics_1_1pose_a5b862d808e53d177522083133675b8a8}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!operator/@{operator/}}
+\index{operator/@{operator/}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator/()}{operator/()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::operator/ (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+2座標系間の相対姿勢取得 
+
+入力姿勢(obj)から相対姿勢(ret)をかけたときに現在姿勢(this)となる(this=obj$\ast$ret) 
+\begin{DoxyParams}[1]{引数}
+\mbox{\texttt{ in}}  & {\em obj} & 入力姿勢 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+相対姿勢(obj座標系表現) 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classkinematics_1_1pose_ae546c1daffe2160f815816393095cae6}\label{classkinematics_1_1pose_ae546c1daffe2160f815816393095cae6}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+代入 
+
+\mbox{\Hypertarget{classkinematics_1_1pose_af7e12ff799eed1951c3a02c693042f2b}\label{classkinematics_1_1pose_af7e12ff799eed1951c3a02c693042f2b}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!operator==@{operator==}}
+\index{operator==@{operator==}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&}]{obj }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+一致判定 
+
+\mbox{\Hypertarget{classkinematics_1_1pose_af8be4fd7c99dca62a5e3fb5ac533c102}\label{classkinematics_1_1pose_af8be4fd7c99dca62a5e3fb5ac533c102}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!projection@{projection}}
+\index{projection@{projection}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{projection()}{projection()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+double \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::projection (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{ray,  }\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{surf,  }\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{normal }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ベクトルの平面への写像 
+
+
+\begin{DoxyParams}{引数}
+{\em ray} & \mbox{[}in,out\mbox{]} 射影ベクトル \\
+\hline
+{\em surf} & \mbox{[}in\mbox{]} 平面座標系 \\
+\hline
+{\em normal} & \mbox{[}in\mbox{]} 平面の法線指定（平面座標系表現） default\+:z軸 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+射影ベクトルの延伸倍率 
+\end{DoxyReturn}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1pose_af8be4fd7c99dca62a5e3fb5ac533c102_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1pose_af8be4fd7c99dca62a5e3fb5ac533c102_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1pose_a29e96c04dd74e088c00a522f4b6cbcf9}\label{classkinematics_1_1pose_a29e96c04dd74e088c00a522f4b6cbcf9}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!rotate@{rotate}}
+\index{rotate@{rotate}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{rotate()}{rotate()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::rotate (\begin{DoxyParamCaption}\item[{int}]{axis,  }\item[{T}]{angle }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+指定軸で回転させて姿勢変更 
+
+
+\begin{DoxyParams}{引数}
+{\em axis} & 回転軸(this座標系) \\
+\hline
+{\em angle} & 回転角\mbox{[}rad\mbox{]} \\
+\hline
+\end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=346pt]{classkinematics_1_1pose_a29e96c04dd74e088c00a522f4b6cbcf9_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1pose_a5753d2354ac97ba94ffb127cf03bb330}\label{classkinematics_1_1pose_a5753d2354ac97ba94ffb127cf03bb330}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!surface@{surface}}
+\index{surface@{surface}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{surface()}{surface()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::surface (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$}]{normal,  }\item[{T}]{yaw = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+法線方向指定による平面オブジェクト生成 
+
+\mbox{[}in\mbox{]} normal 法線ベクトル（this座標系）
+
+\mbox{[}in\mbox{]} yaw 法線ベクトルを合わせたあとの\+Z軸回転\mbox{[}rad\mbox{]} 呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1pose_a5753d2354ac97ba94ffb127cf03bb330_cgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1pose_adb321e96192e012af765b09bdffc94a3}\label{classkinematics_1_1pose_adb321e96192e012af765b09bdffc94a3}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!Trans\_pnt@{Trans\_pnt}}
+\index{Trans\_pnt@{Trans\_pnt}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Trans\_pnt()}{Trans\_pnt()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::Trans\+\_\+pnt (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \&}]{pnt,  }\item[{const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&}]{obj = {\ttfamily \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+点の座標系表現(pnt)を別座標系(obj)表現へ変換 
+
+
+\begin{DoxyParams}{引数}
+{\em pnt} & \mbox{[}in\mbox{]} 3次元点位置(this座標系) \\
+\hline
+{\em obj} & \mbox{[}in\mbox{]} 変換先座標系 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+変換後3次元点位置(obj座標系) 
+\end{DoxyReturn}
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1pose_adb321e96192e012af765b09bdffc94a3_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1pose_adb321e96192e012af765b09bdffc94a3_icgraph}
+\end{center}
+\end{figure}
+\mbox{\Hypertarget{classkinematics_1_1pose_abd44246a228f5d32aa098b1f93d057dc}\label{classkinematics_1_1pose_abd44246a228f5d32aa098b1f93d057dc}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!Trans\_vec@{Trans\_vec}}
+\index{Trans\_vec@{Trans\_vec}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{Trans\_vec()}{Trans\_vec()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::Trans\+\_\+vec (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$ T $>$ \&}]{pnt,  }\item[{const \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ \&}]{obj = {\ttfamily \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$T$>$()} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+ベクトルの座標系表現(pnt)を別座標系(obj)表現へ変換 
+
+
+\begin{DoxyParams}{引数}
+{\em pnt} & \mbox{[}in\mbox{]} 3次元点位置(this座標系) \\
+\hline
+{\em obj} & \mbox{[}in\mbox{]} 変換先座標系 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{戻り値}
+変換後ベクトル(obj座標系) 
+\end{DoxyReturn}
+呼び出し関係図\+:\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1pose_abd44246a228f5d32aa098b1f93d057dc_cgraph}
+\end{center}
+\end{figure}
+被呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1pose_abd44246a228f5d32aa098b1f93d057dc_icgraph}
+\end{center}
+\end{figure}
+
+
+\doxysubsection{メンバ詳解}
+\mbox{\Hypertarget{classkinematics_1_1pose_a7f5b8ef02610a3039518fda4911f42f3}\label{classkinematics_1_1pose_a7f5b8ef02610a3039518fda4911f42f3}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!p@{p}}
+\index{p@{p}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{p}{p}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec3}{vec3}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::p}
+
+\mbox{\Hypertarget{classkinematics_1_1pose_af93ee52cbf52cc767193a7ca3145da40}\label{classkinematics_1_1pose_af93ee52cbf52cc767193a7ca3145da40}} 
+\index{kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}!q@{q}}
+\index{q@{q}!kinematics::pose$<$ T $>$@{kinematics::pose$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{q}{q}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$T$>$ \mbox{\hyperlink{classkinematics_1_1pose}{kinematics\+::pose}}$<$ T $>$\+::q}
+
+
+
+このクラス詳解は次のファイルから抽出されました\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{pose_8h}{pose.\+h}}\end{DoxyCompactItemize}

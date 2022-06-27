@@ -1,0 +1,8 @@
+<map id="kinematics::camera::image2pos" name="kinematics::camera::image2pos">
+<area shape="rect" id="node1" title="画像座標系での位置を基準座標系に変換" alt="" coords="5,23,156,65"/>
+<area shape="rect" id="node2" href="$classkinematics_1_1pose.html#aac6dd50a728d773cabfa952969dfdf67" title="ベクトルの平面への写像" alt="" coords="204,5,411,32"/>
+<area shape="rect" id="node6" href="$classkinematics_1_1pose.html#adb321e96192e012af765b09bdffc94a3" title="点の座標系表現(pnt)を別座標系(obj)表現へ変換" alt="" coords="460,56,664,83"/>
+<area shape="rect" id="node3" href="$classkinematics_1_1pose.html#abd44246a228f5d32aa098b1f93d057dc" title="ベクトルの座標系表現(pnt)を別座標系(obj)表現へ変換" alt="" coords="459,5,665,32"/>
+<area shape="rect" id="node4" href="$classkinematics_1_1vec4.html#a46f3542b20cdc1931331ebc3773c054f" title="ベクトルの基準座標への変換" alt="" coords="713,31,889,57"/>
+<area shape="rect" id="node5" href="$classkinematics_1_1vec4.html#ac67fcb111862198f207044b0ee4a4f4d" title="共役クォータニオン" alt="" coords="937,31,1105,57"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="kinematics::Quaternion" name="kinematics::Quaternion">
+<area shape="rect" id="node1" title=" " alt="" coords="488,35,663,61"/>
+<area shape="rect" id="node2" href="$namespacekinematics.html#a19e1fdaf603783e90d2b720ffaf44fe9" title=" " alt="" coords="277,5,410,32"/>
+<area shape="rect" id="node4" href="$classkinematics_1_1rviz__publisher.html#ab9a4bacdf94e2b7b55615a296c20b00d" title="Axesの配信" alt="" coords="247,57,440,98"/>
+<area shape="rect" id="node3" href="$namespacekinematics.html#a889092c69713237a825813bff1b2754e" title="直方体マーカデータの生成" alt="" coords="12,5,192,32"/>
+<area shape="rect" id="node5" href="$classkinematics_1_1rviz__publisher.html#a08c84c260f03208ad5be00d7a456451f" title="Axesの配信" alt="" coords="5,57,199,98"/>
+</map>

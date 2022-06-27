@@ -1,0 +1,12 @@
+<map id="kinematics::CameraMarker" name="kinematics::CameraMarker">
+<area shape="rect" id="node1" title="カメラマーカ生成" alt="" coords="5,81,204,108"/>
+<area shape="rect" id="node2" href="$namespacekinematics.html#a2a10482de8af9a97ec07626afab91ccb" title=" " alt="" coords="267,5,441,32"/>
+<area shape="rect" id="node3" href="$namespacekinematics.html#a860ece298f9e1e8b340564342e329b8b" title="点マーカ生成" alt="" coords="264,56,444,83"/>
+<area shape="rect" id="node5" href="$namespacekinematics.html#adab0952a4f1f19fbeb336b0e0cec449d" title="矢印マーカ生成（隣接データを接続）" alt="" coords="253,107,455,133"/>
+<area shape="rect" id="node8" href="$classkinematics_1_1pose.html#adb321e96192e012af765b09bdffc94a3" title="点の座標系表現(pnt)を別座標系(obj)表現へ変換" alt="" coords="252,169,456,196"/>
+<area shape="rect" id="node4" href="$namespacekinematics.html#ade4d392cfe4bb49535c107a72324e6e3" title=" " alt="" coords="539,43,674,69"/>
+<area shape="rect" id="node6" href="$namespacekinematics.html#a4a6a732e6241604a71c4efe8b29e6e1b" title="直線マーカ生成（データを順番に接続しループ）" alt="" coords="504,93,709,120"/>
+<area shape="rect" id="node7" href="$namespacekinematics.html#a0ecba94cad8e09e623fd1c04aea31c29" title="線マーカ生成" alt="" coords="757,119,932,145"/>
+<area shape="rect" id="node9" href="$classkinematics_1_1vec4.html#a46f3542b20cdc1931331ebc3773c054f" title="ベクトルの基準座標への変換" alt="" coords="519,195,695,221"/>
+<area shape="rect" id="node10" href="$classkinematics_1_1vec4.html#ac67fcb111862198f207044b0ee4a4f4d" title="共役クォータニオン" alt="" coords="761,195,929,221"/>
+</map>

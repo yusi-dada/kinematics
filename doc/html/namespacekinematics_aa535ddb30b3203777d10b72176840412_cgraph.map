@@ -1,0 +1,4 @@
+<map id="kinematics::InitMarker" name="kinematics::InitMarker">
+<area shape="rect" id="node1" title="初期化マーカデータの生成" alt="" coords="5,5,173,32"/>
+<area shape="rect" id="node2" href="$namespacekinematics.html#a93b28f6e52d0d69deeb71cf7f1489e1d" title="マーカの初期化指令" alt="" coords="221,5,381,32"/>
+</map>

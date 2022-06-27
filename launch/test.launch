@@ -1,0 +1,16 @@
+<?xml version="1.0" ?>
+
+<launch>
+
+  <arg name="this_package" default="kinematics"/>
+  <arg name="program_name" default="test_rviz"/>
+
+  <node name = "$(arg this_package)_$(arg program_name)"
+        pkg  = "$(arg this_package)"
+        type = "$(arg this_package)_$(arg program_name)"/>
+
+  <node name = "rviz"
+        pkg  = "rviz"
+        type = "rviz"
+        args = "-d $(find kinematics)/launch/$(arg program_name).rviz" required="true" />
+</launch>

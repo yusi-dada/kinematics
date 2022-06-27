@@ -1,0 +1,9 @@
+<map id="kinematics::pose::projection" name="kinematics::pose::projection">
+<area shape="rect" id="node1" title="ベクトルの平面への写像" alt="" coords="688,101,895,127"/>
+<area shape="rect" id="node2" href="$classkinematics_1_1camera.html#a7ec8e377bb756e6ac743642e1057cff5" title="画像座標系での位置を基準座標系に変換" alt="" coords="489,60,640,101"/>
+<area shape="rect" id="node6" href="$classkinematics_1_1camera.html#ae830c47ffd206fa0d2eb8dafd5c11aa2" title="基準座標系での位置を画像座標系に変換" alt="" coords="489,125,640,167"/>
+<area shape="rect" id="node3" href="$classkinematics_1_1camera.html#a1630594f64c958650bca75f1b26c3ff7" title="画像座標系での位置を基準座標系に変換" alt="" coords="256,5,407,47"/>
+<area shape="rect" id="node4" href="$namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,71,441,98"/>
+<area shape="rect" id="node5" href="$classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,71,173,98"/>
+<area shape="rect" id="node7" href="$classkinematics_1_1camera.html#a88151fef6b9a103188bddca18000a465" title="基準座標系での位置を画像座標系に変換" alt="" coords="256,125,407,167"/>
+</map>

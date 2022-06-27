@@ -1,0 +1,166 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "https://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/xhtml;charset=UTF-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=9"/>
+<meta name="generator" content="Doxygen 1.8.17"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<title>kinematics: pose_array.h ソースファイル</title>
+<link href="tabs.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript" src="dynsections.js"></script>
+<link href="search/search.css" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="search/searchdata.js"></script>
+<script type="text/javascript" src="search/search.js"></script>
+<link href="doxygen.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="top"><!-- do not remove this div, it is closed by doxygen! -->
+<div id="titlearea">
+<table cellspacing="0" cellpadding="0">
+ <tbody>
+ <tr style="height: 56px;">
+  <td id="projectalign" style="padding-left: 0.5em;">
+   <div id="projectname">kinematics
+   </div>
+  </td>
+ </tr>
+ </tbody>
+</table>
+</div>
+<!-- end header part -->
+<!-- 構築: Doxygen 1.8.17 -->
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+var searchBox = new SearchBox("searchBox", "search",false,'検索');
+/* @license-end */
+</script>
+<script type="text/javascript" src="menudata.js"></script>
+<script type="text/javascript" src="menu.js"></script>
+<script type="text/javascript">
+/* @license magnet:?xt=urn:btih:cf05388f2679ee054f2beb29a391d25f4e673ac3&amp;dn=gpl-2.0.txt GPL-v2 */
+$(function() {
+  initMenu('',true,false,'search.php','検索');
+  $(document).ready(function() { init_search(); });
+});
+/* @license-end */</script>
+<div id="main-nav"></div>
+<!-- window showing the filter options -->
+<div id="MSearchSelectWindow"
+     onmouseover="return searchBox.OnSearchSelectShow()"
+     onmouseout="return searchBox.OnSearchSelectHide()"
+     onkeydown="return searchBox.OnSearchSelectKey(event)">
+</div>
+
+<!-- iframe showing the search results (closed by default) -->
+<div id="MSearchResultsWindow">
+<iframe src="javascript:void(0)" frameborder="0" 
+        name="MSearchResults" id="MSearchResults">
+</iframe>
+</div>
+
+<div id="nav-path" class="navpath">
+  <ul>
+<li class="navelem"><a class="el" href="dir_d44c64559bbebec7f509842c48db8b23.html">include</a></li><li class="navelem"><a class="el" href="dir_4815c66ebd24ed661f5ddc129d935e04.html">kinematics</a></li>  </ul>
+</div>
+</div><!-- top -->
+<div class="header">
+  <div class="headertitle">
+<div class="title">pose_array.h</div>  </div>
+</div><!--header-->
+<div class="contents">
+<a href="pose__array_8h.html">[詳解]</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#pragma once</span></div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="pose_8h.html">pose.h</a>&quot;</span></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespacekinematics.html">kinematics</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classkinematics_1_1pose__array.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classkinematics_1_1pose__array.html">pose_array</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">   13</a></span>&#160;        std::vector&lt;pose&lt;T&gt;&gt; <a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classkinematics_1_1pose__array.html#a1bd5fba8cd02fa3ad1b0af919cac6cc4">   15</a></span>&#160;        <a class="code" href="classkinematics_1_1pose__array.html#a1bd5fba8cd02fa3ad1b0af919cac6cc4">pose_array</a>(){}</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="classkinematics_1_1pose__array.html#add8d65d34c81ec3f008a533a389b6135">   24</a></span>&#160;        <a class="code" href="classkinematics_1_1pose__array.html#add8d65d34c81ec3f008a533a389b6135">pose_array</a>(std::vector&lt;<a class="code" href="classkinematics_1_1vec3.html">vec3&lt;T&gt;</a>&gt; pos, std::vector&lt;<a class="code" href="classkinematics_1_1vec3.html">vec3&lt;T&gt;</a>&gt; <a class="code" href="namespacekinematics.html#a576e59c2a04271bac0fd8ddd80e01d38">alfa</a>, T theta[], <a class="code" href="classkinematics_1_1pose.html">pose&lt;T&gt;</a> posI=<a class="code" href="classkinematics_1_1pose.html">pose&lt;T&gt;</a>())</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordtype">int</span> linksize = pos.size();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            assert(linksize==<a class="code" href="namespacekinematics.html#a576e59c2a04271bac0fd8ddd80e01d38">alfa</a>.size());</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            assert(linksize&gt;0);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;            <a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>.resize(linksize+1);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>[0] = posI;            </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;linksize; i++)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                <a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>[i+1] = <a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>[i] * <a class="code" href="classkinematics_1_1pose.html">pose&lt;T&gt;</a>(pos[i], <a class="code" href="classkinematics_1_1vec4.html">vec4&lt;T&gt;</a>(<a class="code" href="namespacekinematics.html#a576e59c2a04271bac0fd8ddd80e01d38">alfa</a>[i], theta[i]));</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="classkinematics_1_1pose__array.html#a7202b45a8d461eff53e169b83cb6ce2a">   39</a></span>&#160;        <a class="code" href="classkinematics_1_1pose__array.html">pose_array</a> <a class="code" href="classkinematics_1_1pose__array.html#a7202b45a8d461eff53e169b83cb6ce2a">operator=</a>(<span class="keyword">const</span> <a class="code" href="classkinematics_1_1pose__array.html">pose_array&lt;T&gt;</a>&amp; obj)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            this-&gt;pa = obj.<a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keywordflow">return</span> (*<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="classkinematics_1_1pose__array.html#ad2224bf40ae7b534ac9c220cfc8b769c">   48</a></span>&#160;        std::shared_ptr&lt;pose&lt;T&gt;&gt; <a class="code" href="classkinematics_1_1pose__array.html#ad2224bf40ae7b534ac9c220cfc8b769c">operator[]</a>(<span class="keywordtype">int</span> n)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            <span class="keywordtype">int</span> pa_size = this-&gt;pa.size();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            n = (n&gt;=0) ? (n) : (pa_size+n);           </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            assert(0&lt;=n &amp;&amp; n&lt;pa_size);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            <span class="keywordflow">return</span> std::make_shared&lt;pose&lt;T&gt;&gt;(this-&gt;pa[n].p, this-&gt;pa[n].q);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno"><a class="line" href="classkinematics_1_1pose__array.html#ad24355de181d039e70e6eb976de5f221">   59</a></span>&#160;        std::vector&lt;vec3&lt;T&gt;&gt; <a class="code" href="classkinematics_1_1pose__array.html#ad24355de181d039e70e6eb976de5f221">p</a>()</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            <span class="keywordtype">int</span> N = <a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>.size();</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            std::vector&lt;vec3&lt;T&gt;&gt; ret(N);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;N; i++)</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                ret[i]=<a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>[i].<a class="code" href="classkinematics_1_1pose__array.html#ad24355de181d039e70e6eb976de5f221">p</a>;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            <span class="keywordflow">return</span> ret;            </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="classkinematics_1_1pose__array.html#a000df0a2426b03ba0173a213b0d0b9fd">   71</a></span>&#160;        std::vector&lt;vec4&lt;T&gt;&gt; <a class="code" href="classkinematics_1_1pose__array.html#a000df0a2426b03ba0173a213b0d0b9fd">q</a>()</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            <span class="keywordtype">int</span> N = <a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>.size();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            std::vector&lt;vec4&lt;T&gt;&gt; ret(N);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <span class="keywordflow">for</span>(<span class="keywordtype">int</span> i=0; i&lt;N; i++)</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                ret[i]=<a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>[i].<a class="code" href="classkinematics_1_1pose__array.html#a000df0a2426b03ba0173a213b0d0b9fd">q</a>;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            <span class="keywordflow">return</span> ret;            </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;};</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;<span class="keyword">template</span> &lt;<span class="keyword">typename</span> T&gt;</div>
+<div class="line"><a name="l00085"></a><span class="lineno"><a class="line" href="namespacekinematics.html#a8cbb0878bdbcd8d47db80c80a69d53ce">   85</a></span>&#160;<a class="code" href="classkinematics_1_1pose__array.html">pose_array&lt;T&gt;</a>&amp; <a class="code" href="namespacekinematics.html#a5b0cc50ef6e863f0300212162c85ae61">operator&lt;&lt;</a>(<a class="code" href="classkinematics_1_1pose__array.html">pose_array&lt;T&gt;</a>&amp; obj1, <span class="keyword">const</span> <a class="code" href="classkinematics_1_1pose.html">pose&lt;T&gt;</a>&amp; obj2)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;{</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    <a class="code" href="classkinematics_1_1pose.html">pose&lt;T&gt;</a> tmp = obj1.<a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>.back();</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;    obj1.<a class="code" href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">pa</a>.push_back(tmp*obj2);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;    <span class="keywordflow">return</span> (obj1);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;}</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;}</div>
+</div><!-- fragment --></div><!-- contents -->
+<div class="ttc" id="apose_8h_html"><div class="ttname"><a href="pose_8h.html">pose.h</a></div></div>
+<div class="ttc" id="aclasskinematics_1_1pose__array_html_a000df0a2426b03ba0173a213b0d0b9fd"><div class="ttname"><a href="classkinematics_1_1pose__array.html#a000df0a2426b03ba0173a213b0d0b9fd">kinematics::pose_array::q</a></div><div class="ttdeci">std::vector&lt; vec4&lt; T &gt; &gt; q()</div><div class="ttdoc">座標系姿勢を抽出</div><div class="ttdef"><b>Definition:</b> pose_array.h:71</div></div>
+<div class="ttc" id="aclasskinematics_1_1pose__array_html"><div class="ttname"><a href="classkinematics_1_1pose__array.html">kinematics::pose_array</a></div><div class="ttdef"><b>Definition:</b> pose_array.h:10</div></div>
+<div class="ttc" id="aclasskinematics_1_1vec4_html"><div class="ttname"><a href="classkinematics_1_1vec4.html">kinematics::vec4</a></div><div class="ttdef"><b>Definition:</b> vec4.h:9</div></div>
+<div class="ttc" id="aclasskinematics_1_1pose_html"><div class="ttname"><a href="classkinematics_1_1pose.html">kinematics::pose</a></div><div class="ttdef"><b>Definition:</b> pose.h:8</div></div>
+<div class="ttc" id="aclasskinematics_1_1pose__array_html_a11eb35b28c65b69baf573fd05a5608d7"><div class="ttname"><a href="classkinematics_1_1pose__array.html#a11eb35b28c65b69baf573fd05a5608d7">kinematics::pose_array::pa</a></div><div class="ttdeci">std::vector&lt; pose&lt; T &gt; &gt; pa</div><div class="ttdef"><b>Definition:</b> pose_array.h:13</div></div>
+<div class="ttc" id="aclasskinematics_1_1pose__array_html_ad2224bf40ae7b534ac9c220cfc8b769c"><div class="ttname"><a href="classkinematics_1_1pose__array.html#ad2224bf40ae7b534ac9c220cfc8b769c">kinematics::pose_array::operator[]</a></div><div class="ttdeci">std::shared_ptr&lt; pose&lt; T &gt; &gt; operator[](int n)</div><div class="ttdoc">インデックスによるリンク取得（python方式）</div><div class="ttdef"><b>Definition:</b> pose_array.h:48</div></div>
+<div class="ttc" id="aclasskinematics_1_1pose__array_html_ad24355de181d039e70e6eb976de5f221"><div class="ttname"><a href="classkinematics_1_1pose__array.html#ad24355de181d039e70e6eb976de5f221">kinematics::pose_array::p</a></div><div class="ttdeci">std::vector&lt; vec3&lt; T &gt; &gt; p()</div><div class="ttdoc">座標系原点位置を抽出</div><div class="ttdef"><b>Definition:</b> pose_array.h:59</div></div>
+<div class="ttc" id="aclasskinematics_1_1pose__array_html_a1bd5fba8cd02fa3ad1b0af919cac6cc4"><div class="ttname"><a href="classkinematics_1_1pose__array.html#a1bd5fba8cd02fa3ad1b0af919cac6cc4">kinematics::pose_array::pose_array</a></div><div class="ttdeci">pose_array()</div><div class="ttdef"><b>Definition:</b> pose_array.h:15</div></div>
+<div class="ttc" id="anamespacekinematics_html"><div class="ttname"><a href="namespacekinematics.html">kinematics</a></div><div class="ttdef"><b>Definition:</b> camera.h:4</div></div>
+<div class="ttc" id="aclasskinematics_1_1pose__array_html_add8d65d34c81ec3f008a533a389b6135"><div class="ttname"><a href="classkinematics_1_1pose__array.html#add8d65d34c81ec3f008a533a389b6135">kinematics::pose_array::pose_array</a></div><div class="ttdeci">pose_array(std::vector&lt; vec3&lt; T &gt;&gt; pos, std::vector&lt; vec3&lt; T &gt;&gt; alfa, T theta[], pose&lt; T &gt; posI=pose&lt; T &gt;())</div><div class="ttdoc">ベース座標系から相対変換によるリンク構造生成</div><div class="ttdef"><b>Definition:</b> pose_array.h:24</div></div>
+<div class="ttc" id="anamespacekinematics_html_a576e59c2a04271bac0fd8ddd80e01d38"><div class="ttname"><a href="namespacekinematics.html#a576e59c2a04271bac0fd8ddd80e01d38">kinematics::alfa</a></div><div class="ttdeci">std::vector&lt; vec3&lt; double &gt; &gt; alfa()</div><div class="ttdef"><b>Definition:</b> kinematics.h:21</div></div>
+<div class="ttc" id="aclasskinematics_1_1vec3_html"><div class="ttname"><a href="classkinematics_1_1vec3.html">kinematics::vec3</a></div><div class="ttdef"><b>Definition:</b> vec3.h:11</div></div>
+<div class="ttc" id="anamespacekinematics_html_a5b0cc50ef6e863f0300212162c85ae61"><div class="ttname"><a href="namespacekinematics.html#a5b0cc50ef6e863f0300212162c85ae61">kinematics::operator&lt;&lt;</a></div><div class="ttdeci">std::ostream &amp; operator&lt;&lt;(std::ostream &amp;stream, pose&lt; T &gt; &amp;obj)</div><div class="ttdef"><b>Definition:</b> pose.h:165</div></div>
+<div class="ttc" id="aclasskinematics_1_1pose__array_html_a7202b45a8d461eff53e169b83cb6ce2a"><div class="ttname"><a href="classkinematics_1_1pose__array.html#a7202b45a8d461eff53e169b83cb6ce2a">kinematics::pose_array::operator=</a></div><div class="ttdeci">pose_array operator=(const pose_array&lt; T &gt; &amp;obj)</div><div class="ttdoc">代入</div><div class="ttdef"><b>Definition:</b> pose_array.h:39</div></div>
+<!-- start footer part -->
+<hr class="footer"/><address class="footer"><small>
+構築: &#160;<a href="http://www.doxygen.org/index.html">
+<img class="footer" src="doxygen.png" alt="doxygen"/>
+</a> 1.8.17
+</small></address>
+</body>
+</html>
