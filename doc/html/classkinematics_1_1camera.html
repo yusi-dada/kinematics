@@ -91,9 +91,9 @@ kinematics::camera&lt; T &gt; 連携図</div>
 公開メンバ関数</h2></td></tr>
 <tr class="memitem:af7c8c2fc2c19ed247a2ebf085cf5e2c7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1camera.html#af7c8c2fc2c19ed247a2ebf085cf5e2c7">camera</a> ()</td></tr>
 <tr class="separator:af7c8c2fc2c19ed247a2ebf085cf5e2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a42fb1fef38a972a1f9fd4c0ae7239154"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1camera.html#a42fb1fef38a972a1f9fd4c0ae7239154">camera</a> (T tanH_, T tanV_, <a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt; p0_)</td></tr>
-<tr class="memdesc:a42fb1fef38a972a1f9fd4c0ae7239154"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラモデル生成  <a href="classkinematics_1_1camera.html#a42fb1fef38a972a1f9fd4c0ae7239154">[詳解]</a><br /></td></tr>
-<tr class="separator:a42fb1fef38a972a1f9fd4c0ae7239154"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7b0e40ec5ed20d1b872762c528561a02"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1camera.html#a7b0e40ec5ed20d1b872762c528561a02">camera</a> (T tanH_, T tanV_, <a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt; p0_, T yaw=0)</td></tr>
+<tr class="memdesc:a7b0e40ec5ed20d1b872762c528561a02"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラモデル生成  <a href="classkinematics_1_1camera.html#a7b0e40ec5ed20d1b872762c528561a02">[詳解]</a><br /></td></tr>
+<tr class="separator:a7b0e40ec5ed20d1b872762c528561a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a46f3de670fedd81dd2aad748aac368d4"><td class="memTemplParams" colspan="2">template&lt;typename U &gt; </td></tr>
 <tr class="memitem:a46f3de670fedd81dd2aad748aac368d4"><td class="memTemplItemLeft" align="right" valign="top"><a class="el" href="classkinematics_1_1camera.html">camera</a>&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classkinematics_1_1camera.html#a46f3de670fedd81dd2aad748aac368d4">operator=</a> (const <a class="el" href="classkinematics_1_1camera.html">camera</a>&lt; U &gt; &amp;obj)</td></tr>
 <tr class="memdesc:a46f3de670fedd81dd2aad748aac368d4"><td class="mdescLeft">&#160;</td><td class="mdescRight">代入  <a href="classkinematics_1_1camera.html#a46f3de670fedd81dd2aad748aac368d4">[詳解]</a><br /></td></tr>
@@ -163,8 +163,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="a42fb1fef38a972a1f9fd4c0ae7239154"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a42fb1fef38a972a1f9fd4c0ae7239154">&#9670;&nbsp;</a></span>camera() <span class="overload">[2/2]</span></h2>
+<a id="a7b0e40ec5ed20d1b872762c528561a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7b0e40ec5ed20d1b872762c528561a02">&#9670;&nbsp;</a></span>camera() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -190,7 +190,13 @@ template&lt;typename T &gt; </div>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt;&#160;</td>
-          <td class="paramname"><em>p0_</em>&#160;</td>
+          <td class="paramname"><em>p0_</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">T&#160;</td>
+          <td class="paramname"><em>yaw</em> = <code>0</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -209,9 +215,20 @@ template&lt;typename T &gt; </div>
 <dl class="params"><dt>引数</dt><dd>
   <table class="params">
     <tr><td class="paramdir">[in]</td><td class="paramname">p0_</td><td>カメラ座標系 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">yaw</td><td>カメラ座標系で視線方向の回転 </td></tr>
   </table>
   </dd>
 </dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classkinematics_1_1camera_a7b0e40ec5ed20d1b872762c528561a02_cgraph.png" border="0" usemap="#classkinematics_1_1camera_a7b0e40ec5ed20d1b872762c528561a02_cgraph" alt=""/></div>
+<map name="classkinematics_1_1camera_a7b0e40ec5ed20d1b872762c528561a02_cgraph" id="classkinematics_1_1camera_a7b0e40ec5ed20d1b872762c528561a02_cgraph">
+<area shape="rect" title="カメラモデル生成" alt="" coords="5,5,156,47"/>
+<area shape="rect" href="classkinematics_1_1pose.html#a29e96c04dd74e088c00a522f4b6cbcf9" title="指定軸で回転させて姿勢変更" alt="" coords="204,13,384,39"/>
+<area shape="rect" href="namespacekinematics.html#acf77fa7f71c754866310023b103bf757" title=" " alt="" coords="432,13,559,39"/>
+</map>
+</div>
 
 </div>
 </div>
@@ -276,7 +293,7 @@ template&lt;typename T &gt; </div>
 <area shape="rect" title="画像座標系からカメラ座標系への変換" alt="" coords="688,35,839,76"/>
 <area shape="rect" href="classkinematics_1_1camera.html#a7ec8e377bb756e6ac743642e1057cff5" title="画像座標系での位置を基準座標系に変換" alt="" coords="489,35,640,76"/>
 <area shape="rect" href="classkinematics_1_1camera.html#a1630594f64c958650bca75f1b26c3ff7" title="画像座標系での位置を基準座標系に変換" alt="" coords="256,5,407,47"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,71,441,98"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,71,441,98"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,71,173,98"/>
 </map>
 </div>
@@ -426,7 +443,7 @@ template&lt;typename T &gt; </div>
 <map name="classkinematics_1_1camera_a7ec8e377bb756e6ac743642e1057cff5_icgraph" id="classkinematics_1_1camera_a7ec8e377bb756e6ac743642e1057cff5_icgraph">
 <area shape="rect" title="画像座標系での位置を基準座標系に変換" alt="" coords="489,35,640,76"/>
 <area shape="rect" href="classkinematics_1_1camera.html#a1630594f64c958650bca75f1b26c3ff7" title="画像座標系での位置を基準座標系に変換" alt="" coords="256,5,407,47"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,71,441,98"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,71,441,98"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,71,173,98"/>
 </map>
 </div>

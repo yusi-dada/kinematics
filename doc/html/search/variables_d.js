@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['y_224',['y',['../classkinematics_1_1vec3.html#a9af4cd8a20aaf463323489da71a20f0a',1,'kinematics::vec3::y()'],['../classkinematics_1_1vec4.html#a51135392a56f1b0f1d677b4c605b8ae9',1,'kinematics::vec4::y()']]]
+  ['x_233',['x',['../classkinematics_1_1vec3.html#a9e9261f4860b07c8805b810c0bec6860',1,'kinematics::vec3::x()'],['../classkinematics_1_1vec4.html#a3973b2748ef043e52321568554fa33bf',1,'kinematics::vec4::x()']]]
 ];

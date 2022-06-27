@@ -10,5 +10,5 @@
 <area shape="rect" id="node8" href="$namespaceros__func.html#a7b62a9cd824d376006672bff9f0b3bf8" title="直方体マーカデータの生成" alt="" coords="731,147,894,174"/>
 <area shape="rect" id="node10" href="$namespaceros__func.html#a576f441325d402ff9498d32ec18972f8" title="ポリゴン生成（データを順番に接続しループ）" alt="" coords="721,198,904,225"/>
 <area shape="rect" id="node11" href="$namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="489,198,673,225"/>
-<area shape="rect" id="node12" href="$namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,223,441,250"/>
+<area shape="rect" id="node12" href="$namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,223,441,250"/>
 </map>

@@ -150,6 +150,7 @@ $(function() {
 <tr class="separator:aa52eba1f1b526428f9967e5c0d627641"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7c94f3e1db7073aa5bfecf3395950a1"><td class="memTemplParams" colspan="2">template&lt;typename T &gt; </td></tr>
 <tr class="memitem:ae7c94f3e1db7073aa5bfecf3395950a1"><td class="memTemplItemLeft" align="right" valign="top">void&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1">ImageSurfaceMarker</a> (visualization_msgs::MarkerArray &amp;ma, std::string frame, <a class="el" href="classkinematics_1_1camera.html">camera</a>&lt; T &gt; cam, <a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt;surf, std_msgs::ColorRGBA color=<a class="el" href="namespaceros__func.html#abe14e13e891377507cdc4495947e1e7f">ColorRGBA</a>(1, 1, 1, 1), std::string ns=&quot;&quot;)</td></tr>
+<tr class="memdesc:ae7c94f3e1db7073aa5bfecf3395950a1"><td class="mdescLeft">&#160;</td><td class="mdescRight">カメラ射影面マーカ生成  <a href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1">[詳解]</a><br /></td></tr>
 <tr class="separator:ae7c94f3e1db7073aa5bfecf3395950a1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">関数詳解</h2>
@@ -431,7 +432,7 @@ template&lt;typename T &gt; </div>
 <area shape="rect" href="namespaceros__func.html#aa52eba1f1b526428f9967e5c0d627641" title="カメラマーカ生成" alt="" coords="241,29,422,55"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,29,173,55"/>
 <area shape="rect" href="namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="489,79,673,106"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,79,441,106"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,79,441,106"/>
 </map>
 </div>
 
@@ -670,12 +671,20 @@ template&lt;typename T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
+
+<p>カメラ射影面マーカ生成 </p>
+<p>[in/out] ma マーカデータ</p>
+<p>[in] frame 基準フレーム</p>
+<p>[in] cam カメラ</p>
+<p>[in] surf 射影面</p>
+<p>[in] color 色データ</p>
+<p>[in] ns 名前空間 </p>
 <div class="dynheader">
 呼び出し関係図:</div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_cgraph.png" border="0" usemap="#namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_cgraph" alt=""/></div>
 <map name="namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_cgraph" id="namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_cgraph">
-<area shape="rect" title=" " alt="" coords="5,173,225,199"/>
+<area shape="rect" title="カメラ射影面マーカ生成" alt="" coords="5,173,225,199"/>
 <area shape="rect" href="classkinematics_1_1camera.html#a7ec8e377bb756e6ac743642e1057cff5" title="画像座標系での位置を基準座標系に変換" alt="" coords="290,89,441,131"/>
 <area shape="rect" href="namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="273,223,457,250"/>
 <area shape="rect" href="classkinematics_1_1camera.html#a6e3b5a31f60b1f36901b76b6c64e869a" title="画像座標系からカメラ座標系への変換" alt="" coords="533,5,684,47"/>
@@ -700,7 +709,7 @@ template&lt;typename T &gt; </div>
 <div class="dyncontent">
 <div class="center"><img src="namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_icgraph.png" border="0" usemap="#namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_icgraph" alt=""/></div>
 <map name="namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_icgraph" id="namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1_icgraph">
-<area shape="rect" title=" " alt="" coords="221,5,441,32"/>
+<area shape="rect" title="カメラ射影面マーカ生成" alt="" coords="221,5,441,32"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,5,173,32"/>
 </map>
 </div>
@@ -894,7 +903,7 @@ template&lt;typename T &gt; </div>
 <area shape="rect" href="namespaceros__func.html#a1fa3b6d33735e091b3870cb5dc3cd3cf" title="直方体のワイヤーフレームマーカ生成" alt="" coords="489,5,683,32"/>
 <area shape="rect" href="namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="494,56,678,83"/>
 <area shape="rect" href="namespaceros__func.html#aa52eba1f1b526428f9967e5c0d627641" title="カメラマーカ生成" alt="" coords="241,31,422,57"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,81,441,108"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,81,441,108"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,56,173,83"/>
 </map>
 </div>
@@ -983,7 +992,7 @@ template&lt;typename T &gt; </div>
 <area shape="rect" href="namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="494,107,678,133"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,56,173,83"/>
 <area shape="rect" href="namespaceros__func.html#aa52eba1f1b526428f9967e5c0d627641" title="カメラマーカ生成" alt="" coords="241,107,422,133"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,56,441,83"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,56,441,83"/>
 </map>
 </div>
 
@@ -1022,7 +1031,7 @@ template&lt;typename T &gt; </div>
 <area shape="rect" href="namespaceros__func.html#a7b62a9cd824d376006672bff9f0b3bf8" title="直方体マーカデータの生成" alt="" coords="731,147,894,174"/>
 <area shape="rect" href="namespaceros__func.html#a576f441325d402ff9498d32ec18972f8" title="ポリゴン生成（データを順番に接続しループ）" alt="" coords="721,198,904,225"/>
 <area shape="rect" href="namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="489,198,673,225"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,223,441,250"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,223,441,250"/>
 </map>
 </div>
 
@@ -1239,7 +1248,7 @@ template&lt;typename T &gt; </div>
 <area shape="rect" title="ポリゴン生成（データを順番に接続しループ）" alt="" coords="721,31,904,57"/>
 <area shape="rect" href="namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="489,31,673,57"/>
 <area shape="rect" href="namespaceros__func.html#aa52eba1f1b526428f9967e5c0d627641" title="カメラマーカ生成" alt="" coords="241,5,422,32"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,56,441,83"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,56,441,83"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,31,173,57"/>
 </map>
 </div>
@@ -1368,7 +1377,7 @@ template&lt;typename T &gt; </div>
 <map name="namespaceros__func_a42bd08518980cacbe215a4693f46191d_icgraph" id="namespaceros__func_a42bd08518980cacbe215a4693f46191d_icgraph">
 <area shape="rect" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="489,31,673,57"/>
 <area shape="rect" href="namespaceros__func.html#aa52eba1f1b526428f9967e5c0d627641" title="カメラマーカ生成" alt="" coords="241,5,422,32"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,56,441,83"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,56,441,83"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,31,173,57"/>
 </map>
 </div>
@@ -1476,7 +1485,7 @@ template&lt;typename T &gt; </div>
 <area shape="rect" href="namespaceros__func.html#a576f441325d402ff9498d32ec18972f8" title="ポリゴン生成（データを順番に接続しループ）" alt="" coords="721,31,904,57"/>
 <area shape="rect" href="namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="489,31,673,57"/>
 <area shape="rect" href="namespaceros__func.html#aa52eba1f1b526428f9967e5c0d627641" title="カメラマーカ生成" alt="" coords="241,5,422,32"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,56,441,83"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,56,441,83"/>
 <area shape="rect" href="classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,31,173,57"/>
 </map>
 </div>

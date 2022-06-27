@@ -80,12 +80,18 @@ kinematics::robot&lt; T &gt; 連携図</div>
 <div class="dyncontent">
 <div class="center"><img src="classkinematics_1_1robot__coll__graph.png" border="0" usemap="#kinematics_1_1robot_3_01T_01_4_coll__map" alt="Collaboration graph"/></div>
 <map name="kinematics_1_1robot_3_01T_01_4_coll__map" id="kinematics_1_1robot_3_01T_01_4_coll__map">
-<area shape="rect" title=" " alt="" coords="5,5,180,200"/>
+<area shape="rect" title=" " alt="" coords="5,5,180,303"/>
 </map>
 </div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 公開メンバ関数</h2></td></tr>
+<tr class="memitem:ab20831eddee9f26053a2ba5145263504"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#ab20831eddee9f26053a2ba5145263504">jnt2pos</a> (std::array&lt; T, <a class="el" href="robot_8h.html#a1d0bbe070024419adc7cce52ae1884e4">Naxis</a> &gt; jnt, <a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt; base=<a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt;())</td></tr>
+<tr class="memdesc:ab20831eddee9f26053a2ba5145263504"><td class="mdescLeft">&#160;</td><td class="mdescRight">関節角からリンク生成  <a href="classkinematics_1_1robot.html#ab20831eddee9f26053a2ba5145263504">[詳解]</a><br /></td></tr>
+<tr class="separator:ab20831eddee9f26053a2ba5145263504"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9b714a5af10196e961f00f91df12273c"><td class="memItemLeft" align="right" valign="top">std::array&lt; T, <a class="el" href="robot_8h.html#a1d0bbe070024419adc7cce52ae1884e4">Naxis</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a9b714a5af10196e961f00f91df12273c">pos2jnt</a> (<a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt; pos)</td></tr>
+<tr class="memdesc:a9b714a5af10196e961f00f91df12273c"><td class="mdescLeft">&#160;</td><td class="mdescRight">姿勢から関節角を生成  <a href="classkinematics_1_1robot.html#a9b714a5af10196e961f00f91df12273c">[詳解]</a><br /></td></tr>
+<tr class="separator:a9b714a5af10196e961f00f91df12273c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a522fd26640f89046a4c634a8f0e752d8"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a522fd26640f89046a4c634a8f0e752d8">robot</a> (T jnt[])</td></tr>
 <tr class="separator:a522fd26640f89046a4c634a8f0e752d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a68c55474507205bd03133bebb353fa77"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a68c55474507205bd03133bebb353fa77">command</a> (std::vector&lt; <a class="el" href="classkinematics_1_1vec3.html">vec3</a>&lt; T &gt;&gt; hand_points_, std::vector&lt; <a class="el" href="classkinematics_1_1vec3.html">vec3</a>&lt; T &gt;&gt; target_points_)</td></tr>
@@ -97,10 +103,20 @@ kinematics::robot&lt; T &gt; 連携図</div>
 公開変数類</h2></td></tr>
 <tr class="memitem:a9e8cab0b97d91d2b5827963eae500b02"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkinematics_1_1pose__array.html">pose_array</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a9e8cab0b97d91d2b5827963eae500b02">links</a></td></tr>
 <tr class="separator:a9e8cab0b97d91d2b5827963eae500b02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a07694eecbab69a6159c065e5febefb5a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a07694eecbab69a6159c065e5febefb5a">flange2hand</a></td></tr>
+<tr class="separator:a07694eecbab69a6159c065e5febefb5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac2ffba85e5b1127cb542ed66b7f44dfb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#ac2ffba85e5b1127cb542ed66b7f44dfb">handeye</a></td></tr>
+<tr class="separator:ac2ffba85e5b1127cb542ed66b7f44dfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3e587e12d021e5bb88a422d5ff05ebb1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt; *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a3e587e12d021e5bb88a422d5ff05ebb1">ref2cam</a></td></tr>
+<tr class="separator:a3e587e12d021e5bb88a422d5ff05ebb1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87546c4ce63ba3d73598fda2dc1fa963"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a87546c4ce63ba3d73598fda2dc1fa963">cameraYaw</a></td></tr>
+<tr class="separator:a87546c4ce63ba3d73598fda2dc1fa963"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4ad51bfb7af375d452b0ee0f5921491b"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a4ad51bfb7af375d452b0ee0f5921491b">tanH</a></td></tr>
+<tr class="separator:a4ad51bfb7af375d452b0ee0f5921491b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adce7e3d9b228834b0ade315e38c9711f"><td class="memItemLeft" align="right" valign="top">T&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#adce7e3d9b228834b0ade315e38c9711f">tanV</a></td></tr>
+<tr class="separator:adce7e3d9b228834b0ade315e38c9711f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af4ea1a028951a6fced7e1119d45b43fa"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkinematics_1_1camera.html">camera</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#af4ea1a028951a6fced7e1119d45b43fa">cam</a></td></tr>
 <tr class="separator:af4ea1a028951a6fced7e1119d45b43fa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acc8f9718e1a9d32c3c103cc329728741"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#acc8f9718e1a9d32c3c103cc329728741">flange2hand</a></td></tr>
-<tr class="separator:acc8f9718e1a9d32c3c103cc329728741"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7a398aed0be6ca1c9ea4b4f5e46bb42e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a7a398aed0be6ca1c9ea4b4f5e46bb42e">hand_surf</a></td></tr>
 <tr class="separator:a7a398aed0be6ca1c9ea4b4f5e46bb42e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ba631c24e7aaecef540ea83c4abe188"><td class="memItemLeft" align="right" valign="top">std::vector&lt; <a class="el" href="classkinematics_1_1vec3.html">vec3</a>&lt; T &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classkinematics_1_1robot.html#a6ba631c24e7aaecef540ea83c4abe188">hand_points</a></td></tr>
@@ -136,16 +152,6 @@ template&lt;typename T &gt; </div>
   </tr>
 </table>
 </div><div class="memdoc">
-<div class="dynheader">
-呼び出し関係図:</div>
-<div class="dyncontent">
-<div class="center"><img src="classkinematics_1_1robot_a522fd26640f89046a4c634a8f0e752d8_cgraph.png" border="0" usemap="#classkinematics_1_1robot_a522fd26640f89046a4c634a8f0e752d8_cgraph" alt=""/></div>
-<map name="classkinematics_1_1robot_a522fd26640f89046a4c634a8f0e752d8_cgraph" id="classkinematics_1_1robot_a522fd26640f89046a4c634a8f0e752d8_cgraph">
-<area shape="rect" title=" " alt="" coords="5,23,149,65"/>
-<area shape="rect" href="namespacekinematics.html#a576e59c2a04271bac0fd8ddd80e01d38" title=" " alt="" coords="201,5,328,32"/>
-<area shape="rect" href="namespacekinematics.html#a4b7f4ed6cbc458f6b92b0017f55a6b44" title=" " alt="" coords="197,56,332,83"/>
-</map>
-</div>
 
 </div>
 </div>
@@ -188,6 +194,99 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ab20831eddee9f26053a2ba5145263504"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab20831eddee9f26053a2ba5145263504">&#9670;&nbsp;</a></span>jnt2pos()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt;T&gt; <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::jnt2pos </td>
+          <td>(</td>
+          <td class="paramtype">std::array&lt; T, <a class="el" href="robot_8h.html#a1d0bbe070024419adc7cce52ae1884e4">Naxis</a> &gt;&#160;</td>
+          <td class="paramname"><em>jnt</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>base</em> = <code><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt;T&gt;()</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>関節角からリンク生成 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">jnt</td><td>関節角 </td></tr>
+    <tr><td class="paramdir">[in]</td><td class="paramname">base</td><td>ベース姿勢 </td></tr>
+  </table>
+  </dd>
+</dl>
+<div class="dynheader">
+呼び出し関係図:</div>
+<div class="dyncontent">
+<div class="center"><img src="classkinematics_1_1robot_ab20831eddee9f26053a2ba5145263504_cgraph.png" border="0" usemap="#classkinematics_1_1robot_ab20831eddee9f26053a2ba5145263504_cgraph" alt=""/></div>
+<map name="classkinematics_1_1robot_ab20831eddee9f26053a2ba5145263504_cgraph" id="classkinematics_1_1robot_ab20831eddee9f26053a2ba5145263504_cgraph">
+<area shape="rect" title="関節角からリンク生成" alt="" coords="5,23,149,65"/>
+<area shape="rect" href="namespacekinematics.html#acf77fa7f71c754866310023b103bf757" title=" " alt="" coords="201,5,328,32"/>
+<area shape="rect" href="namespacekinematics.html#a06751d4853e29714726838fa698af6f5" title=" " alt="" coords="197,56,332,83"/>
+</map>
+</div>
+
+</div>
+</div>
+<a id="a9b714a5af10196e961f00f91df12273c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9b714a5af10196e961f00f91df12273c">&#9670;&nbsp;</a></span>pos2jnt()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::array&lt;T, <a class="el" href="robot_8h.html#a1d0bbe070024419adc7cce52ae1884e4">Naxis</a>&gt; <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::pos2jnt </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt; T &gt;&#160;</td>
+          <td class="paramname"><em>pos</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>姿勢から関節角を生成 </p>
+<dl class="params"><dt>引数</dt><dd>
+  <table class="params">
+    <tr><td class="paramdir">[in]</td><td class="paramname">pos</td><td>姿勢 </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
 <a id="a59291f3f546ae145da8f052f041fa15b"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a59291f3f546ae145da8f052f041fa15b">&#9670;&nbsp;</a></span>rviz()</h2>
 
@@ -222,7 +321,7 @@ template&lt;typename T &gt; </div>
 <area shape="rect" href="namespaceros__func.html#aa52eba1f1b526428f9967e5c0d627641" title="カメラマーカ生成" alt="" coords="241,107,422,133"/>
 <area shape="rect" href="namespaceros__func.html#abe14e13e891377507cdc4495947e1e7f" title=" " alt="" coords="757,56,913,83"/>
 <area shape="rect" href="namespaceros__func.html#ae0c028fe8be35d3f544eb9b5c75f80b6" title="点マーカ生成" alt="" coords="505,5,668,32"/>
-<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title=" " alt="" coords="221,168,441,195"/>
+<area shape="rect" href="namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,168,441,195"/>
 <area shape="rect" href="namespaceros__func.html#a7fdd2456fc5239db33f53e090e847f1b" title="初期化マーカデータの生成" alt="" coords="256,269,407,296"/>
 <area shape="rect" href="namespaceros__func.html#ae270409de31c1d99ed37854dbf60f1be" title="直線マーカ生成（隣接データを接続）" alt="" coords="489,233,684,260"/>
 <area shape="rect" href="classros__func_1_1rviz__publisher.html#afb158b930546586440b66f96d822cbdf" title="MakerArrayの配信" alt="" coords="243,321,419,362"/>
@@ -267,8 +366,8 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
-<a id="acc8f9718e1a9d32c3c103cc329728741"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#acc8f9718e1a9d32c3c103cc329728741">&#9670;&nbsp;</a></span>flange2hand</h2>
+<a id="a87546c4ce63ba3d73598fda2dc1fa963"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a87546c4ce63ba3d73598fda2dc1fa963">&#9670;&nbsp;</a></span>cameraYaw</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +375,23 @@ template&lt;typename T &gt; </div>
 template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt;T&gt; <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::flange2hand</td>
+          <td class="memname">T <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::cameraYaw</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a07694eecbab69a6159c065e5febefb5a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07694eecbab69a6159c065e5febefb5a">&#9670;&nbsp;</a></span>flange2hand</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt;T&gt;* <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::flange2hand</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -315,6 +430,22 @@ template&lt;typename T &gt; </div>
 
 </div>
 </div>
+<a id="ac2ffba85e5b1127cb542ed66b7f44dfb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac2ffba85e5b1127cb542ed66b7f44dfb">&#9670;&nbsp;</a></span>handeye</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">bool <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::handeye</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a9e8cab0b97d91d2b5827963eae500b02"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9e8cab0b97d91d2b5827963eae500b02">&#9670;&nbsp;</a></span>links</h2>
 
@@ -325,6 +456,54 @@ template&lt;typename T &gt; </div>
       <table class="memname">
         <tr>
           <td class="memname"><a class="el" href="classkinematics_1_1pose__array.html">pose_array</a>&lt;T&gt; <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::links</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a3e587e12d021e5bb88a422d5ff05ebb1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3e587e12d021e5bb88a422d5ff05ebb1">&#9670;&nbsp;</a></span>ref2cam</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="classkinematics_1_1pose.html">pose</a>&lt;T&gt;* <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::ref2cam</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4ad51bfb7af375d452b0ee0f5921491b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4ad51bfb7af375d452b0ee0f5921491b">&#9670;&nbsp;</a></span>tanH</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::tanH</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="adce7e3d9b228834b0ade315e38c9711f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adce7e3d9b228834b0ade315e38c9711f">&#9670;&nbsp;</a></span>tanV</h2>
+
+<div class="memitem">
+<div class="memproto">
+<div class="memtemplate">
+template&lt;typename T &gt; </div>
+      <table class="memname">
+        <tr>
+          <td class="memname">T <a class="el" href="classkinematics_1_1robot.html">kinematics::robot</a>&lt; T &gt;::tanV</td>
         </tr>
       </table>
 </div><div class="memdoc">

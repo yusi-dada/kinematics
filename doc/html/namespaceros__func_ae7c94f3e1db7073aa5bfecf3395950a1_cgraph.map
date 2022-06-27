@@ -1,5 +1,5 @@
 <map id="ros_func::ImageSurfaceMarker" name="ros_func::ImageSurfaceMarker">
-<area shape="rect" id="node1" title=" " alt="" coords="5,173,225,199"/>
+<area shape="rect" id="node1" title="カメラ射影面マーカ生成" alt="" coords="5,173,225,199"/>
 <area shape="rect" id="node2" href="$classkinematics_1_1camera.html#a7ec8e377bb756e6ac743642e1057cff5" title="画像座標系での位置を基準座標系に変換" alt="" coords="290,89,441,131"/>
 <area shape="rect" id="node9" href="$namespaceros__func.html#a42bd08518980cacbe215a4693f46191d" title="N角錐マーカ生成（頂点から底面への線分）" alt="" coords="273,223,457,250"/>
 <area shape="rect" id="node3" href="$classkinematics_1_1camera.html#a6e3b5a31f60b1f36901b76b6c64e869a" title="画像座標系からカメラ座標系への変換" alt="" coords="533,5,684,47"/>

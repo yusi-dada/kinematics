@@ -11,8 +11,7 @@
 
 
 
-kinematics\+::camera$<$ T $>$ 連携図
-\nopagebreak
+kinematics\+::camera$<$ T $>$ 連携図\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -24,7 +23,7 @@ kinematics\+::camera$<$ T $>$ 連携図
 \item 
 \mbox{\hyperlink{classkinematics_1_1camera_af7c8c2fc2c19ed247a2ebf085cf5e2c7}{camera}} ()
 \item 
-\mbox{\hyperlink{classkinematics_1_1camera_a42fb1fef38a972a1f9fd4c0ae7239154}{camera}} (T tan\+H\+\_\+, T tan\+V\+\_\+, \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ p0\+\_\+)
+\mbox{\hyperlink{classkinematics_1_1camera_a7b0e40ec5ed20d1b872762c528561a02}{camera}} (T tan\+H\+\_\+, T tan\+V\+\_\+, \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$ p0\+\_\+, T yaw=0)
 \begin{DoxyCompactList}\small\item\em カメラモデル生成 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename U $>$ }\\\mbox{\hyperlink{classkinematics_1_1camera}{camera}} \mbox{\hyperlink{classkinematics_1_1camera_a46f3de670fedd81dd2aad748aac368d4}{operator=}} (const \mbox{\hyperlink{classkinematics_1_1camera}{camera}}$<$ U $>$ \&obj)
 \begin{DoxyCompactList}\small\item\em 代入 \end{DoxyCompactList}\item 
@@ -67,12 +66,12 @@ class kinematics\+::camera$<$ T $>$}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 \mbox{\hyperlink{classkinematics_1_1camera}{kinematics\+::camera}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1camera}{camera}} (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
-\mbox{\Hypertarget{classkinematics_1_1camera_a42fb1fef38a972a1f9fd4c0ae7239154}\label{classkinematics_1_1camera_a42fb1fef38a972a1f9fd4c0ae7239154}} 
+\mbox{\Hypertarget{classkinematics_1_1camera_a7b0e40ec5ed20d1b872762c528561a02}\label{classkinematics_1_1camera_a7b0e40ec5ed20d1b872762c528561a02}} 
 \index{kinematics::camera$<$ T $>$@{kinematics::camera$<$ T $>$}!camera@{camera}}
 \index{camera@{camera}!kinematics::camera$<$ T $>$@{kinematics::camera$<$ T $>$}}
 \doxysubsubsection{\texorpdfstring{camera()}{camera()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
 {\footnotesize\ttfamily template$<$typename T $>$ \\
-\mbox{\hyperlink{classkinematics_1_1camera}{kinematics\+::camera}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1camera}{camera}} (\begin{DoxyParamCaption}\item[{T}]{tan\+H\+\_\+,  }\item[{T}]{tan\+V\+\_\+,  }\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{p0\+\_\+ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+\mbox{\hyperlink{classkinematics_1_1camera}{kinematics\+::camera}}$<$ T $>$\+::\mbox{\hyperlink{classkinematics_1_1camera}{camera}} (\begin{DoxyParamCaption}\item[{T}]{tan\+H\+\_\+,  }\item[{T}]{tan\+V\+\_\+,  }\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{p0\+\_\+,  }\item[{T}]{yaw = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
 
 
 
@@ -82,7 +81,17 @@ class kinematics\+::camera$<$ T $>$}
 \begin{DoxyParams}[1]{引数}
 \mbox{\texttt{ in}}  & {\em p0\+\_\+} & カメラ座標系 \\
 \hline
+\mbox{\texttt{ in}}  & {\em yaw} & カメラ座標系で視線方向の回転 \\
+\hline
 \end{DoxyParams}
+呼び出し関係図\+:
+\nopagebreak
+\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[width=350pt]{classkinematics_1_1camera_a7b0e40ec5ed20d1b872762c528561a02_cgraph}
+\end{center}
+\end{figure}
 
 
 \doxysubsection{関数詳解}
@@ -148,8 +157,7 @@ bool \mbox{\hyperlink{classkinematics_1_1camera}{kinematics\+::camera}}$<$ T $>$
 {\em false} & 変換失敗（射影面が並行 or 逆方向） \\
 \hline
 \end{DoxyRetVals}
-呼び出し関係図\+:
-\nopagebreak
+呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -183,8 +191,7 @@ bool \mbox{\hyperlink{classkinematics_1_1camera}{kinematics\+::camera}}$<$ T $>$
 {\em false} & 変換失敗（射影面が並行 or 逆方向） \\
 \hline
 \end{DoxyRetVals}
-呼び出し関係図\+:
-\nopagebreak
+呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -236,8 +243,7 @@ bool \mbox{\hyperlink{classkinematics_1_1camera}{kinematics\+::camera}}$<$ T $>$
 {\em false} & 変換失敗 \\
 \hline
 \end{DoxyRetVals}
-呼び出し関係図\+:
-\nopagebreak
+呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -269,16 +275,14 @@ bool \mbox{\hyperlink{classkinematics_1_1camera}{kinematics\+::camera}}$<$ T $>$
 {\em false} & 変換失敗 \\
 \hline
 \end{DoxyRetVals}
-呼び出し関係図\+:
-\nopagebreak
+呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{classkinematics_1_1camera_ae830c47ffd206fa0d2eb8dafd5c11aa2_cgraph}
 \end{center}
 \end{figure}
-被呼び出し関係図\+:
-\nopagebreak
+被呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode

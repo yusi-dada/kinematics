@@ -49,7 +49,7 @@ visualization\+\_\+msgs\+::\+Marker\+Array \mbox{\hyperlink{namespaceros__func_a
 {\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_aa52eba1f1b526428f9967e5c0d627641}{Camera\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1camera}{camera}}$<$ T $>$ cam, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
 \begin{DoxyCompactList}\small\item\em カメラマーカ生成 \end{DoxyCompactList}\item 
 {\footnotesize template$<$typename T $>$ }\\void \mbox{\hyperlink{namespaceros__func_ae7c94f3e1db7073aa5bfecf3395950a1}{Image\+Surface\+Marker}} (visualization\+\_\+msgs\+::\+Marker\+Array \&ma, std\+::string frame, \mbox{\hyperlink{classkinematics_1_1camera}{camera}}$<$ T $>$ cam, \mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$surf, std\+\_\+msgs\+::\+Color\+R\+G\+BA color=\mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1, 1, 1, 1), std\+::string ns=\char`\"{}\char`\"{})
-\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em カメラ射影面マーカ生成 \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsection{関数詳解}
@@ -72,8 +72,7 @@ void ros\+\_\+func\+::\+Arrow\+Chain\+Marker (\begin{DoxyParamCaption}\item[{vis
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -101,8 +100,7 @@ void ros\+\_\+func\+::\+Arrow\+Marker (\begin{DoxyParamCaption}\item[{visualizat
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -135,16 +133,14 @@ void ros\+\_\+func\+::\+Camera\+Marker (\begin{DoxyParamCaption}\item[{visualiza
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespaceros__func_aa52eba1f1b526428f9967e5c0d627641_cgraph}
 \end{center}
 \end{figure}
-被呼び出し関係図\+:
-\nopagebreak
+被呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -214,8 +210,7 @@ void ros\+\_\+func\+::\+Cube\+Wire\+Marker (\begin{DoxyParamCaption}\item[{visua
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -232,8 +227,7 @@ void ros\+\_\+func\+::\+Cube\+Wire\+Marker (\begin{DoxyParamCaption}\item[{visua
 
 マーカの初期化指令 
 
-被呼び出し関係図\+:
-\nopagebreak
+被呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -247,7 +241,21 @@ void ros\+\_\+func\+::\+Cube\+Wire\+Marker (\begin{DoxyParamCaption}\item[{visua
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 void ros\+\_\+func\+::\+Image\+Surface\+Marker (\begin{DoxyParamCaption}\item[{visualization\+\_\+msgs\+::\+Marker\+Array \&}]{ma,  }\item[{std\+::string}]{frame,  }\item[{\mbox{\hyperlink{classkinematics_1_1camera}{camera}}$<$ T $>$}]{cam,  }\item[{\mbox{\hyperlink{classkinematics_1_1pose}{pose}}$<$ T $>$}]{surf,  }\item[{std\+\_\+msgs\+::\+Color\+R\+G\+BA}]{color = {\ttfamily \mbox{\hyperlink{namespaceros__func_abe14e13e891377507cdc4495947e1e7f}{Color\+R\+G\+BA}}(1,1,1,1)},  }\item[{std\+::string}]{ns = {\ttfamily \char`\"{}\char`\"{}} }\end{DoxyParamCaption})}
 
-呼び出し関係図\+:
+
+
+カメラ射影面マーカ生成 
+
+\mbox{[}in/out\mbox{]} ma マーカデータ
+
+\mbox{[}in\mbox{]} frame 基準フレーム
+
+\mbox{[}in\mbox{]} cam カメラ
+
+\mbox{[}in\mbox{]} surf 射影面
+
+\mbox{[}in\mbox{]} color 色データ
+
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
 \nopagebreak
 \begin{figure}[H]
 \begin{center}
@@ -280,8 +288,7 @@ void ros\+\_\+func\+::\+Image\+Surface\+Marker (\begin{DoxyParamCaption}\item[{v
 \includegraphics[width=336pt]{namespaceros__func_a7fdd2456fc5239db33f53e090e847f1b_cgraph}
 \end{center}
 \end{figure}
-被呼び出し関係図\+:
-\nopagebreak
+被呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -307,16 +314,14 @@ void ros\+\_\+func\+::\+Line\+Chain\+Marker (\begin{DoxyParamCaption}\item[{visu
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
 \includegraphics[width=350pt]{namespaceros__func_ae270409de31c1d99ed37854dbf60f1be_cgraph}
 \end{center}
 \end{figure}
-被呼び出し関係図\+:
-\nopagebreak
+被呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -342,8 +347,7 @@ void ros\+\_\+func\+::\+Line\+Loop\+Marker (\begin{DoxyParamCaption}\item[{visua
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -379,8 +383,7 @@ void ros\+\_\+func\+::\+Line\+Marker (\begin{DoxyParamCaption}\item[{visualizati
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -436,8 +439,7 @@ void ros\+\_\+func\+::\+Point\+Marker (\begin{DoxyParamCaption}\item[{visualizat
 \includegraphics[width=327pt]{namespaceros__func_ae0c028fe8be35d3f544eb9b5c75f80b6_cgraph}
 \end{center}
 \end{figure}
-被呼び出し関係図\+:
-\nopagebreak
+被呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -489,8 +491,7 @@ void ros\+\_\+func\+::\+Polygon\+Marker (\begin{DoxyParamCaption}\item[{visualiz
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -547,8 +548,7 @@ N角錐マーカ生成（頂点から底面への線分）
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -570,8 +570,7 @@ N角錐マーカ生成（頂点から底面への線分）
 {\footnotesize\ttfamily template$<$typename T $>$ \\
 geometry\+\_\+msgs\+::\+Quaternion ros\+\_\+func\+::\+Quaternion (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classkinematics_1_1vec4}{vec4}}$<$ T $>$}]{p }\end{DoxyParamCaption})}
 
-被呼び出し関係図\+:
-\nopagebreak
+被呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
@@ -595,8 +594,7 @@ void ros\+\_\+func\+::\+Triangle\+Marker (\begin{DoxyParamCaption}\item[{visuali
 
 \mbox{[}in\mbox{]} color 色データ
 
-\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:
-\nopagebreak
+\mbox{[}in\mbox{]} ns 名前空間 呼び出し関係図\+:\nopagebreak
 \begin{figure}[H]
 \begin{center}
 \leavevmode
