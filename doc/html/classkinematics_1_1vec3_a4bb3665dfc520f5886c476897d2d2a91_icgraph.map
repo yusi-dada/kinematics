@@ -1,4 +1,0 @@
-<map id="kinematics::vec3::sign" name="kinematics::vec3::sign">
-<area shape="rect" id="node1" title=" " alt="" coords="264,5,432,32"/>
-<area shape="rect" id="node2" href="$classkinematics_1_1vec4.html#a74ee7de249ebb579f8c6185c627390af" title="this姿勢からobj姿勢への等価回転軸と回転角を算出" alt="" coords="5,5,216,32"/>
-</map>

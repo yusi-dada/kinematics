@@ -1,5 +1,0 @@
-<map id="ros_func::PolygonMarker" name="ros_func::PolygonMarker">
-<area shape="rect" id="node1" title="ポリゴン生成（データを順番に接続しループ）" alt="" coords="5,5,188,32"/>
-<area shape="rect" id="node2" href="$namespaceros__func.html#a9ea7d40fbd41cfc330eb36537095e697" title="線分マーカデータの生成" alt="" coords="236,5,419,32"/>
-<area shape="rect" id="node3" href="$namespaceros__func.html#a3145b9759af1dc750a8365f5f043de13" title=" " alt="" coords="467,5,585,32"/>
-</map>

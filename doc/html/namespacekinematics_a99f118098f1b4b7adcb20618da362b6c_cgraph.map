@@ -1,8 +1,0 @@
-<map id="kinematics::CubeWireMarker" name="kinematics::CubeWireMarker">
-<area shape="rect" id="node1" title="直方体のワイヤーフレームマーカ生成" alt="" coords="5,56,216,83"/>
-<area shape="rect" id="node2" href="$namespacekinematics.html#a4a6a732e6241604a71c4efe8b29e6e1b" title="直線マーカ生成（データを順番に接続しループ）" alt="" coords="264,5,469,32"/>
-<area shape="rect" id="node3" href="$namespacekinematics.html#a0ecba94cad8e09e623fd1c04aea31c29" title="線マーカ生成" alt="" coords="518,31,693,57"/>
-<area shape="rect" id="node4" href="$classkinematics_1_1pose.html#adb321e96192e012af765b09bdffc94a3" title="点の座標系表現(pnt)を別座標系(obj)表現へ変換" alt="" coords="265,107,469,133"/>
-<area shape="rect" id="node5" href="$classkinematics_1_1vec4.html#a46f3542b20cdc1931331ebc3773c054f" title="ベクトルの基準座標への変換" alt="" coords="517,107,693,133"/>
-<area shape="rect" id="node6" href="$classkinematics_1_1vec4.html#ac67fcb111862198f207044b0ee4a4f4d" title="共役クォータニオン" alt="" coords="741,107,909,133"/>
-</map>

@@ -1,5 +1,0 @@
-<map id="kinematics::pose::Trans_vec" name="kinematics::pose::Trans_vec">
-<area shape="rect" id="node1" title="ベクトルの座標系表現(pnt)を別座標系(obj)表現へ変換" alt="" coords="5,5,212,32"/>
-<area shape="rect" id="node2" href="$classkinematics_1_1vec4.html#a46f3542b20cdc1931331ebc3773c054f" title="ベクトルの基準座標への変換" alt="" coords="260,5,436,32"/>
-<area shape="rect" id="node3" href="$classkinematics_1_1vec4.html#ac67fcb111862198f207044b0ee4a4f4d" title="共役クォータニオン" alt="" coords="484,5,652,32"/>
-</map>

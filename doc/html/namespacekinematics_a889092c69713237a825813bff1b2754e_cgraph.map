@@ -1,6 +1,0 @@
-<map id="kinematics::CubeMarker" name="kinematics::CubeMarker">
-<area shape="rect" id="node1" title="直方体マーカデータの生成" alt="" coords="5,31,185,57"/>
-<area shape="rect" id="node2" href="$namespacekinematics.html#a19e1fdaf603783e90d2b720ffaf44fe9" title=" " alt="" coords="233,31,367,57"/>
-<area shape="rect" id="node3" href="$namespacekinematics.html#ade4d392cfe4bb49535c107a72324e6e3" title=" " alt="" coords="435,5,569,32"/>
-<area shape="rect" id="node4" href="$namespacekinematics.html#a5f2d299ccf48c3980fdae8c9524aa299" title=" " alt="" coords="415,56,589,83"/>
-</map>

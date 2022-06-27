@@ -1,7 +1,0 @@
-<map id="kinematics::vec4::RotationTo" name="kinematics::vec4::RotationTo">
-<area shape="rect" id="node1" title="this姿勢からobj姿勢への等価回転軸と回転角を算出" alt="" coords="5,81,216,108"/>
-<area shape="rect" id="node2" href="$classkinematics_1_1vec4.html#aaa3c5f2b4c157a927571577c091b5a5e" title="回転行列の生成" alt="" coords="273,5,423,32"/>
-<area shape="rect" id="node3" href="$classkinematics_1_1vec4.html#ac67fcb111862198f207044b0ee4a4f4d" title="共役クォータニオン" alt="" coords="264,56,432,83"/>
-<area shape="rect" id="node4" href="$classkinematics_1_1vec3.html#a18f9e7a343a97e5ba5a5e83b67ccb190" title=" " alt="" coords="265,107,431,133"/>
-<area shape="rect" id="node5" href="$classkinematics_1_1vec3.html#a4bb3665dfc520f5886c476897d2d2a91" title=" " alt="" coords="264,157,432,184"/>
-</map>

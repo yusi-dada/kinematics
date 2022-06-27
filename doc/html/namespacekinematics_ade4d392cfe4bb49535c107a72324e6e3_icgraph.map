@@ -1,9 +1,0 @@
-<map id="kinematics::Point" name="kinematics::Point">
-<area shape="rect" id="node1" title=" " alt="" coords="727,81,861,108"/>
-<area shape="rect" id="node2" href="$namespacekinematics.html#a860ece298f9e1e8b340564342e329b8b" title="点マーカ生成" alt="" coords="499,56,679,83"/>
-<area shape="rect" id="node6" href="$namespacekinematics.html#a19e1fdaf603783e90d2b720ffaf44fe9" title=" " alt="" coords="522,107,655,133"/>
-<area shape="rect" id="node3" href="$namespacekinematics.html#a1014edfee462dfd8de6bbfe3210cbafe" title="カメラマーカ生成" alt="" coords="252,5,451,32"/>
-<area shape="rect" id="node5" href="$namespacekinematics.html#a44e7310336a9a7eff16685a8ec35b2d5" title="点マーカ生成" alt="" coords="261,56,441,83"/>
-<area shape="rect" id="node4" href="$namespacekinematics.html#afe631913dee72c4d6cd70f534bf5b06c" title=" " alt="" coords="5,5,204,32"/>
-<area shape="rect" id="node7" href="$namespacekinematics.html#a889092c69713237a825813bff1b2754e" title="直方体マーカデータの生成" alt="" coords="261,107,441,133"/>
-</map>

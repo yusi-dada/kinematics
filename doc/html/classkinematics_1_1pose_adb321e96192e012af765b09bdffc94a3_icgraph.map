@@ -1,8 +1,0 @@
-<map id="kinematics::pose::Trans_pnt" name="kinematics::pose::Trans_pnt">
-<area shape="rect" id="node1" title="点の座標系表現(pnt)を別座標系(obj)表現へ変換" alt="" coords="731,35,935,61"/>
-<area shape="rect" id="node2" href="$namespaceros__func.html#a1fa3b6d33735e091b3870cb5dc3cd3cf" title="直方体のワイヤーフレームマーカ生成" alt="" coords="489,5,683,32"/>
-<area shape="rect" id="node3" href="$classkinematics_1_1camera.html#a7ec8e377bb756e6ac743642e1057cff5" title="画像座標系での位置を基準座標系に変換" alt="" coords="511,57,661,98"/>
-<area shape="rect" id="node4" href="$classkinematics_1_1camera.html#a1630594f64c958650bca75f1b26c3ff7" title="画像座標系での位置を基準座標系に変換" alt="" coords="256,27,407,69"/>
-<area shape="rect" id="node5" href="$namespaceros__func.html#ae7c94f3e1db7073aa5bfecf3395950a1" title="カメラ射影面マーカ生成" alt="" coords="221,93,441,120"/>
-<area shape="rect" id="node6" href="$classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,93,173,120"/>
-</map>

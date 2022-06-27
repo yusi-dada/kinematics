@@ -1,6 +1,0 @@
-<map id="ros_func::deleteAll" name="ros_func::deleteAll">
-<area shape="rect" id="node1" title="マーカの初期化指令" alt="" coords="420,42,563,69"/>
-<area shape="rect" id="node2" href="$namespaceros__func.html#a7fdd2456fc5239db33f53e090e847f1b" title="初期化マーカデータの生成" alt="" coords="221,42,372,69"/>
-<area shape="rect" id="node3" href="$classros__func_1_1PathMarker.html#a3e951d41d41e81cf0b637371f7bd912a" title=" " alt="" coords="10,5,169,47"/>
-<area shape="rect" id="node4" href="$classkinematics_1_1robot.html#a59291f3f546ae145da8f052f041fa15b" title=" " alt="" coords="5,71,173,98"/>
-</map>

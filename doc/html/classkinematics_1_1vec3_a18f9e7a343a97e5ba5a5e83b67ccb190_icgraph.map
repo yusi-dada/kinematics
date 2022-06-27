@@ -1,5 +1,0 @@
-<map id="kinematics::vec3::nrm" name="kinematics::vec3::nrm">
-<area shape="rect" id="node1" title=" " alt="" coords="264,31,431,57"/>
-<area shape="rect" id="node2" href="$classkinematics_1_1vec4.html#a74ee7de249ebb579f8c6185c627390af" title="this姿勢からobj姿勢への等価回転軸と回転角を算出" alt="" coords="5,5,216,32"/>
-<area shape="rect" id="node3" href="$classkinematics_1_1pose.html#a5753d2354ac97ba94ffb127cf03bb330" title="法線方向指定による平面オブジェクト生成" alt="" coords="16,56,205,83"/>
-</map>

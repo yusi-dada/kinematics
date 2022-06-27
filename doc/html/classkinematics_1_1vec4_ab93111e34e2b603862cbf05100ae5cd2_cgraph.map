@@ -1,5 +1,0 @@
-<map id="kinematics::vec4::vec4" name="kinematics::vec4::vec4">
-<area shape="rect" id="node1" title="回転軸と回転角度から生成" alt="" coords="5,31,177,57"/>
-<area shape="rect" id="node2" href="$namespacekinematics.html#acf77fa7f71c754866310023b103bf757" title=" " alt="" coords="245,5,372,32"/>
-<area shape="rect" id="node3" href="$classkinematics_1_1vec4.html#adc454d4c11e84108fc05638aa562ad9a" title="ノルム" alt="" coords="225,56,392,83"/>
-</map>

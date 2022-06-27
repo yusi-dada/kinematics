@@ -1,4 +1,0 @@
-<map id="kinematics::camera::pos2image" name="kinematics::camera::pos2image">
-<area shape="rect" id="node1" title="基準座標系での位置を画像座標系に変換" alt="" coords="204,5,355,47"/>
-<area shape="rect" id="node2" href="$classkinematics_1_1camera.html#a88151fef6b9a103188bddca18000a465" title="基準座標系での位置を画像座標系に変換" alt="" coords="5,5,156,47"/>
-</map>

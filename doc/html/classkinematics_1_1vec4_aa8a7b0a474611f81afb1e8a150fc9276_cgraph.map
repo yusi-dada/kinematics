@@ -1,5 +1,0 @@
-<map id="kinematics::vec4::RotationTo2" name="kinematics::vec4::RotationTo2">
-<area shape="rect" id="node1" title=" " alt="" coords="5,31,224,57"/>
-<area shape="rect" id="node2" href="$classkinematics_1_1vec4.html#aaa3c5f2b4c157a927571577c091b5a5e" title="回転行列の生成" alt="" coords="281,5,431,32"/>
-<area shape="rect" id="node3" href="$classkinematics_1_1vec4.html#ac67fcb111862198f207044b0ee4a4f4d" title="共役クォータニオン" alt="" coords="272,56,440,83"/>
-</map>

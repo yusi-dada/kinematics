@@ -1,9 +1,0 @@
-<map id="kinematics::alfa" name="kinematics::alfa">
-<area shape="rect" id="node1" title=" " alt="" coords="243,159,369,185"/>
-<area shape="rect" id="node2" href="$namespacekinematics.html#ad7d17bbc11e54e057ca4643cf63403dc" title=" " alt="" coords="25,5,175,32"/>
-<area shape="rect" id="node3" href="$classkinematics_1_1pose__array.html#add8d65d34c81ec3f008a533a389b6135" title="ベース座標系から相対変換によるリンク構造生成" alt="" coords="13,57,187,98"/>
-<area shape="rect" id="node4" href="$classkinematics_1_1robot.html#a522fd26640f89046a4c634a8f0e752d8" title=" " alt="" coords="28,122,172,163"/>
-<area shape="rect" id="node5" href="$classkinematics_1_1pose.html#a29e96c04dd74e088c00a522f4b6cbcf9" title="指定軸で回転させて姿勢変更" alt="" coords="10,188,190,215"/>
-<area shape="rect" id="node6" href="$classkinematics_1_1pose.html#a5753d2354ac97ba94ffb127cf03bb330" title="法線方向指定による平面オブジェクト生成" alt="" coords="5,239,195,265"/>
-<area shape="rect" id="node7" href="$classkinematics_1_1vec4.html#ab93111e34e2b603862cbf05100ae5cd2" title="回転軸と回転角度から生成" alt="" coords="14,289,186,316"/>
-</map>
