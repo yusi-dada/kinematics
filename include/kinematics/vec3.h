@@ -1,3 +1,7 @@
+/**
+ * @file vec3.h
+ * @brief 3次元ベクトルクラス
+ */
 #pragma once
 #include <iostream>
 #include <math.h>
@@ -7,6 +11,9 @@
 namespace kinematics
 {
 
+/**
+ * @brief 3次元ベクトルクラス
+ */
 template <typename T>
 class vec3
 {

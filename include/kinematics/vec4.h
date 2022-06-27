@@ -1,3 +1,7 @@
+/**
+ * @file vec4.h
+ * @brief クォータニオンクラス
+ */
 #pragma once
 #include "vec3.h"
 #include <bits/stdc++.h> // M_PI
@@ -5,15 +9,18 @@
 namespace kinematics
 {
 
+/**
+ * @brief クォータニオンクラス
+ */
 template <typename T>
 class vec4
 {
     public:
         T err = 1e-9;
-        T x; 
-        T y; 
-        T z; 
-        T w;
+        T x;    ///< ベクトル部 x
+        T y;    ///< ベクトル部 y
+        T z;    ///< ベクトル部 z
+        T w;    ///< スカラ部
     
         /**
          * @brief 基準クォータニオン
@@ -200,7 +207,7 @@ class vec4
             T l = vx*vx + vy*vy + vz*vz;
             l = sqrt(l);
             vec3<T> axis(vx,vy,vz);
-            T theta = asin(l/2);
+            T theta = asin(l/2.0);
             return {axis/l, theta};
         }
 
