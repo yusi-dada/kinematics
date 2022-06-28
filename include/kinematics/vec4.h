@@ -58,7 +58,7 @@ class vec4
         }
 
         /**
-         * @brief 回転軸と回転角度から生成
+         * @brief 回転軸と回転角度から生成(回転角範囲は[0, 2pi])
          */
         vec4(vec3<T> alfa, T theta)
         {

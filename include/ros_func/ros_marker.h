@@ -1,5 +1,11 @@
+/**
+ * @file ros_marker.h
+ * @brief マーカオブジェクトの生成
+ */
 #pragma once
 #include "ros_func.h"
+#include "camera.h"
+#include "pose_array.h"
 #include <tf/transform_broadcaster.h>
 #include <visualization_msgs/MarkerArray.h>
 
@@ -373,6 +379,15 @@ void ImageSurfaceMarker(visualization_msgs::MarkerArray& ma, std::string frame, 
     for (auto &c:cornor)
         cam.image2pos(c, surf);
     PyramidMarker(ma, frame, cam.p0.p, cornor, color, ns);
+}
+
+template <typename T>
+void LinkMarker(visualization_msgs::MarkerArray& ma, std::string frame, pose_array<T> pos, std_msgs::ColorRGBA color=ColorRGBA(1,1,1,1), std::string ns="")
+{
+    // リンクの各接点を取得し描画
+    auto edge_points = pos.p();
+    LineChainMarker(ma, "world", edge_points, ColorRGBA(1,1,0,1), ns+"link");
+    PointMarker(ma, "world", edge_points, color, ns+"joint");
 }
 
 

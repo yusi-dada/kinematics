@@ -1,7 +1,10 @@
+/**
+ * @file ros_func.h
+ * @brief ROSメッセージ型の生成
+ */
 #ifndef __ROS_FUNC__
 #define __ROS_FUNC__
-#include "pose_array.h"
-#include "camera.h"
+#include "pose.h"
 
 #include <ros/ros.h>
 #include <std_msgs/ColorRGBA.h>

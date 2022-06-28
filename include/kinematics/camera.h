@@ -1,3 +1,7 @@
+/**
+ * @file camera.h
+ * @brief カメラモデル
+ */
 #pragma once
 #include "pose.h"
 

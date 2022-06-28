@@ -34,6 +34,17 @@ inline std::vector<vec3<double>> alfa()
     return alfa;
 }
 
+/**
+ * @brief 関節角からリンク生成
+ * @param [in] jnt 関節角
+ * @param [in] base ベース姿勢
+ */
+template <typename T>
+pose<T> jnt2pos_array(std::array<T, Naxis> jnt, pose<T> base=pose<T>())
+{
+    return pose_array<T>(posB(), alfa(), jnt, base);   // リンク生成
+}
+
 
 template <typename T>
 class robot

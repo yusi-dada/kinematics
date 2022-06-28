@@ -14,6 +14,11 @@ class pose_array
 
         pose_array(){}
 
+        pose_array(std::vector<vec3<T>> pos, std::vector<vec3<T>> alfa, T theta[], pose<T> posI=pose<T>())
+        {
+            (*this)(pos, alfa, theta, posI);
+        }
+
         /**
          * @brief ベース座標系から相対変換によるリンク構造生成
          * @param [in] pos 相対位置
@@ -21,22 +26,15 @@ class pose_array
          * @param [in] theta 回転角
          * @param [in] posI ベース座標系
          */
-        pose_array(std::vector<vec3<T>> pos, std::vector<vec3<T>> alfa, T theta[], pose<T> posI=pose<T>())
-        {
-            (*this)(pos, alfa, theta, posI);
-        }
-
         void operator()(std::vector<vec3<T>> pos, std::vector<vec3<T>> alfa, T theta[], pose<T> posI=pose<T>())
         {
+            // 入力サイズ確認
             int linksize = pos.size();
             assert((linksize==alfa.size()) && (linksize>0));
 
+            // 配列初期化
             if (pa.size() != linksize+1)
-            {
-                std::cerr << "clear" << std::endl;
-                pa.clear();
                 pa.resize(linksize+1);
-            }
 
             pa[0] = posI;            
             for(int i=0; i<linksize; i++)

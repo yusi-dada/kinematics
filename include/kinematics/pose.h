@@ -1,3 +1,7 @@
+/**
+ * @file pose.h
+ * @brief 座標系クラス
+ */
 #pragma once
 #include "vec4.h"
 
