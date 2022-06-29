@@ -14,7 +14,12 @@ namespace ros_func
 {
 using namespace kinematics;
 
-std_msgs::ColorRGBA ColorRGBA(double r, double g, double b, double a);
+inline std_msgs::ColorRGBA ColorRGBA(double r, double g, double b, double a)
+{
+    std_msgs::ColorRGBA ret;
+    ret.b = b;    ret.g = g;    ret.r = r;    ret.a = a;
+    return ret;
+}
 
 template <typename T>
 geometry_msgs::Point Point(vec3<T> p)

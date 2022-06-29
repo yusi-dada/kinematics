@@ -153,7 +153,6 @@ include_directories(
 # )
 
 set( LIB_SOURCE_CPP
-  src/ros_func.cpp
   src/ros_marker.cpp
   src/vec.cpp
 )
@@ -163,17 +162,12 @@ add_library(${PROJECT_NAME} ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 
 # テストファイル
-#add_executable(${PROJECT_NAME}_test3 test/test3.cpp ${LIB_SOURCE_CPP})
-#target_link_libraries(${PROJECT_NAME}_test3 ${catkin_LIBRARIES})
-
 add_executable(${PROJECT_NAME}_test_pose test/test_pose.cpp ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME}_test_pose ${catkin_LIBRARIES})
 
 add_executable(${PROJECT_NAME}_test_rviz test/test_rviz.cpp ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME}_test_rviz ${catkin_LIBRARIES})
 
-add_executable(${PROJECT_NAME}_test_vec4 test/test_vec4.cpp ${LIB_SOURCE_CPP})
-target_link_libraries(${PROJECT_NAME}_test_vec4 ${catkin_LIBRARIES})
 
 #############
 ## Install ##
