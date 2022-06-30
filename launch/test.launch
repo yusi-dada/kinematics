@@ -2,8 +2,8 @@
 
 <launch>
 
-  <arg name="this_package" default="kinematics"/>
   <arg name="program_name" default="test_rviz"/>
+  <arg name="this_package" default="kinematics"/>
 
   <node name = "$(arg this_package)_$(arg program_name)"
         pkg  = "$(arg this_package)"

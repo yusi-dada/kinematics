@@ -51,22 +51,24 @@ class camera
         /**
          * @brief 画像座標系からカメラ座標系への変換
          * @param [in] p 画像座標系[0, 1]
-         * @param [in] z_len カメラ視線方向距離
+         * @param [in] len カメラ視線方向距離
          * @param [out] p カメラ座標系(視線方向Z=z_len平面への投影)
          * @retval true 変換成功
          * @retval false 変換失敗（視野範囲外）
          */
-        bool image2camera(vec3<T> &p, T z_len=1.0)
+        bool image2camera(vec3<T> &p, T len=NAN)
         {
+            len = std::isnan(len) ? z_len : len;
+            
             // 視野範囲外
-            if(0.0>p.x || p.x>1.0 || 0.0>p.y || p.y>1.0 || z_len<=0)
+            if(0.0>p.x || p.x>1.0 || 0.0>p.y || p.y>1.0 || len<=0)
                 return false;
 
             // 画像座標系→カメラ座標系
             p = 2.0*p - 1.0;    // [0,1] -> [-1,1]
-            p.x = p.x * z_len * this->tanH;
-            p.y = p.y * z_len * this->tanV;
-            p.z = z_len;
+            p.x = p.x * len * this->tanH;
+            p.y = p.y * len * this->tanV;
+            p.z = len;
             return true;
         }
 

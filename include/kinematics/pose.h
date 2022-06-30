@@ -38,18 +38,33 @@ class pose
         }
 
         /**
-         * @brief 指定軸で回転させて姿勢変更
-         * @param axis 回転軸(this座標系)
+         * @brief (this/p座標系の)指定軸で回転させて姿勢変更
+         * @param axis 回転軸(this座標系 or p座標系)
          * @param angle 回転角[rad]
+         * @param p 座標系
+         * @return 回転処理後のthis座標系
          */
-        pose<T> rotate(int axis, T angle)
+        pose<T> rotate(int axis, T angle, pose<T> *p = nullptr)
         {
+            // 回転軸生成（回転基準となる座標系表現）
             assert(0<=axis && axis<=2);
             vec3<T> alfa;
-            T *p = &alfa.x;
-            p[axis] = 1;
-            this->q = this->q * vec4<T>(alfa, angle);
-            return(*this);
+            T *alfap = &alfa.x;
+            alfap[axis] = 1;
+
+            if(p)   // 基準座標系の指定がある
+            {
+                pose<T> base = (*p);
+                pose<T> tmp = (*this)/base; // 回転前での相対姿勢取得
+                base.q = base.q * vec4<T>(alfa, angle);
+                return base*tmp;
+            }
+            else    // 基準座標系の指定がない
+            {
+                pose<T> base = (*this);
+                base.q = base.q * vec4<T>(alfa, angle);
+                return base;
+            }
         }
 
         /**
@@ -85,6 +100,14 @@ class pose
         bool isnum()
         {
             return(this->p.isnum() && this->q.isnum());
+        }
+
+        /**
+         * @brief 一致判定
+         */
+        bool operator==(const pose<T>& obj)
+        {
+            return (this->p == obj.p)&&(this->q == obj.q);
         }
 
         /**
@@ -128,11 +151,14 @@ class pose
         {
             T nrm = normal.nrm();
             assert(nrm > 1e-9);
-            vec3<T> axisZ = vec3<T>(0,0,1);
-            vec3<T> alfa = axisZ % normal;      // 回転軸
-            T theta = acos(axisZ*normal/nrm);   // 回転角
             pose<T> ret = (*this);
-            ret.q = ret.q * vec4<T>(alfa,theta);
+            vec3<T> axisZ = vec3<T>(0,0,1);
+            T theta = acos(axisZ*normal/nrm);       // 回転角
+            if(abs(theta)>1e-9) // 回転角があれば
+            {
+                vec3<T> alfa = axisZ % normal;      // 回転軸
+                ret.q = ret.q * vec4<T>(alfa,theta);
+            }
             if(yaw!=0) ret.q = ret.q * vec4<T>(0,0,yaw);
             return ret;
         }
@@ -155,13 +181,6 @@ class pose
             return (surf.p - this->p)*N / tmp;
         }
 
-        /**
-         * @brief 一致判定
-         */
-        bool operator==(const pose<T>& obj)
-        {
-            return (this->p == obj.p)&&(this->q == obj.q);
-        }
 
 };
 

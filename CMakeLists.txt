@@ -165,6 +165,9 @@ target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
 add_executable(${PROJECT_NAME}_test_pose test/test_pose.cpp ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME}_test_pose ${catkin_LIBRARIES})
 
+add_executable(${PROJECT_NAME}_test_camera test/test_camera.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}_test_camera ${catkin_LIBRARIES})
+
 add_executable(${PROJECT_NAME}_test_rviz test/test_rviz.cpp ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME}_test_rviz ${catkin_LIBRARIES})
 
