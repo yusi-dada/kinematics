@@ -72,6 +72,22 @@ class vec4
         }
 
         /**
+         * @brief 方向予言行列から生成(回転角範囲は[0, 2pi])
+         */
+        vec4(std::vector<vec3<T>> C)
+        {
+            assert(C.size()==3);
+            auto tmp = 1+C[0][0]+C[1][1]+C[2][2];
+            assert(tmp>0);
+
+            this->w = 0.5*sqrt(tmp);
+            auto den = 1.0/(4.0*this->w);
+            this->x = (C[2][1]-C[1][2])*den;
+            this->y = (C[0][2]-C[2][0])*den;
+            this->z = (C[1][0]-C[0][1])*den;
+        }
+
+        /**
          * @brief 代入
          */
         template<typename U>
@@ -176,9 +192,9 @@ class vec4
         std::vector<vec3<T>> C()
         {
             std::vector<vec3<T>> ret;
-            ret.push_back( vec3<T>(1-2*(y*y+z*z), 2*(x*y+w*z)  , 2*(x*z-w*y))  );
-            ret.push_back( vec3<T>(2*(x*y-w*z)  , 1-2*(x*x+z*z), 2*(y*z+w*x))  );
-            ret.push_back( vec3<T>(2*(x*z+w*y)  , 2*(y*z-w*x)  , 1-2*(x*x+y*y)));
+            ret.push_back( vec3<T>(1-2*(y*y+z*z), 2*(x*y-w*z)  , 2*(x*z+w*y))  );   // 1行目
+            ret.push_back( vec3<T>(2*(x*y+w*z)  , 1-2*(x*x+z*z), 2*(y*z-w*x))  );
+            ret.push_back( vec3<T>(2*(x*z-w*y)  , 2*(y*z+w*x)  , 1-2*(x*x+y*y)));
             return (ret);
         }
 

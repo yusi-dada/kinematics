@@ -111,6 +111,11 @@ TEST(vec4, Test1)
     for(int i=0; i<3; i++)
         std::cerr << "C1[" << i << "] = " << C1[i] << std::endl;
 
+    vec4d c2(C1);
+    std::cerr << "c  = " << c << std::endl;
+    std::cerr << "c2 = " << c2 << std::endl;
+    EXPECT_TRUE(  c == c2 );
+
     // オイラーパラメータによる初期化
     vec4d d( vec3d(1,1,0), M_PI/6);
     vec4d e( vec3d(2,2,0), M_PI/6-2*M_PI);  //逆回転

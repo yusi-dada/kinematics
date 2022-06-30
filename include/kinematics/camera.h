@@ -172,24 +172,37 @@ class camera
             return true;
         }
 
-        
-
         /**
-         * @brief 画像座標系表現での3点から座標系指定
-         * @param [in] origin 原点（画像座標系）
-         * @param [in] x X軸方向（画像座標系）
-         * @param [in] y Y軸方向（画像座標系）
+         * @brief 平面上の２点で座標系を生成
+         * @details p1とp2の中点が原点、原点からp2方向へX軸、射影面方向がZ軸
+         * @param [in] p1 点1（画像座標系）
+         * @param [in] p2 点2（画像座標系）
          * @param [in] surf 射影面（基準座標系、Z方向が法線）
          */
-        /*
-        bool coordinate(vec3<T> origin, vec3<T> x, vec3<T> y, pose<T> surf)
+        bool coordinate_by_2(vec3<T> p1, vec3<T> p2, pose<T> surf, pose<T> &c)
         {
             // 画像座標系を基準座標系へ変換
-            if(!image2pos(origin, surf)) return false;
-            if(!image2pos(x, surf)) return false;
-            if(!image2pos(y, surf)) return false;
+            if(!image2pos(p1, surf)) return false;
+            if(!image2pos(p2, surf)) return false;
 
-        }*/
+            c.p = 0.5*(p1+p2);  // 2点の中点
+
+            // XYZ各軸方向を基準座標系で取得
+            std::vector<vec3<T>> axis(3);
+            axis[0] = p2 - c.p;
+            axis[2] = surf.Trans_vec(vec3<T>(0,0,1));
+            axis[1] = axis[2] % axis[0];
+            for (auto &a : axis) a = a/a.nrm();
+            Transpose(axis);
+            c.q = vec4<T>(axis);
+
+            // カメラの視線方向と射影面Z方向の内積
+            // 負であれば射影面の法線が上を反対なので修正
+            vec3<T> dir = this->p0.Trans_vec(vec3<T>(0,0,1));   // カメラ視線方向
+            if(dir*axis[2]<0) c=c.rotate(0, M_PI);  // X軸180deg回転でZ軸を反対に
+
+            return true;
+        }
 
 };
 

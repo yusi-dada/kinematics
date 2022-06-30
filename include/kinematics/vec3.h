@@ -207,6 +207,16 @@ vec3<T> operator/(const vec3<T>& obj, U k)
     return(vec3<T>(obj.x/k, obj.y/k, obj.z/k));
 }
 
+template <typename T>
+void Transpose(std::vector<vec3<T>> &C)
+{
+    assert(C.size()==3);
+    T tmp;
+    tmp = C[0].y;   C[0].y = C[1].x; C[1].x = tmp; 
+    tmp = C[0].z;   C[0].z = C[2].x; C[2].x = tmp; 
+    tmp = C[1].z;   C[1].z = C[2].y; C[2].y = tmp; 
+}
+
 }
 
 
