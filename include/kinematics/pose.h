@@ -38,36 +38,6 @@ class pose
         }
 
         /**
-         * @brief (this/p座標系の)指定軸で回転させて姿勢変更
-         * @param axis 回転軸(this座標系 or p座標系)
-         * @param angle 回転角[rad]
-         * @param p 座標系
-         * @return 回転処理後のthis座標系
-         */
-        pose<T> rotate(int axis, T angle, pose<T> *p = nullptr)
-        {
-            // 回転軸生成（回転基準となる座標系表現）
-            assert(0<=axis && axis<=2);
-            vec3<T> alfa;
-            T *alfap = &alfa.x;
-            alfap[axis] = 1;
-
-            if(p)   // 基準座標系の指定がある
-            {
-                pose<T> base = (*p);
-                pose<T> tmp = (*this)/base; // 回転前での相対姿勢取得
-                base.q = base.q * vec4<T>(alfa, angle);
-                return base*tmp;
-            }
-            else    // 基準座標系の指定がない
-            {
-                pose<T> base = (*this);
-                base.q = base.q * vec4<T>(alfa, angle);
-                return base;
-            }
-        }
-
-        /**
          * @brief 相対姿勢で座標系変換
          * @details 結合規則は左から右へ
          * @param [in] obj 相対姿勢(this座標系表現)
@@ -86,13 +56,57 @@ class pose
          * @param [in] obj 入力姿勢
          * @return 相対姿勢(obj座標系表現)
          */
-        pose<T> operator/(pose<T>& obj)
+        pose<T> operator/(pose<T> obj)
         {
             pose<T> ret(this->p, this->q);
             ret.q = obj.q.conj()*ret.q;
             ret.p = obj.q.conj().Trans(ret.p-obj.p);
             return ret;
         }
+
+
+        /**
+         * @brief (this/p座標系の)回転軸で回転させて姿勢変更
+         * @param axis 回転軸(this座標系 or p座標系)
+         * @param angle 回転角[rad]
+         * @param pt 座標系
+         * @return 回転処理後のthis座標系
+         */
+        pose<T> rotate(vec3<T> alfa, T angle, pose<T> *pt = nullptr)
+        {
+            if(pt)   // 基準座標系の指定がある
+            {
+                pose<T> base = (*pt);
+                base.q.normalize();
+                pose<T> tmp = (*this)/base; // 回転前での相対姿勢取得
+                base.q = base.q * vec4<T>(alfa, angle);
+                return base*tmp;
+            }
+            else    // 基準座標系の指定がない
+            {
+                pose<T> base = (*this);
+                base.q = base.q * vec4<T>(alfa, angle);
+                return base;
+            }
+        }
+
+        /**
+         * @brief (this/p座標系の)指定軸で回転させて姿勢変更
+         * @param axis 回転軸(this座標系 or p座標系)
+         * @param angle 回転角[rad]
+         * @param p 座標系
+         * @return 回転処理後のthis座標系
+         */
+        pose<T> rotate(int axis, T angle, pose<T> *p = nullptr)
+        {
+            // 回転軸生成（回転基準となる座標系表現）
+            assert(0<=axis && axis<=2);
+            vec3<T> alfa;
+            T *alfap = &alfa.x;
+            alfap[axis] = 1;
+            return rotate(alfa, angle, p);
+        }
+
 
         /**
          * @brief 有効判定
@@ -114,32 +128,34 @@ class pose
          * @brief 点の座標系表現(pnt)を別座標系(obj)表現へ変換
          * @param pnt [in] 3次元点位置(this座標系)
          * @param obj [in] 変換先座標系
+         * @param [in] normalize 正規化フラグ
          * @return 変換後3次元点位置(obj座標系)
          */
-        vec3<T> Trans_pnt(const vec3<T>& pnt, const pose<T>& obj=pose<T>())
+        vec3<T> Trans_pnt(const vec3<T>& pnt, const pose<T>& obj=pose<T>(), bool normalize=true)
         {
             // クラス座標系表現(pnt)を基準座標系表現(ret)に変換
-            vec3<T> ret = this->p + this->q.Trans(pnt); 
+            vec3<T> ret = this->p + this->q.Trans(pnt, normalize); 
 
             // 基準座標系表現(ret)を別座標系(obj)表現に変換
             pose<T> tmp = obj;
-            return tmp.q.conj().Trans(ret - tmp.p);
+            return tmp.q.conj().Trans(ret - tmp.p, normalize);
         }
 
         /**
          * @brief ベクトルの座標系表現(pnt)を別座標系(obj)表現へ変換
-         * @param pnt [in] 3次元点位置(this座標系)
-         * @param obj [in] 変換先座標系
+         * @param [in] pnt 3次元点位置(this座標系)
+         * @param [in] obj 変換先座標系
+         * @param [in] normalize 正規化フラグ
          * @return 変換後ベクトル(obj座標系)
          */
-        vec3<T> Trans_vec(const vec3<T>& pnt, const pose<T>& obj=pose<T>())
+        vec3<T> Trans_vec(const vec3<T>& pnt, const pose<T>& obj=pose<T>(), bool normalize=true)
         {
             // クラス座標系表現(pnt)を基準座標系表現(ret)に変換
-            vec3<T> ret = this->q.Trans(pnt); 
+            vec3<T> ret = this->q.Trans(pnt, normalize); 
 
             // 基準座標系表現(ret)を別座標系(obj)表現に変換
             pose<T> tmp = obj;
-            return tmp.q.conj().Trans(ret);
+            return tmp.q.conj().Trans(ret, normalize);
         }
 
         /**
@@ -177,7 +193,7 @@ class pose
             ray = this->Trans_vec(ray);
 
             double tmp = ray*N;
-            if (abs(tmp) <= 1e-6) return INFINITY;
+            if (abs(tmp) <= 1e-9) return INFINITY;
             return (surf.p - this->p)*N / tmp;
         }
 
@@ -187,7 +203,8 @@ class pose
 template <typename T>
 std::ostream& operator<<(std::ostream& stream, pose<T>& obj)
 {
-    return( stream << "pos[ m ] = "<< obj.p << "\nrpy[deg] = " << obj.q.rpy()*180.0/M_PI );
+//    return( stream << "pos[ m ] = "<< obj.p << "  rpy[deg] = " << obj.q.rpy()*180.0/M_PI );
+    return( stream << "pos[ m ] = "<< obj.p << "  rpy[deg] = " << obj.q );
 }
 
 

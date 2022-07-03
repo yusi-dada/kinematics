@@ -34,12 +34,28 @@ class vec4
         /**
          * @brief 要素直接指定
          */
-        vec4(T x_, T y_, T z_, T w_)
+        vec4(T x_, T y_, T z_, T w_, bool normalize=false)
         {
             this->x = x_;
             this->y = y_;
             this->z = z_;
             this->w = w_;
+            if(normalize) this->normalize();
+        }
+
+        /**
+         * @brief 回転軸と回転角度から生成
+         * @note 回転角範囲を[0, pi]に設定
+         */
+        vec4(vec3<T> alfa, T theta)
+        {
+            T nrm = alfa.nrm();
+            T s = sin(theta/2.0) / nrm;
+            this->x = alfa.x * s;
+            this->y = alfa.y * s;
+            this->z = alfa.z * s;
+            this->w = cos(theta/2.0);
+            if(this->w<0) (*this) = -(*this);
         }
 
         /**
@@ -58,33 +74,30 @@ class vec4
         }
 
         /**
-         * @brief 回転軸と回転角度から生成(回転角範囲は[0, 2pi])
-         */
-        vec4(vec3<T> alfa, T theta)
-        {
-            T nrm = alfa.nrm();
-            T s = sin(theta/2.0);
-            this->x = alfa.x * s / nrm;
-            this->y = alfa.y * s / nrm;
-            this->z = alfa.z * s / nrm;
-            this->w = cos(theta/2.0);
-            if(this->w<0) (*this) = -(*this);
-        }
-
-        /**
-         * @brief 方向予言行列から生成(回転角範囲は[0, 2pi])
+         * @brief 方向余弦行列から生成
+         * @param [in] C 基準座標系からthis座標系への変換行列
          */
         vec4(std::vector<vec3<T>> C)
         {
             assert(C.size()==3);
             auto tmp = 1+C[0][0]+C[1][1]+C[2][2];
-            assert(tmp>0);
-
-            this->w = 0.5*sqrt(tmp);
-            auto den = 1.0/(4.0*this->w);
-            this->x = (C[2][1]-C[1][2])*den;
-            this->y = (C[0][2]-C[2][0])*den;
-            this->z = (C[1][0]-C[0][1])*den;
+            if (tmp>this->err)
+            {
+                this->w = 0.5*sqrt(tmp);
+                auto den = 1.0/(4.0*this->w);
+                this->x = -(C[2][1]-C[1][2])*den;
+                this->y = -(C[0][2]-C[2][0])*den;
+                this->z = -(C[1][0]-C[0][1])*den;
+            } 
+            else
+            {
+                // 回転角=pi
+                this->x = 0.5*(1.0+C[0][0]);
+                this->y = 0.5*(1.0+C[1][1]);
+                this->z = 0.5*(1.0+C[2][2]);
+                this->w = 0;
+            }
+            this->normalize();
         }
 
         /**
@@ -148,54 +161,16 @@ class vec4
         vec4<T> normalize()
         {
             double nrm = this->nrm();
-            if(abs(nrm) > 1.e-6)
+            if(abs(nrm) > this->err)
             {
-                vec4<T> ret(this->x/nrm, this->y/nrm, this->z/nrm, this->w/nrm);
-                if(this->w < 0) ret = -ret;
-                return( ret );
+                this->x = this->x/nrm;
+                this->y = this->y/nrm;
+                this->z = this->z/nrm;
+                this->w = this->w/nrm;
+                return (*this);
             }
             else
                 assert(false);
-        }
-
-        /**
-         * @brief 3-2-1-オイラー角の生成
-         */
-        vec3<T> rpy()
-        {
-            T roll, pitch, yaw;
-            T flg = -2*(this->x*this->z-this->y*this->w);
-            if (abs(flg-1) < 1.e-6)
-            {
-                roll  = atan2(2.0*(this->x*this->y-this->w*this->z), 2.0*(this->x*this->z+this->w*this->y));
-                pitch = M_PI/2.0;
-                yaw   = 0;
-            }
-            else if(abs(flg+1) < 1.e-6)
-            {
-                roll  = -atan2(2.0*(this->x*this->y-this->w*this->z), 2.0*(this->x*this->z+this->w*this->y));
-                pitch = -M_PI/2.0;
-                yaw   = 0;
-            }
-            else
-            {
-                roll  = atan2(2.0*(this->y*this->z+this->w*this->x), 1.0-2.0*(this->x*this->x+this->y*this->y));
-                pitch = asin(-2.0*(this->x*this->z-this->y*this->w));
-                yaw   = atan2(2.0*(this->x*this->y+this->w*this->z), 1.0-2.0*(this->y*this->y+this->z*this->z));
-            }
-            return( vec3<T>(roll, pitch, yaw) );
-        }
-
-        /**
-         * @brief 回転行列の生成
-         */
-        std::vector<vec3<T>> C()
-        {
-            std::vector<vec3<T>> ret;
-            ret.push_back( vec3<T>(1-2*(y*y+z*z), 2*(x*y-w*z)  , 2*(x*z+w*y))  );   // 1行目
-            ret.push_back( vec3<T>(2*(x*y+w*z)  , 1-2*(x*x+z*z), 2*(y*z-w*x))  );
-            ret.push_back( vec3<T>(2*(x*z-w*y)  , 2*(y*z+w*x)  , 1-2*(x*x+y*y)));
-            return (ret);
         }
 
         /**
@@ -207,40 +182,94 @@ class vec4
             vec3<T> v1(this->x, this->y, this->z);
             T s2 = obj.w;
             vec3<T> v2(obj.x, obj.y, obj.z);
-
             T s = (s1 * s2) - (v1 * v2);
             vec3<T> v = (s1 * v2) + (s2 * v1) + (v1 % v2);
             return( vec4<T>(v.x, v.y, v.z, s) );
         }
 
-
-        std::pair<vec3<T>, T> RotationTo2(vec4<T>& obj)
+        /**
+         * @brief ベクトルの基準座標への変換
+         * @param [in] v 変換前位置（this座標系）
+         */
+        vec3<T> Trans(const vec3<T>& v, bool normalize=true)
         {
-            std::vector<vec3<T>> C = (obj.conj()*(*this)).C();
-            T vx = C[2][1]-C[1][2];
-            T vy = C[0][2]-C[2][0];
-            T vz = C[1][0]-C[0][1];
-            T l = vx*vx + vy*vy + vz*vz;
-            l = sqrt(l);
-            vec3<T> axis(vx,vy,vz);
-            T theta = asin(l/2.0);
-            return {axis/l, theta};
+            if(normalize) this->normalize();
+            vec4<T> p_in(v.x, v.y, v.z, 0);
+            vec4<T> p_out = (*this) * p_in * (*this).conj();
+            return vec3<T>(p_out.x, p_out.y, p_out.z);
         }
+
+        /**
+         * @brief 方向余弦行列の生成
+         * @return 基準座標系からthis座標系からの変換行列
+         */
+        std::vector<vec3<T>> C(bool normalize=true)
+        {
+            if(normalize) this->normalize();
+            std::vector<vec3<T>> ret;
+            ret.push_back( vec3<T>(1-2*(y*y+z*z), 2*(x*y+w*z)  , 2*(x*z-w*y))  );   // 1行目
+            ret.push_back( vec3<T>(2*(x*y-w*z)  , 1-2*(x*x+z*z), 2*(y*z+w*x))  );
+            ret.push_back( vec3<T>(2*(x*z+w*y)  , 2*(y*z-w*x)  , 1-2*(x*x+y*y)));
+            return (ret);
+        }
+
+
+
+        /**
+         * @brief 3-2-1-オイラー角の生成
+         */
+        vec3<T> rpy(bool normalize=true)
+        {
+            if(normalize) this->normalize();
+            T roll, pitch, yaw;
+            T flg = -2*(x*z-y*w);
+            if (abs(flg-1) < 1.e-6)
+            {
+                roll  = atan2(2.0*(x*y-w*z), 2.0*(x*z+w*y));
+                pitch = M_PI/2.0;
+                yaw   = 0;
+            }
+            else if(abs(flg+1) < 1.e-6)
+            {
+                roll  = -atan2(2.0*(x*y-w*z), 2.0*(x*z+w*y));
+                pitch = -M_PI/2.0;
+                yaw   = 0;
+            }
+            else
+            {
+                T tmp = -2.0*(x*z-y*w);
+                if(tmp>1)  tmp = 1;
+                if(tmp<-1) tmp = -1;
+                roll  = atan2(2.0*(y*z+w*x), 1.0-2.0*(x*x+y*y));
+                pitch = asin(tmp);
+                yaw   = atan2(2.0*(x*y+w*z), 1.0-2.0*(y*y+z*z));
+            }
+
+            return( vec3<T>(roll, pitch, yaw) );
+        }
+
+
 
         /**
          * @brief this姿勢からobj姿勢への等価回転軸と回転角を算出
          */
-        std::pair<vec3<T>, T> RotationTo(vec4<T>& obj)
+        std::pair<vec3<T>, T> RotationTo(vec4<T> obj)
         {
-            std::vector<vec3<T>> C = (obj.conj()*(*this)).C();
+            if((*this)==obj)    return{vec3<T>(NAN,NAN,NAN), 0};
+
+            vec4<T> p = obj.conj()*(*this);
+            if(abs(p.w)<1e-9)
+            {
+                // 回転角が0 or pi
+            }
+
+            std::vector<vec3<T>> C = p.C();
+            //Transpose(C);
             vec3<T> knum(C[2][1]-C[1][2], C[0][2]-C[2][0], C[1][0]-C[0][1]);
-            std::cerr << knum << std::endl;
             T den = C[0][0]+C[1][1]+C[2][2]-1;
             T theta = atan2(knum.nrm(), den);
             T theta_abs = abs(theta);
             vec3<T> vec;
-
-            if(theta_abs < 1e-9)   return{vec, 0};
 
             T den2;
             if(theta > 150.0*M_PI/180.0)
@@ -316,15 +345,6 @@ class vec4
             return( ret );
         }
 
-        /**
-         * @brief ベクトルの基準座標への変換
-         */
-        vec3<T> Trans(const vec3<T>& v)
-        {
-            vec4<T> p_in(v.x, v.y, v.z, 0);
-            vec4<T> p_out = (*this) * p_in * (*this).conj();
-            return vec3<T>(p_out.x, p_out.y, p_out.z);
-        }
 
         /**
          * @brief 各要素の一致判定（数値誤差をerrだけ許容）
@@ -388,7 +408,7 @@ std::ostream& operator<<(std::ostream& stream, const vec4<T>& obj)
     return( stream << cData);
 }
 
-/*
+
 template <typename T>
 std::vector<vec3<T>> rpy2C(T roll,T pitch, T yaw)
 {
@@ -403,6 +423,28 @@ std::vector<vec3<T>> rpy2C(T roll,T pitch, T yaw)
 	ret.push_back( vec3<T>(s1*s2*c3-c1*s3, s1*s2*s3+c1*c3, s1*c2) );
 	ret.push_back( vec3<T>(c1*s2*c3+s1*s3, c1*s2*s3-s1*c3, c1*c2) );
 	return( ret );
+}
+/*
+template <typename T>
+vec3<T> C2rpy(std::vector<vec3<T>> C)
+{
+    assert(C.size()==3);
+
+    T roll, pitch, yaw;
+    bool flg = (abs(C[0][0]) < 1e-9) && (abs(C[0][1]) < 1e-9);
+    if( flg )
+    {
+        // c2=0
+
+    }
+    else
+    {
+        // c2!=0 
+        roll  = atan2(C[1][2], C[2][2]);
+        pitch = asin(-C[0][2]);
+        yaw   = atan2(C[0][1], C[0][0]);
+    }
+    return vec3<T>(roll, pitch, yaw);
 }
 */
 }

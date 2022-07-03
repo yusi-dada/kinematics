@@ -30,6 +30,7 @@ class camera
         camera(T tanH_, T tanV_, pose<T> p0_, T yaw=0)
         {
             assert(tanH_>0 && tanV_>0);
+            p0_.q.normalize();
             this->tanH = tanH_;
             this->tanV = tanV_;
             this->p0   = p0_.rotate(2, yaw); 
@@ -182,6 +183,7 @@ class camera
         bool coordinate_by_2(vec3<T> p1, vec3<T> p2, pose<T> surf, pose<T> &c)
         {
             // 画像座標系を基準座標系へ変換
+            if(p1==p2)               return false;
             if(!image2pos(p1, surf)) return false;
             if(!image2pos(p2, surf)) return false;
 
@@ -193,7 +195,6 @@ class camera
             axis[2] = surf.Trans_vec(vec3<T>(0,0,1));
             axis[1] = axis[2] % axis[0];
             for (auto &a : axis) a = a/a.nrm();
-            Transpose(axis);
             c.q = vec4<T>(axis);
 
             // カメラの視線方向と射影面Z方向の内積

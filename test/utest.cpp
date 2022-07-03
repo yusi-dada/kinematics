@@ -117,10 +117,10 @@ TEST(vec4, Test1)
     EXPECT_TRUE(  c == c2 );
 
     // オイラーパラメータによる初期化
-    vec4d d( vec3d(1,1,0), M_PI/6);
-    vec4d e( vec3d(2,2,0), M_PI/6-2*M_PI);  //逆回転
-    EXPECT_TRUE(  d == e );  // 回転方向による違いはなし
-    EXPECT_FALSE( d == -e );
+    vec4d d( vec3d(1,1,0), M_PI/6);         // [-pi pi]
+    vec4d e( vec3d(2,2,0), M_PI/6+4*M_PI);  // [-pi pi]の範囲外
+//    EXPECT_FALSE(  d == e );  // 回転方向による違いはなし
+//    EXPECT_TRUE( d == -e );
     EXPECT_TRUE(  d.eq(e) );
     EXPECT_TRUE(  d.eq(-e) );   // 回転方向の区別なしで比較
 
@@ -132,7 +132,81 @@ TEST(vec4, Test1)
     vec4d g(vec3d(0,0,1),M_PI/6);
     EXPECT_TRUE( g.rpy() == vec3d(0,0,M_PI/6) );
     EXPECT_TRUE( g.Trans(vec3d(1,0,0)) == vec3d(cos(M_PI/6),sin(M_PI/6),0) );
+}
 
+TEST(vec4, Test2)
+{
+    // オイラーパラメータ <===> 方向余弦行列
+
+    // 角度リスト作成
+    int list_size = 3;
+    std::vector<double> angle_list(list_size);
+    for(int i=0; i<list_size; i++)
+        angle_list[i] = -M_PI/3 + (M_PI/2.0)*i;
+
+    double roll, pitch, yaw;
+    for(int i=0; i<list_size; i++)
+    {
+        roll = angle_list[i];
+        for(int j=0; j<list_size; j++)
+        {
+            pitch = angle_list[j];
+            for(int k=0; k<list_size; k++)
+            {
+                yaw = angle_list[k];
+                vec4d q(roll, pitch, yaw);          // EulerParameter (from rpy)
+                auto C1 = q.C();
+                auto C2 = rpy2C(roll, pitch, yaw);
+//                std::cerr << C1 << std::endl;
+//                std::cerr << C2 << std::endl;
+//                std::cerr << "------------" << std::endl;
+                EXPECT_TRUE(C1==C2);
+            }
+        }
+    }
+
+
+
+}
+
+TEST(vec4, Test3)
+{
+    // オイラーパラメータ <===> オイラー角
+
+    // 角度リスト作成
+    int list_size = 3;
+    std::vector<double> angle_list(list_size);
+    for(int i=0; i<list_size; i++)
+        angle_list[i] = -M_PI/3 + (M_PI/2.0)*i;
+//        angle_list[i] = -2.0*M_PI + (M_PI/2.0)*i;
+
+    double roll, pitch, yaw;
+    for(int i=0; i<list_size; i++)
+    {
+        roll = angle_list[i];
+        for(int j=0; j<list_size; j++)
+        {
+            pitch = angle_list[j];
+            for(int k=0; k<list_size; k++)
+            {
+                yaw = angle_list[k];
+                vec3d rpy(roll, pitch, yaw);        // rpy (input)
+                vec4d q(roll, pitch, yaw);          // EulerParameter (from rpy)
+                vec3d rpy2 = q.rpy();               // rpy2 (from EulerParameter)
+                vec4d q2(rpy2.x, rpy2.y, rpy2.z);   // EulerParameter2 (from rpy2)
+                bool test1 = (rpy == rpy2);
+                bool test2 = (q.eq(q2));        // 同一回転  
+                //bool test2 = (q == q2);       // 成分完全一致
+                char cData[512];
+                sprintf(cData, "rpy1[deg]=(%3.0f, %3.0f, %3.0f) --> %d\nrpy2[deg]=(%3.0f, %3.0f, %3.0f)", 
+                        roll*180/M_PI, pitch*180/M_PI, yaw*180/M_PI, test1 & test2,
+                        rpy2.x*180/M_PI, rpy2.y*180/M_PI, rpy2.z*180/M_PI);
+                std::cerr << cData << std::endl;
+                //EXPECT_TRUE(test2) << q << q2;
+                
+            }
+        }
+    }
 
 }
 

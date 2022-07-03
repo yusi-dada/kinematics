@@ -207,6 +207,19 @@ vec3<T> operator/(const vec3<T>& obj, U k)
     return(vec3<T>(obj.x/k, obj.y/k, obj.z/k));
 }
 
+
+template <typename T>
+std::ostream& operator<<(std::ostream& stream, const std::vector<vec3<T>>& obj)
+{
+    stream << obj[0] << std::endl;
+    stream << obj[1] << std::endl;
+    stream << obj[2] << std::endl;
+    return( stream );
+}
+
+/**
+ * @brief 3x3行列の転置
+ */
 template <typename T>
 void Transpose(std::vector<vec3<T>> &C)
 {
@@ -215,6 +228,20 @@ void Transpose(std::vector<vec3<T>> &C)
     tmp = C[0].y;   C[0].y = C[1].x; C[1].x = tmp; 
     tmp = C[0].z;   C[0].z = C[2].x; C[2].x = tmp; 
     tmp = C[1].z;   C[1].z = C[2].y; C[2].y = tmp; 
+}
+
+/**
+ * @brief 行列の一致確認
+ */
+template <typename T>
+bool operator==(std::vector<vec3<T>> C1, std::vector<vec3<T>> C2)
+{
+    if(C1.size()!=C2.size()) return false;
+    for(int i=0; i<C1.size(); i++)
+    {
+        if(!(C1[i]==C2[i])) return false;
+    }
+    return true;
 }
 
 }
