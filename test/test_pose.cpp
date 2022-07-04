@@ -1,5 +1,5 @@
-#include "ros_marker.h"
-#include "pose.h"
+#include <ros_func/ros_marker.h>
+#include <kinematics/pose.h>
 using namespace kinematics;
 using namespace ros_func;
 typedef pose<double> posed;

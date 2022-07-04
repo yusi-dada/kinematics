@@ -3,7 +3,7 @@
  * @brief 座標系クラス
  */
 #pragma once
-#include "vec4.h"
+#include <kinematics/vec4.h>
 
 namespace kinematics
 {

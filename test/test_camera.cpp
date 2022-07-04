@@ -1,10 +1,6 @@
-#include "ros_marker.h"
-#include "camera.h"
+#include <kinematics/kinematics.h>
 using namespace kinematics;
 using namespace ros_func;
-typedef pose<double> posed;
-typedef vec4<double> vec4d;
-typedef vec3<double> vec3d;
 
 int main(int argc, char **argv)
 {
@@ -15,7 +11,7 @@ int main(int argc, char **argv)
     ros::Rate rate (100);
 
     // カメラ設定
-    posed flange2cam(vec3d(-0.05,0,0), vec4d(0, 10*M_PI/180, 0));
+    posed flange2cam(vec3d(-0.05,0,0), vec4d(0, 20*M_PI/180, 0));
     double cameraYaw = -M_PI/2;
     double tanH = tan(20*M_PI/180.0);
     double tanV = tan(15*M_PI/180.0);
@@ -59,9 +55,6 @@ int main(int argc, char **argv)
         posed c1;
         if(cam1.coordinate_by_2(ray3[0],ray3[1],surf_hand,c1))
         {
-            std::cerr <<"surf= "<<surf_hand << std::endl;
-            std::cerr <<"cam1= "<<cam1.p0 << std::endl;
-            std::cerr <<"c1= "<<c1 << std::endl;
             rp.setAxis("world", "hand_coor", c1);        
             if (cam1.image2pos(ray3, surf_hand))
                 LineMarker(ma, "world", ray3[0], ray3[1], ColorRGBA(1,1,1,0.5), "line");
@@ -92,13 +85,38 @@ int main(int argc, char **argv)
             auto tmp = c1.q.RotationTo(c2.q);
             auto axis = tmp.first;
             auto theta = tmp.second;
-            std::cerr <<"theta= "<<theta << std::endl;
-            if(theta!=0)
+            if(abs(theta)>1e-4)
             {
+                std::cerr <<"theta= "<<theta << std::endl;
                 ArrowMarker(ma,"hand_coor", vec3d(), axis, ColorRGBA(1,1,0,0.5), "rotate");
                 theta = std::min(std::max(theta,-0.01),0.01);
-                flange = flange.rotate(axis, theta, &c1);
+                flange = flange.rotate(axis, theta, &c2);
             }
+
+            // カメラ視線方向の補正
+            vec3d a = c1.p - cam1.p0.p;     // ハンド
+            vec3d b = c2.p - cam1.p0.p;     // ターゲット
+            double COS = a*b/a.nrm()/b.nrm();
+            if(COS < 1)  // 補正角あり
+            {
+                vec3d axb = a%b;    // 基準座標系の回転軸
+                theta = acos(COS);
+                theta = std::min(std::max(theta,-0.01),0.01);
+                posed g;            // 基準座標系
+                g.p = cam1.p0.p;    // 回転中心をカメラに設定
+                flange = flange.rotate(axb, theta, &g);
+            }
+
+            auto dL = b - a;
+            if (!(dL==vec3d(0,0,0)))
+            {
+                dL.x = std::min(std::max(dL.x,-0.001),0.001);
+                dL.y = std::min(std::max(dL.y,-0.001),0.001);
+                dL.z = std::min(std::max(dL.z,-0.001),0.001);
+                flange.p = flange.p + dL;
+                //pm.append(flange.p);
+            }
+
 
             assert(flange.isnum());
         }

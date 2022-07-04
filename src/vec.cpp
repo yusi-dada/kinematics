@@ -1,5 +1,5 @@
-#include "vec3.h"
-#include "vec4.h"
-#include "pose.h"
-#include "pose_array.h"
-#include "camera.h"
+#include <kinematics/vec3.h>
+#include <kinematics/vec4.h>
+#include <kinematics/pose.h>
+#include <kinematics/pose_array.h>
+#include <kinematics/camera.h>

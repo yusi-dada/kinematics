@@ -1,7 +1,7 @@
-#include "ros_marker.h"
-#include "pose_array.h"
-#include "camera.h"
-#include "robot.h"
+#include <ros_func/ros_marker.h>
+#include <kinematics/pose_array.h>
+#include <kinematics/camera.h>
+#include <kinematics/robot.h>
 using namespace kinematics;
 using namespace ros_func;
 typedef pose<double> posed;

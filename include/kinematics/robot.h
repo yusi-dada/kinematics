@@ -1,8 +1,9 @@
 #pragma once
 #include <array>
-#include "camera.h"
-#include "pose_array.h"
-#include "ros_marker.h"
+#include <kinematics/camera.h>
+#include <kinematics/pose_array.h>
+
+#include <ros_func/ros_marker.h>
 using namespace ros_func;
 
 #define Naxis (6)

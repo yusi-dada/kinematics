@@ -3,7 +3,7 @@
  * @brief カメラモデル
  */
 #pragma once
-#include "pose.h"
+#include <kinematics/pose.h>
 
 namespace kinematics
 {
@@ -33,7 +33,8 @@ class camera
             p0_.q.normalize();
             this->tanH = tanH_;
             this->tanV = tanV_;
-            this->p0   = p0_.rotate(2, yaw); 
+            this->p0   = p0_;
+            if(yaw!=0) this->p0 = this->p0.rotate(2, yaw); 
         }
 
         /**
@@ -201,7 +202,6 @@ class camera
             // 負であれば射影面の法線が上を反対なので修正
             vec3<T> dir = this->p0.Trans_vec(vec3<T>(0,0,1));   // カメラ視線方向
             if(dir*axis[2]<0) c=c.rotate(0, M_PI);  // X軸180deg回転でZ軸を反対に
-
             return true;
         }
 

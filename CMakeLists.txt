@@ -117,8 +117,7 @@ catkin_package(
 ## Specify additional locations of header files
 ## Your package locations should be listed before other locations
 include_directories(
-  include/kinematics
-  include/ros_func
+  include
   ${catkin_INCLUDE_DIRS}
 )
 
@@ -217,8 +216,16 @@ target_link_libraries(${PROJECT_NAME}_test_rviz ${catkin_LIBRARIES})
 #############
 ## Testing ##
 #############
-catkin_add_gtest(${PROJECT_NAME}-test test/utest.cpp ${LIB_SOURCE_CPP})
-target_link_libraries(${PROJECT_NAME}-test ${catkin_LIBRARIES})
+#catkin_add_gtest(${PROJECT_NAME}-test test/utest.cpp ${LIB_SOURCE_CPP})
+#target_link_libraries(${PROJECT_NAME}-test ${catkin_LIBRARIES})
+
+# vec3
+catkin_add_gtest(${PROJECT_NAME}-vec3 test/utest_vec3.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}-vec3 ${catkin_LIBRARIES})
+
+#vec4
+catkin_add_gtest(${PROJECT_NAME}-vec4 test/utest_vec4.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}-vec4 ${catkin_LIBRARIES})
 
 ## Add gtest based cpp test target and link libraries
 #catkin_add_gtest(${PROJECT_NAME}-test test/test_kinematics.cpp)

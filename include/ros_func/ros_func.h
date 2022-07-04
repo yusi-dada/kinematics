@@ -4,8 +4,7 @@
  */
 #ifndef __ROS_FUNC__
 #define __ROS_FUNC__
-#include "pose.h"
-
+#include <kinematics/pose.h>
 #include <ros/ros.h>
 #include <std_msgs/ColorRGBA.h>
 #include <geometry_msgs/Pose.h>

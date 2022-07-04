@@ -1,5 +1,5 @@
 #pragma once
-#include "pose.h"
+#include <kinematics/pose.h>
 #include <memory>
 
 namespace kinematics

@@ -1,46 +1,22 @@
 #pragma once
-#include "pose_array.h"
-#include <array>
-#define Naxis (6)
+#include <kinematics/vec3.h>
+#include <kinematics/vec4.h>
+#include <kinematics/pose.h>
+#include <kinematics/pose_array.h>
+#include <kinematics/camera.h>
+#include <ros_func/ros_marker.h>
 
-namespace kinematics
-{
+typedef kinematics::vec3<double> vec3d;
+typedef kinematics::vec4<double> vec4d;
+typedef kinematics::pose<double> posed;
+typedef kinematics::pose_array<double> pad;
+typedef kinematics::camera<double> camd;
 
-inline std::vector<vec3<double>> posB()
-{
-    std::vector<vec3<double>> pos(Naxis);
-    pos[0] = vec3<double>(0,0,0.295);
-    pos[1] = vec3<double>(0,0.0797,0);
-    pos[2] = vec3<double>(0,-0.0367,0.230);
-    pos[3] = vec3<double>(-0.050,-0.043,0.0725);
-    pos[4] = vec3<double>(0,0,0.1975);
-    pos[5] = vec3<double>(0,0,0.07);
-    return pos;
-}
+typedef kinematics::vec3<float> vec3f;
+typedef kinematics::vec4<float> vec4f;
+typedef kinematics::pose<float> posef;
+typedef kinematics::pose_array<float> paf;
+typedef kinematics::camera<float> camf;
 
-inline std::vector<vec3<double>> alfa()
-{
-    std::vector<vec3<double>> alfa(Naxis);
-    alfa[0] = vec3<double>(0,0,1);
-    alfa[1] = vec3<double>(0,1,0);
-    alfa[2] = vec3<double>(0,1,0);
-    alfa[3] = vec3<double>(0,0,1);
-    alfa[4] = vec3<double>(0,1,0);
-    alfa[5] = vec3<double>(0,0,1);
-    return alfa;
-}
-
-
-template <typename T>
-pose_array<T> jnt2pos_array(std::array<T, Naxis> jnt, pose<T> base=pose<T>())
-{
-    return pose_array<T>(posB(), alfa(), jnt, base);       // リンク生成
-}
-
-template <typename T>
-std::array<T, Naxis> pos2jnt(pose<T> pos)
-{
-
-}
-
-}
+typedef std::vector<kinematics::vec3<double>> mat3d;
+typedef std::vector<kinematics::vec3<float>> mat3f;

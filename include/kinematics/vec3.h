@@ -208,12 +208,13 @@ vec3<T> operator/(const vec3<T>& obj, U k)
 }
 
 
+/**
+ * @brief 行列のストリーム表示
+ */
 template <typename T>
 std::ostream& operator<<(std::ostream& stream, const std::vector<vec3<T>>& obj)
 {
-    stream << obj[0] << std::endl;
-    stream << obj[1] << std::endl;
-    stream << obj[2] << std::endl;
+    for(auto p : obj)  stream << p << std::endl;
     return( stream );
 }
 

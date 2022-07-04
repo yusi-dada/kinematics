@@ -3,9 +3,9 @@
  * @brief マーカオブジェクトの生成
  */
 #pragma once
-#include "ros_func.h"
-#include "camera.h"
-#include "pose_array.h"
+#include <ros_func/ros_func.h>
+#include <kinematics/camera.h>
+#include <kinematics/pose_array.h>
 #include <tf/transform_broadcaster.h>
 #include <visualization_msgs/MarkerArray.h>
 

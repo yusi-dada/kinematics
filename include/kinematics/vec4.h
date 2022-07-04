@@ -3,7 +3,7 @@
  * @brief クォータニオンクラス
  */
 #pragma once
-#include "vec3.h"
+#include <kinematics/vec3.h>
 #include <bits/stdc++.h> // M_PI
 
 namespace kinematics
@@ -34,13 +34,12 @@ class vec4
         /**
          * @brief 要素直接指定
          */
-        vec4(T x_, T y_, T z_, T w_, bool normalize=false)
+        vec4(T x_, T y_, T z_, T w_)
         {
             this->x = x_;
             this->y = y_;
             this->z = z_;
             this->w = w_;
-            if(normalize) this->normalize();
         }
 
         /**
@@ -92,25 +91,16 @@ class vec4
             else
             {
                 // 回転角=pi
-                this->x = 0.5*(1.0+C[0][0]);
-                this->y = 0.5*(1.0+C[1][1]);
-                this->z = 0.5*(1.0+C[2][2]);
+                this->x = sqrt(0.5*(1.0+C[0][0]));
+                this->y = sqrt(0.5*(1.0+C[1][1]));
+                this->z = sqrt(0.5*(1.0+C[2][2]));
                 this->w = 0;
+
+                // x>0とする
+                if(C[0][1]<0) this->y = -this->y;
+                if(C[0][2]<0) this->z = -this->z;
             }
             this->normalize();
-        }
-
-        /**
-         * @brief 代入
-         */
-        template<typename U>
-        vec4<T> operator=(const vec4<U>& obj)
-        {
-            this->x = obj.x;
-            this->y = obj.y;
-            this->z = obj.z;
-            this->w = obj.w;
-            return(*this);
         }
 
         /**
@@ -125,7 +115,10 @@ class vec4
                 case 2: return(this->z);
                 case 3: return(this->w);
                 default:
+                {
+                    std::cerr << "[vec4] wrong index" << std::endl;
                     assert(false);
+                }
             }
         }
 
@@ -161,16 +154,77 @@ class vec4
         vec4<T> normalize()
         {
             double nrm = this->nrm();
-            if(abs(nrm) > this->err)
-            {
-                this->x = this->x/nrm;
-                this->y = this->y/nrm;
-                this->z = this->z/nrm;
-                this->w = this->w/nrm;
-                return (*this);
-            }
-            else
-                assert(false);
+            assert(abs(nrm) > this->err);
+            this->x = this->x / nrm;
+            this->y = this->y / nrm;
+            this->z = this->z / nrm;
+            this->w = this->w / nrm;
+            return (*this);
+        }
+
+        /**
+         * @brief 代入
+         */
+        template<typename U>
+        vec4<T> operator=(const vec4<U>& obj)
+        {
+            this->x = (T)obj.x;
+            this->y = (T)obj.y;
+            this->z = (T)obj.z;
+            this->w = (T)obj.w;
+            return(*this);
+        }
+
+        /**
+         * @brief 各要素の一致判定（数値誤差をerrだけ許容）
+         */
+        bool operator==(const vec4<T>& obj)
+        {
+            if(abs(this->x-obj.x)>this->err) return false;
+            if(abs(this->y-obj.y)>this->err) return false;
+            if(abs(this->z-obj.z)>this->err) return false;
+            if(abs(this->w-obj.w)>this->err) return false;
+            return true;
+        }
+
+        /**
+         * @brief 同回転のクォータニオン判定
+         */
+        bool eq(const vec4<T>& obj)
+        {
+            return ((*this) == obj) || (-(*this) == obj);
+        }
+
+        /**
+         * @brief 不定値判定
+         */
+        bool isnan()
+        {
+            if(std::isnan(this->x)) return true;
+            if(std::isnan(this->y)) return true;
+            if(std::isnan(this->z)) return true;
+            if(std::isnan(this->w)) return true;
+            return false;
+        }
+
+        /**
+         * @brief 無限大値判定
+         */
+        bool isinf()
+        {
+            if(std::isinf(this->x)) return true;
+            if(std::isinf(this->y)) return true;
+            if(std::isinf(this->z)) return true;
+            if(std::isinf(this->w)) return true;
+            return false;
+        }
+
+        /**
+         * @brief 有効値判定
+         */
+        bool isnum()
+        {
+            return(!isnan() && !isinf());
         }
 
         /**
@@ -344,60 +398,6 @@ class vec4
             ret.w = a*w + b*obj.w;
             return( ret );
         }
-
-
-        /**
-         * @brief 各要素の一致判定（数値誤差をerrだけ許容）
-         */
-        bool operator==(const vec4<T>& obj)
-        {
-            if(abs(this->x-obj.x)>this->err) return false;
-            if(abs(this->y-obj.y)>this->err) return false;
-            if(abs(this->z-obj.z)>this->err) return false;
-            if(abs(this->w-obj.w)>this->err) return false;
-            return true;
-        }
-
-        /**
-         * @brief 同回転のクォータニオン判定
-         */
-        bool eq(const vec4<T>& obj)
-        {
-            return ((*this) == obj) || (-(*this) == obj);
-        }
-
-        /**
-         * @brief 不定値判定
-         */
-        bool isnan()
-        {
-            if(std::isnan(this->x)) return true;
-            if(std::isnan(this->y)) return true;
-            if(std::isnan(this->z)) return true;
-            if(std::isnan(this->w)) return true;
-            return false;
-        }
-
-        /**
-         * @brief 無限大値判定
-         */
-        bool isinf()
-        {
-            if(std::isinf(this->x)) return true;
-            if(std::isinf(this->y)) return true;
-            if(std::isinf(this->z)) return true;
-            if(std::isinf(this->w)) return true;
-            return false;
-        }
-
-        /**
-         * @brief 有効値判定
-         */
-        bool isnum()
-        {
-            return(!isnan() && !isinf());
-        }
-
 };
 
 template <typename T>
