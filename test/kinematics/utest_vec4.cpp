@@ -15,6 +15,17 @@ TEST(vec4, Test1)
     EXPECT_EQ(3, b[2]);
     EXPECT_EQ(4, b[3]);
 
+    // 要素変更
+    b[0] = 2;
+    b[1] = 3 * b[0];
+    EXPECT_EQ(2, b[0]);
+    EXPECT_EQ(6, b[1]);
+    EXPECT_EQ(3, b[2]);
+    EXPECT_EQ(4, b[3]);
+
+    b[0] = 1;   // もとに戻す
+    b[1] = 2;   // もとに戻す
+
     // 単項演算子/共役
     EXPECT_TRUE(+b == vec4d( 1, 2, 3, 4));
     EXPECT_TRUE(-b == vec4d(-1,-2,-3,-4));

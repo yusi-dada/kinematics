@@ -1,5 +1,21 @@
-#include <kinematics/vec3.h>
-#include <kinematics/vec4.h>
-#include <kinematics/pose.h>
-#include <kinematics/pose_array.h>
-#include <kinematics/camera.h>
+#include <kinematics/kinematics.h>
+#include <robot/robot.h>
+
+const unsigned int BIT_FLAG[16]={
+    (1 <<  0),
+    (1 <<  1),
+    (1 <<  2),
+    (1 <<  3),
+    (1 <<  4),
+    (1 <<  5),
+    (1 <<  6),
+    (1 <<  7),
+    (1 <<  8),
+    (1 <<  9),
+    (1 << 10),
+    (1 << 11),
+    (1 << 12),
+    (1 << 13),
+    (1 << 14),
+    (1 << 15)
+};

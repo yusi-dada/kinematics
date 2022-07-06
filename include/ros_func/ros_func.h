@@ -4,11 +4,14 @@
  */
 #ifndef __ROS_FUNC__
 #define __ROS_FUNC__
-#include <kinematics/pose.h>
+#include <kinematics/kinematics.h>
 #include <ros/ros.h>
 #include <std_msgs/ColorRGBA.h>
 #include <geometry_msgs/Pose.h>
 
+/**
+ * @brief ROS用関数名前空間
+ */
 namespace ros_func
 {
 using namespace kinematics;

@@ -16,6 +16,15 @@ TEST(vec3, Test1)
     EXPECT_EQ(2, a[1]);
     EXPECT_EQ(3, a[2]);
 
+    // 要素の変更
+    a[0] = 4;
+    a[2] = 2 * a[0];
+    EXPECT_EQ(4, a[0]);
+    EXPECT_EQ(8, a[2]);
+
+    a[0] = 1;
+    a[2] = 3;
+
     // 定数演算
     EXPECT_TRUE( 3+a == vec3d(3+1,3+2,3+3) );
     EXPECT_TRUE( a+2 == vec3d(2+1,2+2,2+3) );

@@ -12,6 +12,7 @@ find_package(catkin REQUIRED COMPONENTS
   rospy
   std_msgs
   tf
+  urdf
 )
 
 ## System dependencies are found with CMake's conventions
@@ -153,23 +154,13 @@ include_directories(
 
 set( LIB_SOURCE_CPP
   src/ros_marker.cpp
+  src/urdf.cpp
   src/vec.cpp
 )
 
 # 共有ライブラリの作成
 add_library(${PROJECT_NAME} ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME} ${catkin_LIBRARIES})
-
-# テストファイル
-add_executable(${PROJECT_NAME}_test_pose test/test_pose.cpp ${LIB_SOURCE_CPP})
-target_link_libraries(${PROJECT_NAME}_test_pose ${catkin_LIBRARIES})
-
-add_executable(${PROJECT_NAME}_test_camera test/test_camera.cpp ${LIB_SOURCE_CPP})
-target_link_libraries(${PROJECT_NAME}_test_camera ${catkin_LIBRARIES})
-
-add_executable(${PROJECT_NAME}_test_rviz test/test_rviz.cpp ${LIB_SOURCE_CPP})
-target_link_libraries(${PROJECT_NAME}_test_rviz ${catkin_LIBRARIES})
-
 
 #############
 ## Install ##
@@ -219,13 +210,40 @@ target_link_libraries(${PROJECT_NAME}_test_rviz ${catkin_LIBRARIES})
 #catkin_add_gtest(${PROJECT_NAME}-test test/utest.cpp ${LIB_SOURCE_CPP})
 #target_link_libraries(${PROJECT_NAME}-test ${catkin_LIBRARIES})
 
+#####(kinematics)########################################
 # vec3
-catkin_add_gtest(${PROJECT_NAME}-vec3 test/utest_vec3.cpp ${LIB_SOURCE_CPP})
+catkin_add_gtest(${PROJECT_NAME}-vec3 test/kinematics/utest_vec3.cpp ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME}-vec3 ${catkin_LIBRARIES})
 
 #vec4
-catkin_add_gtest(${PROJECT_NAME}-vec4 test/utest_vec4.cpp ${LIB_SOURCE_CPP})
+catkin_add_gtest(${PROJECT_NAME}-vec4 test/kinematics/utest_vec4.cpp ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME}-vec4 ${catkin_LIBRARIES})
+
+#####(robot)########################################
+# bit
+catkin_add_gtest(${PROJECT_NAME}-bit test/robot/utest_bit.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}-bit ${catkin_LIBRARIES})
+
+# joint
+catkin_add_gtest(${PROJECT_NAME}-joint test/robot/utest_joint.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}-joint ${catkin_LIBRARIES})
+
+#####(その他テストファイル)########################################
+# pose
+add_executable(${PROJECT_NAME}_test_pose test/kinematics/test_pose.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}_test_pose ${catkin_LIBRARIES})
+
+add_executable(${PROJECT_NAME}_test_pose2 test/kinematics/test_pose2.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}_test_pose2 ${catkin_LIBRARIES})
+
+# camera
+add_executable(${PROJECT_NAME}_test_camera test/kinematics/test_camera.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}_test_camera ${catkin_LIBRARIES})
+
+# urdf
+add_executable(${PROJECT_NAME}_test_urdf test/test_urdf.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}_test_urdf ${catkin_LIBRARIES})
+
 
 ## Add gtest based cpp test target and link libraries
 #catkin_add_gtest(${PROJECT_NAME}-test test/test_kinematics.cpp)

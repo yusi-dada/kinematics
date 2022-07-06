@@ -3,9 +3,7 @@
  * @brief マーカオブジェクトの生成
  */
 #pragma once
-#include <ros_func/ros_func.h>
-#include <kinematics/camera.h>
-#include <kinematics/pose_array.h>
+#include <ros_func/ros_func.h>  // kinematics
 #include <tf/transform_broadcaster.h>
 #include <visualization_msgs/MarkerArray.h>
 
@@ -382,15 +380,19 @@ void ImageSurfaceMarker(visualization_msgs::MarkerArray& ma, std::string frame, 
 }
 
 template <typename T>
-void LinkMarker(visualization_msgs::MarkerArray& ma, std::string frame, pose_array<T> pos, std_msgs::ColorRGBA color=ColorRGBA(1,1,1,1), std::string ns="")
+void LinkMarker(visualization_msgs::MarkerArray& ma, std::string frame, std::vector<pose<T>> pos, std_msgs::ColorRGBA color=ColorRGBA(1,1,1,1), std::string ns="")
 {
     // リンクの各接点を取得し描画
-    auto edge_points = pos.p();
+    int N = pos.size();
+    std::vector<vec3<T>> edge_points(N);
+    for(int i=0; i<N; i++) edge_points[i]=pos[i].p;
     LineChainMarker(ma, "world", edge_points, ColorRGBA(1,1,0,1), ns+"link");
     PointMarker(ma, "world", edge_points, color, ns+"joint");
 }
 
-
+/**
+ * @brief 点列マーカ
+ */
 class PathMarker
 {
     private:

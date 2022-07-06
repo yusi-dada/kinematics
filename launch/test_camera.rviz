@@ -111,7 +111,7 @@ Visualization Manager:
       Marker Topic: /test_path
       Name: MarkerArray
       Namespaces:
-        path: true
+        {}
       Queue Size: 100
       Value: true
   Enabled: true
@@ -142,7 +142,7 @@ Visualization Manager:
   Views:
     Current:
       Class: rviz/Orbit
-      Distance: 0.46236008405685425
+      Distance: 0.20858246088027954
       Enable Stereo Rendering:
         Stereo Eye Separation: 0.05999999865889549
         Stereo Focal Distance: 1
@@ -150,9 +150,9 @@ Visualization Manager:
         Value: false
       Field of View: 0.7853981852531433
       Focal Point:
-        X: -0.02960655838251114
-        Y: 0.08077040314674377
-        Z: 0.06673254817724228
+        X: -0.010493254289031029
+        Y: 0.07125329226255417
+        Z: 0.06645888090133667
       Focal Shape Fixed Size: true
       Focal Shape Size: 0.05000000074505806
       Invert Z Axis: false

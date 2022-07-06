@@ -8,13 +8,16 @@
 namespace kinematics
 {
 
+/**
+ * @brief 座標系クラス
+ */
 template <typename T>
 class pose
 {
     public:
         vec3<T> p;
         vec4<T> q;
-
+        ~pose(){std::cerr << "****************************destructor" << std::endl;}
         pose()
         {
             this->p = vec3<T>(0,0,0);
@@ -64,7 +67,6 @@ class pose
             return ret;
         }
 
-
         /**
          * @brief (this/p座標系の)回転軸で回転させて姿勢変更
          * @param axis 回転軸(this座標系 or p座標系)
@@ -106,7 +108,6 @@ class pose
             alfap[axis] = 1;
             return rotate(alfa, angle, p);
         }
-
 
         /**
          * @brief 有効判定
@@ -196,8 +197,6 @@ class pose
             if (abs(tmp) <= 1e-9) return INFINITY;
             return (surf.p - this->p)*N / tmp;
         }
-
-
 };
 
 template <typename T>

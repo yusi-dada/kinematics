@@ -1,3 +1,7 @@
+/**
+ * @file ros_marker.cpp
+ * @brief マーカオブジェクトの生成
+ */
 #include <ros_func/ros_marker.h>
 
 namespace ros_func

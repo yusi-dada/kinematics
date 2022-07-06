@@ -8,6 +8,9 @@
 #include <vector>
 #include <assert.h>
 
+/**
+ * @brief キネマティクス処理名前空間
+ */
 namespace kinematics
 {
 
@@ -44,7 +47,7 @@ class vec3
             return(*this);
         }
 
-        T operator[](int n)
+        T& operator[](int n)
         {
             switch (n)
             {

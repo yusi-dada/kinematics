@@ -106,7 +106,7 @@ class vec4
         /**
          * @brief 要素アクセス
          */
-        T operator[](int n)
+        T& operator[](int n)
         {
             switch (n)
             {
