@@ -101,7 +101,7 @@ int main(int argc, char **argv)
             {
                 vec3d axb = a%b;    // 基準座標系の回転軸
                 theta = acos(COS);
-                theta = std::min(std::max(theta,-0.01),0.01);
+                theta = std::min(std::max(theta,-0.01), 0.01);
                 posed g;            // 基準座標系
                 g.p = cam1.p0.p;    // 回転中心をカメラに設定
                 flange = flange.rotate(axb, theta, &g);

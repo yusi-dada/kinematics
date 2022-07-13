@@ -17,7 +17,7 @@ class pose
     public:
         vec3<T> p;
         vec4<T> q;
-        ~pose(){std::cerr << "****************************destructor" << std::endl;}
+
         pose()
         {
             this->p = vec3<T>(0,0,0);
@@ -28,6 +28,31 @@ class pose
         {
             this->p = p_;
             this->q = q_;
+        }
+
+        /**
+         * @brief 要素アクセス
+         */
+        T& operator[](int n)
+        {
+            switch (n)
+            {
+                case 0: return(this->p.x);
+                case 1: return(this->p.y);
+                case 2: return(this->p.z);
+                case 3:
+                case 4:
+                case 5:
+                {
+                    vec3<T> rpy = this->q.rpy();
+                    return rpy[n-3];
+                }
+                default:
+                {
+                    std::cerr << "[pose] wrong index" << std::endl;
+                    assert(false);
+                }
+            }
         }
 
         /**
@@ -48,22 +73,22 @@ class pose
         pose<T> operator*(const pose<T>& obj)
         {
             pose<T> ret(this->p, this->q);
-            ret.p = ret.p + ret.q.Trans(obj.p);
+            ret.p = ret.p + ret.q.Trans(obj.p, true);
             ret.q = ret.q * obj.q;
             return ret;
         }
 
         /**
          * @brief 2座標系間の相対姿勢取得
-         * @details 入力姿勢(obj)から相対姿勢(ret)をかけたときに現在姿勢(this)となる(this=obj*ret)
+         * @details 現在姿勢(this)は入力姿勢(obj)から相対姿勢(ret)をかける(this=obj*ret)
          * @param [in] obj 入力姿勢
          * @return 相対姿勢(obj座標系表現)
          */
-        pose<T> operator/(pose<T> obj)
+        pose<T> operator/(const pose<T>& obj)
         {
             pose<T> ret(this->p, this->q);
             ret.q = obj.q.conj()*ret.q;
-            ret.p = obj.q.conj().Trans(ret.p-obj.p);
+            ret.p = obj.q.conj().Trans(ret.p-obj.p, true);
             return ret;
         }
 
@@ -195,7 +220,7 @@ class pose
 
             double tmp = ray*N;
             if (abs(tmp) <= 1e-9) return INFINITY;
-            return (surf.p - this->p)*N / tmp;
+            return (surf.p - this->p)*(N / tmp);
         }
 };
 
@@ -203,7 +228,7 @@ template <typename T>
 std::ostream& operator<<(std::ostream& stream, pose<T>& obj)
 {
 //    return( stream << "pos[ m ] = "<< obj.p << "  rpy[deg] = " << obj.q.rpy()*180.0/M_PI );
-    return( stream << "pos[ m ] = "<< obj.p << "  rpy[deg] = " << obj.q );
+    return( stream << "p = "<< obj.p << "  q = " << obj.q );
 }
 
 

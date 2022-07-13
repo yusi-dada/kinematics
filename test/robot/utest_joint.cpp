@@ -58,11 +58,12 @@ TEST(joint, Test1)
     EXPECT_FALSE( (b-3).iszero() );
 
     // SAT
-    joint<double> inrange;
+    joint<double> out_of_range;
     joint<double> _min = {-0.9,-0.9,-0.9,-0.9,-0.9,-0.9};
     joint<double> _max = {1.2,1.2,1.2,1.2,1.2,1.2};
-    EXPECT_TRUE( (b-3).sat(_min, _max, &inrange) == joint<double>({-0.9,-0.9,0,1,1.2,1.2})  );     // b-3 = {-2,-1,0,1,2,3}
-    EXPECT_TRUE( inrange == joint<double>({0,0,1,1,0,0})  ); 
+    EXPECT_TRUE( (b-3).sat(_min, _max, &out_of_range) == joint<double>({-0.9,-0.9,0,1,1.2,1.2})  );     // b-3 = {-2,-1,0,1,2,3}
+    EXPECT_TRUE( out_of_range == joint<double>({1,1,0,0,1,1})  ); 
+
 }
 
 

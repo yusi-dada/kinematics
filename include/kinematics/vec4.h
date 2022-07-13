@@ -122,30 +122,17 @@ class vec4
             }
         }
 
-        vec4<T> operator+()
-        {
-        	return(vec4<T>(this->x,this->y,this->z,this->w));
-        }
-
-        vec4<T> operator-()
-        {
-        	return(vec4<T>(-this->x,-this->y,-this->z,-this->w));
-        }
-
         /**
-         * @brief 共役クォータニオン
+         * @brief 代入
          */
-        vec4<T> conj()
+        template<typename U>
+        vec4<T> operator=(const vec4<U>& obj)
         {
-            return vec4<T>(-this->x,-this->y,-this->z,this->w);
-        }
-
-        /**
-         * @brief ノルム
-         */
-        T nrm()
-        {
-            return sqrt(this->x*this->x + this->y*this->y + this->z*this->z + this->w*this->w);
+            this->x = (T)obj.x;
+            this->y = (T)obj.y;
+            this->z = (T)obj.z;
+            this->w = (T)obj.w;
+            return(*this);
         }
 
         /**
@@ -162,23 +149,36 @@ class vec4
             return (*this);
         }
 
-        /**
-         * @brief 代入
-         */
-        template<typename U>
-        vec4<T> operator=(const vec4<U>& obj)
+        vec4<T> operator+() const
         {
-            this->x = (T)obj.x;
-            this->y = (T)obj.y;
-            this->z = (T)obj.z;
-            this->w = (T)obj.w;
-            return(*this);
+        	return(vec4<T>(this->x,this->y,this->z,this->w));
+        }
+
+        vec4<T> operator-() const
+        {
+        	return(vec4<T>(-this->x,-this->y,-this->z,-this->w));
+        }
+
+        /**
+         * @brief 共役クォータニオン
+         */
+        vec4<T> conj() const
+        {
+            return vec4<T>(-this->x,-this->y,-this->z,this->w);
+        }
+
+        /**
+         * @brief ノルム
+         */
+        T nrm() const
+        {
+            return sqrt(this->x*this->x + this->y*this->y + this->z*this->z + this->w*this->w);
         }
 
         /**
          * @brief 各要素の一致判定（数値誤差をerrだけ許容）
          */
-        bool operator==(const vec4<T>& obj)
+        bool operator==(const vec4<T>& obj) const
         {
             if(abs(this->x-obj.x)>this->err) return false;
             if(abs(this->y-obj.y)>this->err) return false;
@@ -190,7 +190,7 @@ class vec4
         /**
          * @brief 同回転のクォータニオン判定
          */
-        bool eq(const vec4<T>& obj)
+        bool eq(const vec4<T>& obj) const
         {
             return ((*this) == obj) || (-(*this) == obj);
         }
@@ -198,7 +198,7 @@ class vec4
         /**
          * @brief 不定値判定
          */
-        bool isnan()
+        bool isnan() const
         {
             if(std::isnan(this->x)) return true;
             if(std::isnan(this->y)) return true;
@@ -210,7 +210,7 @@ class vec4
         /**
          * @brief 無限大値判定
          */
-        bool isinf()
+        bool isinf() const
         {
             if(std::isinf(this->x)) return true;
             if(std::isinf(this->y)) return true;
@@ -222,7 +222,7 @@ class vec4
         /**
          * @brief 有効値判定
          */
-        bool isnum()
+        bool isnum() const
         {
             return(!isnan() && !isinf());
         }
@@ -230,7 +230,7 @@ class vec4
         /**
          * @brief クォータニオン積
          */
-        vec4<T> operator*(const vec4<T>& obj)
+        vec4<T> operator*(const vec4<T>& obj) const
         {
             T s1 = this->w;
             vec3<T> v1(this->x, this->y, this->z);

@@ -23,6 +23,17 @@ TEST(bit, Test1)
 
     clr_bit(bit,3);
     EXPECT_EQ(bit, 0b10100101);
+
+    unsigned int ret;
+    ret = get_bits(bit, 0, 15);
+    EXPECT_EQ(ret, 0b10100101);
+
+    ret = get_bits(bit, 1, 5);
+    EXPECT_EQ(ret, 0b10010);
+
+    ret = get_bits(bit, 6, 8);
+    EXPECT_EQ(ret, 0b10);
+
 }
 
 // Run all the tests that were declared with TEST()

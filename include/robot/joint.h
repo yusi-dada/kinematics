@@ -155,9 +155,10 @@ class joint
             joint<T> ret = (*this);
             for(T &x : ret.val)
             {
-                if(std::abs(x)<=err) x = 0;
-                else if(x>0)    x = 1;
-                else            x = -1;
+                if(std::abs(x)>err)
+                    x = (x>0) ? 1 : -1;
+                else
+                    x = 0;
             }
             return ret;
         }
@@ -177,11 +178,11 @@ class joint
 
         /**
          * @brief 飽和関数
-         * @param [out] inrange 制約内判定
+         * @param [out] out_of_range 制約外判定
          */
-        joint<T> sat(const joint<T> _min, const joint<T> _max, joint<T> *inrange=nullptr)
+        joint<T> sat(const joint<T> _min, const joint<T> _max, joint<T> *out_of_range=nullptr)
         {
-            if(inrange) inrange->val.fill(0);   // 制約範囲外で初期化
+            if(out_of_range) out_of_range->val.fill(1);   // 制約範囲外で初期化
 
             joint<T> ret = (*this);
             for(int i=0; i<this->val.size(); i++)
@@ -190,9 +191,23 @@ class joint
 
                 if     (ret.val[i] < _min.val[i]){ ret.val[i] = _min.val[i]; }
                 else if(ret.val[i] > _max.val[i]){ ret.val[i] = _max.val[i]; }
-                else if(inrange) { inrange->val[i] = 1; }
+                else if(out_of_range) { out_of_range->val[i] = 0; }
             }
             return ret;
+        }
+
+        /**
+         * @brief 制約内判定
+         */
+        bool in_range(const joint<T> _min, const joint<T> _max)
+        {
+            for(int i=0; i<this->val.size(); i++)
+            {
+                assert(_min.val[i]<=_max.val[i]);
+                if(this->val[i] < _min.val[i]){ return false; }
+                if(this->val[i] > _max.val[i]){ return false; }
+            }
+            return true;
         }
 
 };

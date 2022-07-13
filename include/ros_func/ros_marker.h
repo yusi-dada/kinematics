@@ -293,18 +293,20 @@ template <typename T>
 void CubeWireMarker(visualization_msgs::MarkerArray& ma, std::string frame, pose<T> p0, vec3<T> size, std_msgs::ColorRGBA color=ColorRGBA(1,1,1,1), std::string ns="")
 {
     std::vector<vec3<T>> pos1, pos2;
+    T x = size.x/2;
+    T y = size.y/2;
+    T z = size.z/2;
+
     pos1.resize(4);
+    pos1[0] = p0.Trans_pnt(vec3<T>( x,  y, z));
+    pos1[1] = p0.Trans_pnt(vec3<T>(-x,  y, z));
+    pos1[2] = p0.Trans_pnt(vec3<T>(-x, -y, z));
+    pos1[3] = p0.Trans_pnt(vec3<T>( x, -y, z));
     pos2.resize(4);
-    pos1[0] = p0.Trans_pnt(vec3<T>( size.x/2,  size.y/2, size.z/2));
-    pos1[1] = p0.Trans_pnt(vec3<T>(-size.x/2,  size.y/2, size.z/2));
-    pos1[2] = p0.Trans_pnt(vec3<T>(-size.x/2, -size.y/2, size.z/2));
-    pos1[3] = p0.Trans_pnt(vec3<T>( size.x/2, -size.y/2, size.z/2));
-
-    pos2[0] = p0.Trans_pnt(vec3<T>( size.x/2,  size.y/2, -size.z/2));
-    pos2[1] = p0.Trans_pnt(vec3<T>(-size.x/2,  size.y/2, -size.z/2));
-    pos2[2] = p0.Trans_pnt(vec3<T>(-size.x/2, -size.y/2, -size.z/2));
-    pos2[3] = p0.Trans_pnt(vec3<T>( size.x/2, -size.y/2, -size.z/2));
-
+    pos2[0] = p0.Trans_pnt(vec3<T>( x,  y, -z));
+    pos2[1] = p0.Trans_pnt(vec3<T>(-x,  y, -z));
+    pos2[2] = p0.Trans_pnt(vec3<T>(-x, -y, -z));
+    pos2[3] = p0.Trans_pnt(vec3<T>( x, -y, -z));
     LineLoopMarker(ma, frame, pos1, color, ns);
     LineLoopMarker(ma, frame, pos2, color, ns);
     for(int i=0;i<4;i++)
@@ -323,10 +325,9 @@ void CubeWireMarker(visualization_msgs::MarkerArray& ma, std::string frame, pose
 template <typename T>
 void PyramidMarker(visualization_msgs::MarkerArray& ma, std::string frame, vec3<T> virtex, std::vector<vec3<T>> bottom, std_msgs::ColorRGBA color=ColorRGBA(1,1,1,1), std::string ns="")
 {
+    LineLoopMarker(ma, frame, bottom, color, ns);
     for(auto b:bottom)
         LineMarker(ma, frame, virtex, b, ColorRGBA(1,1,1,0.5), ns);
-
-    LineLoopMarker(ma, frame, bottom, color, ns);
     if(color.a > 0.1) color.a = 0.2;
     PolygonMarker(ma, frame, bottom, color, ns);
 }

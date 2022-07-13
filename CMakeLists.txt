@@ -219,6 +219,10 @@ target_link_libraries(${PROJECT_NAME}-vec3 ${catkin_LIBRARIES})
 catkin_add_gtest(${PROJECT_NAME}-vec4 test/kinematics/utest_vec4.cpp ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME}-vec4 ${catkin_LIBRARIES})
 
+#pose
+catkin_add_gtest(${PROJECT_NAME}-pose test/kinematics/utest_pose.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}-pose ${catkin_LIBRARIES})
+
 #####(robot)########################################
 # bit
 catkin_add_gtest(${PROJECT_NAME}-bit test/robot/utest_bit.cpp ${LIB_SOURCE_CPP})
@@ -227,6 +231,10 @@ target_link_libraries(${PROJECT_NAME}-bit ${catkin_LIBRARIES})
 # joint
 catkin_add_gtest(${PROJECT_NAME}-joint test/robot/utest_joint.cpp ${LIB_SOURCE_CPP})
 target_link_libraries(${PROJECT_NAME}-joint ${catkin_LIBRARIES})
+
+# joint
+catkin_add_gtest(${PROJECT_NAME}-sflg test/robot/utest_sflg.cpp ${LIB_SOURCE_CPP})
+target_link_libraries(${PROJECT_NAME}-sflg ${catkin_LIBRARIES})
 
 #####(その他テストファイル)########################################
 # pose

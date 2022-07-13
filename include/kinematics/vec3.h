@@ -55,22 +55,25 @@ class vec3
                 case 1: return(this->y);
                 case 2: return(this->z);
                 default:
+                {
+                    std::cerr << "[vec3] wrong index" << std::endl;
                     assert(false);
+                }
             }
         }
 
-        vec3<T> operator+()
+        vec3<T> operator+() const
         {
         	return(vec3<T>(this->x,this->y,this->z));
         }
 
-        vec3<T> operator-()
+        vec3<T> operator-() const
         {
         	return(vec3<T>(-this->x,-this->y,-this->z));
         }
 
         template<typename U>
-        bool operator==(const vec3<U>& obj)
+        bool operator==(const vec3<U>& obj) const
         {
             if(abs(this->x-obj.x)>this->err) return false;
             if(abs(this->y-obj.y)>this->err) return false;
@@ -78,50 +81,50 @@ class vec3
             return true;
         }
 
-        vec3<T> operator+(const vec3<T>& obj)
+        vec3<T> operator+(const vec3<T>& obj) const
         {
             return(vec3<T>(this->x+obj.x, this->y+obj.y, this->z+obj.z));
         }
 
-        vec3<T> operator-(const vec3<T>& obj)
+        vec3<T> operator-(const vec3<T>& obj) const
         {
             return(vec3<T>(this->x-obj.x, this->y-obj.y, this->z-obj.z));
         }
 
-        T operator*(const vec3<T>& obj)
+        T operator*(const vec3<T>& obj) const
         {
         	return( this->x*obj.x + this->y*obj.y + this->z*obj.z);
         }
 
-        vec3<T> operator%(const vec3<T>& obj)
+        vec3<T> operator%(const vec3<T>& obj) const
         {
             return( vec3<T>(this->y*obj.z - this->z*obj.y,
                             this->z*obj.x - this->x*obj.z,
                             this->x*obj.y - this->y*obj.x) );	
         }
 
-        T nrm()
+        T nrm() const
         {
             T sum = this->x*this->x + this->y*this->y + this->z*this->z;
             return(sqrt(sum));
         }
 
-        bool isnan()
+        bool isnan() const
         {
             return(std::isnan(this->x) || std::isnan(this->y) || std::isnan(this->z));
         }
 
-        bool isinf()
+        bool isinf() const
         {
             return(std::isinf(this->x) || std::isinf(this->y) || std::isinf(this->z));
         }
 
-        bool isnum()
+        bool isnum() const
         {
             return(!isnan() && !isinf());
         }
 
-        std::vector<vec3<T>> tilde()
+        std::vector<vec3<T>> tilde() const
         {
             std::vector<vec3<T>> ret(3);
             ret[0] = vec3<T>(0,-this->z,this->y);
@@ -130,7 +133,7 @@ class vec3
             return ret;
         }
 
-        vec3<T> iszero()
+        vec3<T> iszero() const
         {
             vec3<T> ret(1,1,1);
             if(abs(this->x)>this->err) ret.x = 0;
@@ -139,16 +142,15 @@ class vec3
             return ret;
         }
 
-        vec3<T> sign()
+        vec3<T> sign() const
         {
             vec3<T> ret=(*this);
-            T *retp = &ret.x;
             for(int i=0; i<3; i++)
             {
-                if(abs(retp[i])>ret.err)
-                    retp[i] = (retp[i]>0) ? 1 : -1;
+                if(abs(ret[i])>ret.err)
+                    ret[i] = (ret[i]>0) ? 1 : -1;
                 else
-                    retp[i] = 0;
+                    ret[i] = 0;
             }
             return ret;
         }

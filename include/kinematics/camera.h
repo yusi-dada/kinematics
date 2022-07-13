@@ -92,7 +92,7 @@ class camera
             if(isinf(d) || d<0)
             {
                 // 無効解を設定
-                p = p*NAN;  
+                p.x = p.y = p.z = NAN;
                 return false;
             } 
             else
@@ -108,23 +108,21 @@ class camera
          * @param [in] p 画像座標系で画角に対する比率[0,1]
          * @param [out] p 基準座標系での位置
          * @param [in] surf 投影面座標系（基準座標系、Z方向が法線）
-         * @retval true 変換成功
-         * @retval false 変換失敗（射影面が並行 or 逆方向）
+         * @retval true 全入力変換成功
+         * @retval false １つでも変換失敗（射影面が並行 or 逆方向）
          */
         bool image2pos(std::vector<vec3<T>> &p, pose<T> surf)
         {
+            bool ret = true;
             for(auto &pp : p)
-            {
-                if(!image2pos(pp, surf))
-                    return false;
-            }
-            return true;
+                ret = ret & image2pos(pp, surf);
+            return ret;
         }
 
         /**
          * @brief 基準座標系での位置を画像座標系に変換
          * @param [in] p 基準座標系での位置
-         * @param [out] p 画像座標系で画角に対する比率[0,1]
+         * @param [out] p 画像座標系で画角に対する比率[0,1] 変換失敗でNan
          * @retval true 変換成功
          * @retval false 変換失敗
          */
@@ -141,37 +139,42 @@ class camera
             // 射影面への伸展倍率演算
             // 射影面法線はカメラ視線方向なので(0,0,1)
             T d = this->p0.projection(p, surf, vec3<T>(0,0,1));
-            if(isinf(d) || d<0) return false;
+            if(isinf(d) || d<0)
+            {
+                p.x = p.y = p.z = NAN;
+                return false;
+            } 
 
             // カメラ投影面での位置（カメラ座標系）
             // カメラ画角で正規化[-1, 1]
-            p = d*p;
-            p.x = p.x / this->tanH;
-            p.y = p.y / this->tanV;
+            p.x = d * p.x / this->tanH;
+            p.y = d * p.y / this->tanV;
             p.z = 0.0;
-            if((p.x > 1.0) || (p.x < -1.0) || (p.y > 1.0) || (p.y < -1.0))
-                return false;   // 視野範囲外
-            
-            // 画像座標系に変換
-            p = 0.5*(p + 1.0);
-            return true;
+            if((-1.0<=p.x)&&(p.x<=1.0)&&(-1.0<=p.y)&&(p.y<=1.0))
+            {
+                p = 0.5*(p + 1.0);  // 画像座標系に変換
+                return true;
+            }
+            else
+            {
+                p.x = p.y = p.z = NAN;
+                return false;       // 視野範囲外
+            }
         }
 
         /**
          * @brief 基準座標系での位置を画像座標系に変換
          * @param [in] p 基準座標系での位置
-         * @param [out] p 画像座標系で画角に対する比率[0,1]
-         * @retval true 変換成功
-         * @retval false 変換失敗
+         * @param [out] p 画像座標系で画角に対する比率[0,1] 変換失敗でNan
+         * @retval true 全入力変換成功
+         * @retval false １つでも変換失敗
          */
         bool pos2image(std::vector<vec3<T>> &p)
         {
+            bool ret = true;
             for(auto &pp : p)
-            {
-                if(!pos2image(pp))
-                    return false;
-            }
-            return true;
+                ret = ret & pos2image(pp);
+            return ret;
         }
 
         /**
@@ -204,7 +207,6 @@ class camera
             if(dir*axis[2]<0) c=c.rotate(0, M_PI);  // X軸180deg回転でZ軸を反対に
             return true;
         }
-
 };
 
 }
